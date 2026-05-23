@@ -1,10 +1,29 @@
-site_name: My Documentation Site
+site_name: My Porfolio Site
 
 theme:
-  name: materialsite_name: My Documentation Site
+  name: materialsite_name: My Porfolio Site
 
 theme:
   name: material
+
+nav:
+  - ecommerce-tokenization-overview: ecommerce-tokenization-overview.md
+  - phosted-checkout-api: hosted-checkout-api.md
+  - integrate-clover-payments-plugin-with-shopify-online-shop: integrate-clover-payments-plugin-with-shopify-online-shop.md
+  - getchargescharge: getchargescharge.md
+  - getcharges: getcharges.md
+  - Architecture: architecture.md
+  - ecommerce-tokenization: ecommerce-tokenization.md
+  - ecommerce-error-codes: ecommerce-error-codes.markdown_extensions
+  - ecommerce-api-tutorials: ecommerce-api-tutorials.md
+  - createcharge: createcharge.md
+  - clover-payments-plugin-shopify-webhooks: clover-payments-plugin-shopify-webhooks.md
+  - clover-iframe-integrations: clover-iframe-integrations.md
+  - clover-go-sdk-quick-start-guides: clover-go-sdk-quick-start-guides.md
+  - clover-development-basics-ecommerce: clover-development-basics-ecommerce.md
+  - capturecharge: capturecharge.md
+  - capture-a-charge-tutorial: capture-a-charge-tutorial.md
+  - apple-pay-implementation-options: apple-pay-implementation-options.md
 
   features:
     - navigation.tabs
