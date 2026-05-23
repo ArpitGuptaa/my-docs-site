@@ -1,9 +1,6 @@
 site_name: My Porfolio Site
 
 theme:
-  name: materialsite_name: My Porfolio Site
-
-theme:
   name: material
 
 nav:
