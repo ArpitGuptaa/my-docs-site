@@ -4,6 +4,7 @@ theme:
   name: material
 
 nav:
+  - index: index.md
   - ecommerce-tokenization-overview: ecommerce-tokenization-overview.md
   - phosted-checkout-api: hosted-checkout-api.md
   - integrate-clover-payments-plugin-with-shopify-online-shop: integrate-clover-payments-plugin-with-shopify-online-shop.md
@@ -21,12 +22,3 @@ nav:
   - capturecharge: capturecharge.md
   - capture-a-charge-tutorial: capture-a-charge-tutorial.md
   - apple-pay-implementation-options: apple-pay-implementation-options.md
-
-  features:
-    - navigation.tabs
-    - content.code.copy
-    - search.highlight
-
-markdown_extensions:
-  - admonition
-  - tables
