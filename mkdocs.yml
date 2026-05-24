@@ -22,3 +22,12 @@ nav:
   - capturecharge: capturecharge.md
   - capture-a-charge-tutorial: capture-a-charge-tutorial.md
   - apple-pay-implementation-options: apple-pay-implementation-options.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
