@@ -104,24 +104,6 @@ I am also passionate about mentoring technical writers, improving content qualit
 - Living Proof Recognition
 - Most Valuable Performer (Individual & Team)
 
-## Writing Philosophy
-
-I believe great documentation is more than accurate information — it is an experience.
-
-Well-designed documentation should reduce complexity, improve usability, empower developers, and enable users to achieve success faster. My goal is to create documentation that is scalable, maintainable, discoverable, and genuinely useful.
-
-
-## Portfolio Focus Areas
-
-- API & SDK Documentation
-- AI Product Documentation
-- Docs-as-Code Implementation
-- CI/CD Documentation Workflows
-- Developer Experience (DX)
-- Information Architecture
-- Technical Content Strategy
-
-
 ## Let’s Connect
 
 - LinkedIn: linkedin.com/in/arpitgupta007/
