@@ -1,5 +1,5 @@
 ---
-title: "Value of Savings"
+title: "Value of savings"
 slug: "value-of-savings"
 excerpt: ""
 hidden: false

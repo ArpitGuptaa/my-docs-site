@@ -4,12 +4,12 @@ theme:
   name: material
 
 nav:
-  - Value of Savings: why-savings-matter.md
-  - Integrate Clover Payments plugin with Shopify Online Shop: integrate-clover-payments-plugin-with-shopify-online-shop.md
+  - Value of savings: why-savings-matter.md
+  - Integrate Clover payments plugin with Shopify: integrate-clover-payments-plugin-with-shopify-online-shop.md
   - Ecommerce tokenization overview: ecommerce-tokenization-overview.md
   - Error codes: ecommerce-error-codes.md
   - Compliance webhooks for Clover payments plugin: clover-payments-plugin-shopify-webhooks.md
-  - Add Apple Pay button to the Clover iframe: clover-iframe-features-apple-pay.md
+  - Apple Pay button to the Clover iframe: clover-iframe-features-apple-pay.md
   - Capture a charge: capture-a-charge-tutorial.md
 
 markdown_extensions:

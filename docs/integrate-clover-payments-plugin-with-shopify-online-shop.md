@@ -1,5 +1,5 @@
 ---
-title: "Ecommerce: Integrate Clover Payments plugin with Shopify Online Shop"
+title: "Integrate Clover payments plugin with Shopify"
 slug: "integrate-payments-plugin-with-Shopify"
 excerpt: "Pay Anywhere, Sell Everywhere"
 hidden: false
@@ -11,7 +11,7 @@ createdAt: "Mon Aug 19 2024 04:00:07 GMT+0000 (Coordinated Universal Time)"
 updatedAt: "Thu Oct 17 2024 04:05:47 GMT+0000 (Coordinated Universal Time)"
 ---
 
-# Ecommerce: Integrate Clover Payments plugin with Shopify Online Shop
+# Integrate Clover payments plugin with Shopify
 
 To integrate the Clover Payments plugin with a Clover merchant's Shopify Online Shop, note the following:
 
