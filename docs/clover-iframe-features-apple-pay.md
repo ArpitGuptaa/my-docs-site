@@ -1,6 +1,6 @@
 ---
 title: "Add Apple Pay button to the Clover iframe"
-slug: "clover-iframe-features-apple-pay"
+slug: "apple-pay-button-to-the-iframe"
 excerpt: ""
 hidden: false
 metadata:

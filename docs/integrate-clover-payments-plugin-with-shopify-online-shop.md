@@ -1,6 +1,6 @@
 ---
 title: "Ecommerce: Integrate Clover Payments plugin with Shopify Online Shop"
-slug: "integrate-clover-payments-plugin-with-shopify-online-shop"
+slug: "integrate-payments-plugin-with-Shopify"
 excerpt: "Pay Anywhere, Sell Everywhere"
 hidden: false
 metadata:

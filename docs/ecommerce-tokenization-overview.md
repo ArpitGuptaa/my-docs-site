@@ -1,6 +1,6 @@
 ---
 title: "Ecommerce tokenization overview"
-slug: "ecommerce-tokenization-overview"
+slug: "ecommerce-tokenization"
 excerpt: ""
 hidden: false
 metadata:

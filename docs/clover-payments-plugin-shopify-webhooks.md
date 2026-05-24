@@ -1,6 +1,6 @@
 ---
 title: "Compliance webhooks for Clover payments plugin"
-slug: "clover-payments-plugin-shopify-webhooks"
+slug: "compliance-webhooks"
 excerpt: ""
 hidden: true
 metadata:
@@ -13,6 +13,7 @@ updatedAt: "Mon Aug 19 2024 05:37:12 GMT+0000 (Coordinated Universal Time)"
 
 
 # Compliance webhooks for Clover payments plugin
+
 Privacy laws, such as the General Data Protection Regulation (GDPR), impose requirements on entities that handle personal data. These regulations apply to parties that collect, store, or process personal information about individuals and are required when working with merchants in Europe.
 
 Shopify requires mandatory compliance webhooks or callback methods that help manage the personal data collected by an app.

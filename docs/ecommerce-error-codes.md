@@ -1,6 +1,6 @@
 ---
 title: "Ecommerce API: Error codes"
-slug: "ecommerce-error-codes"
+slug: "error-codes"
 excerpt: ""
 hidden: false
 metadata:

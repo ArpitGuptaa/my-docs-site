@@ -5,23 +5,12 @@ theme:
 
 nav:
   - index: index.md
-  - ecommerce-tokenization-overview: ecommerce-tokenization-overview.md
-  - phosted-checkout-api: hosted-checkout-api.md
-  - integrate-clover-payments-plugin-with-shopify-online-shop: integrate-clover-payments-plugin-with-shopify-online-shop.md
-  - getchargescharge: getchargescharge.md
-  - getcharges: getcharges.md
-  - Architecture: architecture.md
-  - ecommerce-tokenization: ecommerce-tokenization.md
-  - ecommerce-error-codes: ecommerce-error-codes.markdown_extensions
-  - ecommerce-api-tutorials: ecommerce-api-tutorials.md
-  - createcharge: createcharge.md
-  - clover-payments-plugin-shopify-webhooks: clover-payments-plugin-shopify-webhooks.md
-  - clover-iframe-integrations: clover-iframe-integrations.md
-  - clover-go-sdk-quick-start-guides: clover-go-sdk-quick-start-guides.md
-  - clover-development-basics-ecommerce: clover-development-basics-ecommerce.md
-  - capturecharge: capturecharge.md
-  - capture-a-charge-tutorial: capture-a-charge-tutorial.md
-  - apple-pay-implementation-options: apple-pay-implementation-options.md
+  - Integrate Clover Payments plugin with Shopify Online Shop: integrate-clover-payments-plugin-with-shopify-online-shop.md
+  - Ecommerce tokenization overview: ecommerce-tokenization-overview.md
+  - Error codes: ecommerce-error-codes.md
+  - Compliance webhooks for Clover payments plugin: clover-payments-plugin-shopify-webhooks.md
+  - Add Apple Pay button to the Clover iframe: clover-iframe-features-apple-pay.md
+  - Capture a charge: capture-a-charge-tutorial.md
 
 markdown_extensions:
   - admonition
