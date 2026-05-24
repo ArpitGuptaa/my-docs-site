@@ -11,7 +11,6 @@ createdAt: "Wed Sep 18 2024 05:00:19 GMT+0000 (Coordinated Universal Time)"
 updatedAt: "Fri Nov 08 2024 12:46:13 GMT+0000 (Coordinated Universal Time)"
 ---
 
-> **North America—United States and Canada**
 
 <meta name="description" content="Learn about the requirements and the procedures to complete Apple Pay payments integration with Clover Ecommerce APIs and Clover-hosted iframe.">
 
@@ -21,14 +20,10 @@ Updated: DS-7258; images and text in the iframe integration section
 Updated: DS-7020 to redirect to the Apple Pay payment tutorial
 -->
 
-You can integrate Apple Pay® payments with Clover Ecommerce in the following two implementations:
-
-1. Clover Ecommerce API for custom integrations for merchant
-2. Clover-hosted iframe on a merchant's ecommerce website
 
 ---
 
-# 1. Apple Pay for Ecommerce Clover API integration
+# Apple Pay for Ecommerce Clover API integration
 
 This Clover implementation for Apple Pay is for merchants who may already have Apple Pay on their ecommerce websites and native mobile apps. Their Apple Pay integration is with non-Clover payment gateways, and they want to migrate to Clover or use custom API integrations.
 
@@ -55,7 +50,7 @@ Read the Apple documentation to activate the merchant CSR file for Clover.
 
 You need to share the registered identifier for the Apple merchant ID from your merchant's Apple developer account with Clover. The Apple merchant ID identifier uniquely identifies a business and lets the merchant accept payments using Apple Pay services. This identifier never expires and can be used across multiple apps and websites.
 
-1. Log in to your [Apple Developer account](https://developer.apple.com/account).
+1. Log in to your Apple Developer account.
 2. In Program Resources, click **Certificates, IDs & Profiles** > **Identifiers**. The Identifiers page appears.
 3. In the search field, enter **Merchant IDs**. Available Apple merchant IDs display on the page.
 4. From the Identifier column, copy the identifier that you need to share with Clover.
@@ -76,7 +71,7 @@ The **Share your Apple merchant information with Clover** pop-up appears.
 
 *Clover Merchant Dashboard: Share your Apple merchant information with Clover*
 
-4. In the Identifier field, enter the Apple merchant ID identifier you copied in [Step 1](https://docs.clover.com/dev/docs/apple-pay-implementation-options#step-1-copy-existing-apple-merchant-id) and complete the other fields.
+4. In the Identifier field, enter the Apple merchant ID identifier you copied in Step 1 and complete the other fields.
 5. Click **OK**. The **Manage Certificate Signing Requests** pop-up appears.
 
 ![Clover Merchant Dashboard: Manage Certificate Signing Request pop-up](https://files.readme.io/038c678d2a122457bbb59136d6e2918fff63ced076220ace5cd5531ad7e56a03-3-ApplePay-DownloadCert.png)
@@ -88,7 +83,7 @@ The **Share your Apple merchant information with Clover** pop-up appears.
 
 ### Step 3: Upload the CSR file to your Apple developer account
 
-The payment processing certificate is associated with a registered Apple merchant ID identifier and used to secure transaction data. After you generate the certificate in [Step 2](https://docs.clover.com/dev/docs/apple-pay-implementation-options#step-2-share-the-identifier-and-download-a-csr-file-from-clover), you need to upload the downloaded Certificate Signing Request (CSR) file to your Apple developer account.
+The payment processing certificate is associated with a registered Apple merchant ID identifier and used to secure transaction data. After you generate the certificate in Step 2, you need to upload the downloaded Certificate Signing Request (CSR) file to your Apple developer account.
 
 1. In Program Resources, click **Certificates, IDs & Profiles** > **Identifiers**. The Identifiers page appears.
 2. In the search field, enter Merchant IDs. Available merchant IDs display on the page.
@@ -140,11 +135,9 @@ On the **Manage Certificate Signing** pop-up:
 
 ## Create an Apple Pay payment token
 
-To use Apple Pay as part of your payment integration, you need to [pass information received from Apple Pay](https://developer.apple.com/documentation/passkit_apple_pay_and_wallet/apple_pay/payment_token_format_reference) in your payment token request.
+To use Apple Pay as part of your payment integration, you need to pass information received from Apple Pay in your payment token request.
 
 To start the integration with the Clover Ecommerce API, create a payment token for the Apple Pay digital wallet transaction. The server returns a `source` token that begins with `clv_`. With a `source` token, you can create a charge, create and pay for orders, accept tips, and save customer cards for future transactions.
-
-See the [Create an Apple Pay payment token](https://docs.clover.com/dev/docs/create-applepaywallet-token) tutorial for the steps and the request and response example.
 
 ---
 
@@ -203,6 +196,6 @@ When you click the blue link either on the Developer Dashboard or the Merchant D
 
 ### Step 2: Add Apple Pay button to the Clover iframe
 
-Once the ecommerce website is verified, you can [add the Apple Pay button to a Clover iframe](https://docs.clover.com/dev/docs/clover-iframe-features-apple-pay) on the website to start accepting payments. When a customer clicks the Apple Pay button on a Clover-hosted iframe, the server redirects to `clover.com`. This domain is already verified with Apple as per their requirements for using Apple Pay on the web. Once the payment checkout flow is completed, the customer is redirected to the merchant's ecommerce website.
+Once the ecommerce website is verified, you can add the Apple Pay button to a Clover iframe on the website to start accepting payments. When a customer clicks the Apple Pay button on a Clover-hosted iframe, the server redirects to `clover.com`. This domain is already verified with Apple as per their requirements for using Apple Pay on the web. Once the payment checkout flow is completed, the customer is redirected to the merchant's ecommerce website.
 
 ---

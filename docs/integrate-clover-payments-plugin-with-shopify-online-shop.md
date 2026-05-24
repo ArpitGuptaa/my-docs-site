@@ -11,7 +11,7 @@ createdAt: "Mon Aug 19 2024 04:00:07 GMT+0000 (Coordinated Universal Time)"
 updatedAt: "Thu Oct 17 2024 04:05:47 GMT+0000 (Coordinated Universal Time)"
 ---
 
-# Before you begin
+# Ecommerce: Integrate Clover Payments plugin with Shopify Online Shop
 
 To integrate the Clover Payments plugin with a Clover merchant's Shopify Online Shop, note the following:
 
@@ -23,7 +23,7 @@ To integrate the Clover Payments plugin with a Clover merchant's Shopify Online 
 
 - **Card networks** — Merchants with Shopify Online Shops must select the same card networks on Shopify to ensure a seamless payment transaction process. In case of any changes, Clover communicates the card network settings and updates to Shopify so they can apply the same settings.
 
-- **Best practices** — Review the [best practices and recommendations](https://docs.clover.com/dev/docs/clover-payments-plugin-for-shopify-online-shop#best-practices-and-recommendations) and for additional information, see the introductory topic: [Clover Payments plugin for Shopify Online Shop](https://docs.clover.com/dev/docs/clover-payments-plugin-for-shopify-online-shop).
+- **Best practices** — Review the best practices and recommendations and for additional information.
 
 ---
 

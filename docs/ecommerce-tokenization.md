@@ -10,6 +10,7 @@ metadata:
 createdAt: "Tue Jul 23 2024 10:40:14 GMT+0000 (Coordinated Universal Time)"
 updatedAt: "Mon Oct 21 2024 05:12:57 GMT+0000 (Coordinated Universal Time)"
 ---
+# Ecommerce - Card tokenization
 
 Card tokenization is a process to substitute sensitive data, such as credit card numbers or PAN, with a non-sensitive equivalent value known as a token.
 
@@ -23,11 +24,6 @@ See [Ecommerce Tokenization](https://medium.com/clover-platform-blog/ecommerce-t
 - Improves PCI DSS compliance — Meet security requirements and reduce the scope and cost of PCI compliance efforts.
 - Improves authorization rates — Payment tokens improve gateway payment authorization rates.
 - Facilitates recurring payments — Allow more subscription billing and uninterrupted service for subscription-based businesses.
-
-Clover supports the following card tokenization services:
-
-- [Clover token](https://docs.clover.com/docs/create-a-card-token)
-- [TransArmor token](https://docs.clover.com/docs/use-transarmor-token)
 
 The following table explains the card tokenization services in Clover to help determine your integration with Clover:
 

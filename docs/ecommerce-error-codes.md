@@ -15,10 +15,7 @@ metadata:
 createdAt: "Tue Jun 16 2020 21:34:23 GMT+0000 (Coordinated Universal Time)"
 updatedAt: "Mon Dec 11 2023 16:33:28 GMT+0000 (Coordinated Universal Time)"
 ---
-
-> Available in:
-> - United States
-> - Canada
+# Ecommerce API: Error codes
 
 The Ecommerce API returns error codes and messages when a request contains invalid or incomplete data and Clover cannot process the request. These issues can be divided into two general categories:
 

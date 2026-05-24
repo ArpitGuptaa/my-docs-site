@@ -13,16 +13,13 @@ updatedAt: "Wed Oct 23 2024 11:10:59 GMT+0000 (Coordinated Universal Time)"
 
 <meta name="description" content="Learn how to add the Apple Pay button to the Clover-hosted iframe." />
 
-> **North America — United States and Canada**
+# Add Apple Pay button to the Clover iframe
 
 Your merchants can accept payments through Apple Pay® using the Clover iframe integrations on their ecommerce websites.
 
 # Prerequisites
 
-1. **Validate merchant ecommerce website domain** — Only Clover merchants with a validated ecommerce website domain and subdomain can use the Apple Pay button. For more information, see:
-
-   - [How to verify your ecommerce website domain with Apple Pay](https://docs.clover.com/dev/docs/apple-pay-implementation-options#step-1-verify-your-ecommerce-website-domain-with-apple-pay)
-   - [How to take payments with Apple Pay](https://www.clover.com/help/take-payments-apple-pay)
+1. **Validate merchant ecommerce website domain** — Only Clover merchants with a validated ecommerce website domain and subdomain can use the Apple Pay button. 
 
 2. **Check supported browsers and devices** — Apple Pay services are available on:
 
@@ -38,7 +35,7 @@ Review and follow the guidelines, terms, and conditions:
 
 # Add button for Apple Pay transactions
 
-1. On the [Clover iframe](https://docs.clover.com/dev/docs/clover-iframe-features), use the `paymentRequestButton` element to add a button for Apple Pay transactions.
+1. On the Clover iframe, use the `paymentRequestButton` element to add a button for Apple Pay transactions.
 
    > **Note:** When creating a new `paymentRequestButton`, the payment `amount` (in cents) is required.
 

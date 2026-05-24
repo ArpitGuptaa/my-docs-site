@@ -36,17 +36,11 @@ Clover supports various token types, including card tokens, ACH tokens for bank 
 
 Used to securely store and process credit card information with a unique token. The card token is used for future transactions such as recurring payments and card-not-present (CNP) transactions.
 
-- [See the tutorial](https://docs.clover.com/dev/docs/create-a-card-token)
-- [Use the endpoint](https://docs.clover.com/dev/reference/create-card-token)
-
 ---
 
 ## TransArmor token
 
 Multilayered, end-to-end security safeguards cardholder data at every stage of the payment process using the TransArmor® solution from Fiserv.
-
-- [See the tutorial](https://docs.clover.com/dev/docs/use-transarmor-token)
-- [Use the endpoint](https://docs.clover.com/dev/reference/createcharge)
 
 ---
 
@@ -54,21 +48,9 @@ Multilayered, end-to-end security safeguards cardholder data at every stage of t
 
 Used for processing electronic payments directly from bank accounts. ACH (Automated Clearing House) tokens replace sensitive bank account information with a token for transactions.
 
-- [See the tutorial](https://docs.clover.com/dev/docs/create-an-ach-token)
-- [Use the endpoint](https://docs.clover.com/dev/reference/create-ach-token)
 
 ---
 
 ## Gift card token
 
 Used to manage and process gift card transactions. The gift card number is replaced with a token for activating a gift card, checking balances, and completing transactions.
-
-- [See the tutorial](https://docs.clover.com/dev/docs/create-a-gift-card-token)
-- [Use the endpoint](https://docs.clover.com/dev/reference/create-gift-card-token)
-
-***
-
-# Related topics
-
-- [Blog: Ecommerce Tokenization: Understanding Methods that Keep Card Data Safe](https://medium.com/clover-platform-blog/ecommerce-tokenization-understanding-methods-that-keep-card-data-safe-5dea8e95a3de)
-- [Ecommerce card tokenization](https://docs.clover.com/dev/docs/ecommerce-tokenization)

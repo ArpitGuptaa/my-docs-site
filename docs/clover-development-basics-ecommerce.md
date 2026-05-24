@@ -31,9 +31,8 @@ DS-7173 Sept-25-2024:
 3. Updated create your test app link to the GDP > Create new app topic.
 -->
 
-> **Region:** North America — United States and Canada
 
-## Overview
+# Clover Ecommerce basics
 
 Clover Ecommerce APIs and SDKs are designed to let you build custom apps and integrations that extend the functionality of the Clover platform to support ecommerce operations.
 
@@ -43,13 +42,6 @@ You can build PCI compliant payment integrations using the Clover-hosted iframe 
 
 A [PCI DSS certification](https://www.pcisecuritystandards.org/standards/secure-software/) is required for production use of the API-only integration.
 
-For more information, see:
-
-- [Ecommerce integration types](https://docs.clover.com/docs/ecommerce-integration-types)
-- [Ecommerce API: Accept payments flow](https://docs.clover.com/docs/ecommerce-api-payments-flow)
-- [Clover Ecommerce API webinar](https://youtu.be/SE-tzLNeyT4)
-
----
 
 ## Ecommerce integration types and tools
 
@@ -57,10 +49,10 @@ Apps can integrate with Clover Ecommerce services in various ways, tailored to t
 
 | Integration types and tools | Description | Related topic |
 |---|---|---|
-| Clover Hosted Checkout | Embed the Clover-hosted checkout page into your website for a secure, PCI-compliant, and seamless payment experience. Customize the online shopping experience, such as the checkout page, to match the merchant's brand. | [Hosted Checkout API](https://docs.clover.com/docs/hosted-checkout-api) |
-| Clover-hosted iframe | Embed and customize a Clover-hosted payment form into your website using an inline frame (iframe). The iframe tokenizer securely collects card data and provides an encrypted token as a `source` token for subsequent transactions with the merchant. | [Clover iframe integrations](doc:clover-iframe-integrations) |
-| REST API-only integration | Use Clover APIs for custom integrations that require complete control over the payment flow or to integrate payment processing into existing systems with complex requirements. An API-only integration requires PCI DSS certification and additional services. | [Ecommerce API tutorials](doc:ecommerce-api-tutorials) |
-| Ecommerce plugins | Use Clover payment extensions or plugins with no coding requirements. These plugins facilitate payment processing from websites powered by ecommerce platforms, such as WooCommerce or Adobe Commerce. | [Clover Payment extension for Ecommerce (US and Canada only)](https://docs.clover.com/docs/clover-payment-plugins) |
+| Clover Hosted Checkout | Embed the Clover-hosted checkout page into your website for a secure, PCI-compliant, and seamless payment experience. Customize the online shopping experience, such as the checkout page, to match the merchant's brand. | Hosted Checkout API |
+| Clover-hosted iframe | Embed and customize a Clover-hosted payment form into your website using an inline frame (iframe). The iframe tokenizer securely collects card data and provides an encrypted token as a `source` token for subsequent transactions with the merchant. | Clover iframe integrations|
+| REST API-only integration | Use Clover APIs for custom integrations that require complete control over the payment flow or to integrate payment processing into existing systems with complex requirements. An API-only integration requires PCI DSS certification and additional services. | Ecommerce API tutorials |
+| Ecommerce plugins | Use Clover payment extensions or plugins with no coding requirements. These plugins facilitate payment processing from websites powered by ecommerce platforms, such as WooCommerce or Adobe Commerce. | Clover Payment extension for Ecommerce |
 
 ---
 
@@ -68,19 +60,19 @@ Apps can integrate with Clover Ecommerce services in various ways, tailored to t
 
 As a developer, you can get started with building and testing your Ecommerce app integrations on the Global Developer Dashboard.
 
-1. [Create a global developer account](https://docs.clover.com/docs/gdp-create-global-developer-account).
-2. [Manage test merchant accounts and information](https://docs.clover.com/docs/gdp-manage-test-merchants-accounts).
+1. Create a global developer account.
+2. Manage test merchant accounts and information.
 
-   - [Create your test app](https://docs.clover.com/dev/docs/gdp-create-new-app) and in the App Settings, select the **Enable online payments** checkbox for Ecommerce and then select **Ecommerce Settings**.
-   - [Create public and private API tokens](https://docs.clover.com/dev/docs/create-ecommerce-api-tokens) for your test merchant.
+   - Create your test app and in the App Settings, select the **Enable online payments** checkbox for Ecommerce and then select **Ecommerce Settings**.
+   - Create public and private API tokens for your test merchant.
 
      > **Note:** Test API tokens generated from the sandbox Merchant Dashboard are intended for development and testing only. The `merchantId` and the test API token are required for you to test interactions with Clover Ecommerce API and your ecommerce integrations.
 
-4. Configure [settings](https://docs.clover.com/docs/app-settings) and [permissions](https://docs.clover.com/docs/app-settings#edit-requested-permissions) that your app requires to access Clover merchant data.
+4. Configure settings and permissions that your app requires to access Clover merchant data.
 5. Test your app integration in the sandbox environment to simulate different settings and scenarios, including the steps to authenticate and authorize.
 6. Generate an OAuth token to complete the Ecommerce API authorization flow.
-7. Tokenize customer [cards](https://docs.clover.com/dev/reference/create-card-token) or [gift cards](https://docs.clover.com/dev/reference/create-gift-card-token) using the Clover Ecommerce API and then complete the steps to [create a charge](https://docs.clover.com/dev/reference/createcharge) or [pay for an order](https://docs.clover.com/dev/reference/postordersidpay).
+7. Tokenize customer cards or gift cards using the Clover Ecommerce API and then complete the steps to create a charge or pay for an order.
 8. Recreate your tested app in the production environment by following steps similar to those in the sandbox environment.
-9. Use your [approved developer account](https://docs.clover.com/docs/approval) in the production environment to submit your app integration for approval.
+9. Use your approved developer account in the production environment to submit your app integration for approval.
 
 ---
