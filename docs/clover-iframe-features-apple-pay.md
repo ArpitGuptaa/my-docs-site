@@ -41,80 +41,83 @@ Review and follow the guidelines, terms, and conditions:
 
 2. Use specific size properties for the Apple Pay payment button:
 
-   - `display: inline-block;`
-   - `background-size: 100% 60%;`
-   - `background-repeat: no-repeat;`
-   - `background-position: 50% 50%;`
-   - `border-radius: 5px;`
-   - `padding: 0px;`
-   - `box-sizing: border-box;`
-   - Default width: `300px (min-width: 200px;)`
-   - Default height: `40px (min-height: 32px;)(max-height: 64px;)`
-   - Values for `max-width` and `max-height` are set by the width and height of the `<div>` container you use for mounting the `paymentRequestButton` (`<div id="payment-request-button"></div>`).
+    - `display: inline-block;`
+    - `background-size: 100% 60%;`
+    - `background-repeat: no-repeat;`
+    - `background-position: 50% 50%;`
+    - `border-radius: 5px;`
+    - `padding: 0px;`
+    - `box-sizing: border-box;`
+    - Default width: `300px (min-width: 200px;)`
+    - Default height: `40px (min-height: 32px;)(max-height: 64px;)`
+    - Values for `max-width` and `max-height` are set by the width and height of the `<div>` container you use for mounting the `paymentRequestButton` (`<div id="payment-request-button"></div>`).
 
 3. Use a wrapper for the custom view.
 
-```javascript
-// Sample payment amount
-const applePayRequest = clover.createApplePaymentRequest({
-  amount: 1290,
-  countryCode: 'CA',
-  currencyCode: 'USD'
-});
+  ```
 
-// By default USD and US, amounts should be sent in cents.
-// Example:
+  // Sample payment amount
+  const applePayRequest = clover.createApplePaymentRequest({
+    amount: 1290,
+    countryCode: 'CA',
+    currencyCode: 'USD'
+  });
 
-const applePayRequest = clover.createApplePaymentRequest({
-  amount: 1290
-});
+  // By default USD and US, amounts should be sent in cents.
+  // Example:
 
-// Example response:
-{
-  "countryCode": "US",
-  "currencyCode": "USD",
-  "merchantCapabilities": ["supports3DS", "supportsEMV"],
-  "supportedNetworks": ["visa", "masterCard", "amex", "discover"],
-  "total": {
-    "label": "Amount to be charged",
-    "type": "final",
-    "amount": "12.90"
-  },
-  "requiredShippingContactFields": ["email"],
-  "requiredBillingContactFields": ["postalAddress", "name"]
-}
+  const applePayRequest = clover.createApplePaymentRequest({
+    amount: 1290
+  });
 
-// Create paymentRequestButton & mount to <div> container
-const paymentRequestAppleButton = elements.create(
-  'PAYMENT_REQUEST_BUTTON_APPLE_PAY',
+  // Example response:
   {
-    applePaymentRequest: applePayRequest,
-    sessionIdentifier: '{clover merchant uuid/clover app uuid}'
+    "countryCode": "US",
+    "currencyCode": "USD",
+    "merchantCapabilities": ["supports3DS", "supportsEMV"],
+    "supportedNetworks": ["visa", "masterCard", "amex", "discover"],
+    "total": {
+      "label": "Amount to be charged",
+      "type": "final",
+      "amount": "12.90"
+    },
+    "requiredShippingContactFields": ["email"],
+    "requiredBillingContactFields": ["postalAddress", "name"]
   }
-);
 
-/*
-Note:
-If merchants register their domains in the Merchant Dashboard,
-they are required to pass merchant uuid.
+  // Create paymentRequestButton & mount to <div> container
+  const paymentRequestAppleButton = elements.create(
+    'PAYMENT_REQUEST_BUTTON_APPLE_PAY',
+    {
+      applePaymentRequest: applePayRequest,
+      sessionIdentifier: '{clover merchant uuid/clover app uuid}'
+    }
+  );
 
-If developers register their domains through the developer_app
-settings on the Developer Dashboard, they are required to pass
-developer_app uuid.
-*/
+  /*
+  Note:
+  If merchants register their domains in the Merchant Dashboard,
+  they are required to pass merchant uuid.
 
-paymentRequestAppleButton.mount('#{apple-div}');
+  If developers register their domains through the developer_app
+  settings on the Developer Dashboard, they are required to pass
+  developer_app uuid.
+  */
 
-// Note:
-// #{apple-div} is an element ID where a button will be mounted
+  paymentRequestAppleButton.mount('#{apple-div}');
 
-// Use the following method if you update the amount during the session:
-clover.updateApplePaymentRequest({
-  amount: 2400,
-  countryCode: 'US',
-  currencyCode: 'USD'
-});
+  // Note:
+  // #{apple-div} is an element ID where a button will be mounted
 
-// Note:
-// Pass the same country and currency codes that are used
-// during the initial request creation.
+  // Use the following method if you update the amount during the session:
+  clover.updateApplePaymentRequest({
+    amount: 2400,
+    countryCode: 'US',
+    currencyCode: 'USD'
+  });
+
+  // Note:
+  // Pass the same country and currency codes that are used
+  // during the initial request creation.
+
+```
