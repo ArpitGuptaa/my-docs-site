@@ -9,7 +9,6 @@ nav:
   - Ecommerce tokenization overview: ecommerce-tokenization-overview.md
   - Error codes: ecommerce-error-codes.md
   - Compliance webhooks for Clover payments plugin: clover-payments-plugin-shopify-webhooks.md
-  - Apple Pay button to the Clover iframe: clover-iframe-features-apple-pay.md
   - Capture a charge: capture-a-charge-tutorial.md
 
 markdown_extensions:
