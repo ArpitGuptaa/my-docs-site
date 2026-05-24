@@ -17,7 +17,7 @@ updatedAt: "Mon Dec 11 2023 16:33:28 GMT+0000 (Coordinated Universal Time)"
 ---
 # Error codes
 
-The Ecommerce API returns error codes and messages when a request contains invalid or incomplete data and Clover cannot process the request. These issues can be divided into two general categories:
+The Ecommerce API returns error codes and messages when a request contains invalid or incomplete data and server cannot process the request. These issues can be divided into two general categories:
 
 - Errors that should be addressed by your app's logic (if you are integrating with the API only)
 - Errors that should be handled at runtime (iframe and API integrations)
@@ -43,7 +43,7 @@ These errors can be handled at runtime and may be encountered by any Ecommerce a
 
 | Error code | Description | Request type | Next steps |
 | :--- | :--- | :--- | :--- |
-| `amount_too_large` | The `amount` provided exceeds the amount allowed by Clover ($999,999.99) | Create charge and pay for order | If possible, split the charge or order into smaller amounts and retry as two transactions. If the customer's `source` token is single-use, the card will need to be tokenized again before attempting a second request when the first succeeds. |
+| `amount_too_large` | The `amount` provided exceeds the amount allowed ($999,999.99). | Create charge and pay for order | If possible, split the charge or order into smaller amounts and retry as two transactions. If the customer's `source` token is single-use, the card will need to be tokenized again before attempting a second request when the first succeeds. |
 | `card_declined` | The `source` provided was declined by the payment gateway | Create charge and pay for order | Allow the customer to enter a different card and retry the request with the new `source` |
 | `card_on_file_missing` | The customer attempting to pay does not have a `source` on file to complete the payment | Charge | Direct the customer to enter their card information and update the customer's record with the new `source`. Then, retry the original charge request. |
 | `charge_already_captured` | The `charge` provided has already been captured | Capture charge | Do not retry the request |
@@ -53,7 +53,7 @@ These errors can be handled at runtime and may be encountered by any Ecommerce a
 | `incorrect_cvc` | The `card.cvv` provided is not a three- or four-digit value | Token | Notify the customer of the issue and allow them to retry by entering a new card |
 | `incorrect_number` | The value provided in `card.number` is not valid | Token | Notify the customer of the issue and allow them to retry by entering a new card |
 | `invalid_card_type` | The `card.brand` provided is not a recognized value | Token | Before sending the request, verify that the `brand` is one of the enumerated values |
-| `invalid_charge_amount` | The `amount` provided exceeds the amount allowed by Clover | Charge | If possible, split the charge or order into smaller amounts and retry as two transactions. If the customer's `source` token is single-use, the card will need to be tokenized again before attempting a second request when the first succeeds. |
+| `invalid_charge_amount` | The `amount` provided exceeds the amount allowed. | Charge | If possible, split the charge or order into smaller amounts and retry as two transactions. If the customer's `source` token is single-use, the card will need to be tokenized again before attempting a second request when the first succeeds. |
 | `invalid_request` | The value provided in `card.number` is not a valid raw or encrypted PAN | Token | Notify the customer of the issue and allow them to retry by entering a new card |
 | `invalid_tip_amount` | The `tip_amount` provided is not a valid amount | Create charge and pay for order | Notify the customer of the issue and allow them to retry by entering a new tip amount |
 | `invalid_tax_amount` | The `tax_amount` provided is not a valid amount | Create charge | Check that the amount is a positive number and, if the value has changed after the check, retry the request |

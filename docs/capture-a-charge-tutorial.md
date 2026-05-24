@@ -1,6 +1,6 @@
 ---
 title: "Capture a charge"
-slug: "capture-a-charge-tutorial"
+slug: "capture-a-charge"
 excerpt: ""
 hidden: false
 metadata: 
@@ -40,7 +40,7 @@ Request and response samples when running Capture a charge:
 
 ```curl cURL Request
 curl --request POST \
-     --url' https://scl-sandbox.dev.clover.com/v1/charges/chargeId/capture' \
+     --url' {{URL}}/v1/charges/chargeId/capture' \
      --header 'Accept: application/json' \
      --header 'Authorization: Bearer ab86a5e8-48f3-b3bd-8c45-d415e9867833' \
      --header 'Content-Type: application/json'

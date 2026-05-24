@@ -22,34 +22,27 @@ These tokens are randomly generated when a customer provides their payment infor
 # Advantages of tokenization
 
 - **Enhanced security** — Tokens prevent the exposure of sensitive data during transactions.
-- **PCI DSS compliance** — Tokenization helps merchants meet [Payment Card Industry Data Security Standard (PCI DSS)](https://www.clover.com/ca/small-business-resources/pci-compliance) requirements, reducing the scope and cost of compliance efforts.
+- **PCI DSS compliance** — Tokenization helps merchants meet Payment Card Industry Data Security Standard (PCI DSS) requirements, reducing the scope and cost of compliance efforts.
 - **Secure storage** — Merchants can store tokens without risking customer account numbers or other sensitive data.
 - **Fraud prevention** — Third parties can't reverse-engineer tokens to obtain payment information.
 - **Improved authorization rates** — Payment tokens can enhance gateway payment authorization rates, leading to fewer declined transactions.
 - **Recurring payments** — Tokenization supports subscription billing and uninterrupted service for subscription-based businesses.
 
-# Clover Ecommerce token types
+# Ecommerce token types
 
-Clover supports various token types, including card tokens, ACH tokens for bank transactions, and gift card tokens.
+There are various types of token, including card tokens, ACH tokens for bank transactions, and gift card tokens.
 
 ## Card token
 
 Used to securely store and process credit card information with a unique token. The card token is used for future transactions such as recurring payments and card-not-present (CNP) transactions.
 
----
-
 ## TransArmor token
 
 Multilayered, end-to-end security safeguards cardholder data at every stage of the payment process using the TransArmor® solution from Fiserv.
 
----
-
 ## ACH token
 
 Used for processing electronic payments directly from bank accounts. ACH (Automated Clearing House) tokens replace sensitive bank account information with a token for transactions.
-
-
----
 
 ## Gift card token
 
