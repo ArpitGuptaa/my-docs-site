@@ -150,3 +150,55 @@ The following table describes the possible responses when running the capture a 
   ]
 }
 [/block]
+---
+title: "Capture a charge"
+slug: "capture-a-charge-tutorial"
+excerpt: ""
+hidden: false
+metadata:
+  description: "Use the capture a charge endpoint to retrieve details of an existing charge, previously created using the create a charge endpoint."
+  image: []
+  robots: "index"
+createdAt: "Mon Jul 18 2022 23:18:36 GMT+0000 (Coordinated Universal Time)"
+updatedAt: "Mon Dec 11 2023 16:33:27 GMT+0000 (Coordinated Universal Time)"
+---
+
+> Available in:
+> - United States
+> - Canada
+
+Use the [Capture a charge](ref:capturecharge) endpoint to retrieve details of an existing charge, previously created using the [Create a charge](ref:createcharge) endpoint.
+
+To return a charge, use the charge identifier (`chargeId`) from the create a charge request. `chargeId` also returns when a charge is first created or refunded.
+
+## Path parameters
+
+Path parameter to use when capturing a charge:
+
+| Object | Type | Description | Required |
+|---|---|---|---|
+| `chargeId` | string | Universally unique identifier (UUID) of the charge. | Required |
+
+## Body parameters
+
+Body parameters to use when capturing a charge:
+
+| Object | Type | Description |
+|---|---|---|
+| `amount` | int64 | Charge amount in the smallest monetary unit of the merchant's currency. If you do not specify an amount, the total of the original charge is captured.<br><br>Format: Cents |
+| `receipt_email` | string | Email address to which the charge receipt is sent. This value overrides any previously-specified email address for the charge.<br><br>**Note:** Receipts are not sent in the sandbox environment. |
+| `level2` | object | Additional data for purchase card transactions (US only). See [Level 2 data](doc:understanding-level-2-data). |
+
+## Request and response examples
+
+Request and response samples when running [Capture a charge](ref:capturecharge):
+
+### cURL Request
+
+```bash
+curl --request POST \
+  --url 'https://scl-sandbox.dev.clover.com/v1/charges/chargeId/capture' \
+  --header 'Accept: application/json' \
+  --header 'Authorization: Bearer ab86a5e8-48f3-b3bd-8c45-d415e9867833' \
+  --header 'Content-Type: application/json' \
+  --header 'x-forwarded-for: {client_ip}'
