@@ -4,6 +4,7 @@ theme:
   name: material
 
 nav:
+  - About me: index.md
   - Value of savings: why-savings-matter.md
   - Integrate Clover payments plugin with Shopify: integrate-clover-payments-plugin-with-shopify-online-shop.md
   - Ecommerce tokenization overview: ecommerce-tokenization-overview.md
