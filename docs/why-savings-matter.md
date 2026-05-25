@@ -5,7 +5,7 @@ excerpt: ""
 hidden: false
 ---
 
-# Value of savings for the Indian middle class families
+# Value of savings for the Indian middle class families (self-created article)
 
 Savings are not only about setting aside money for the future. For a middle-class family in India, savings provide financial security, stability during emergencies, support for long-term goals, and peace of mind. Rising inflation, healthcare costs, education expenses, and uncertain economic conditions make savings an essential part of financial planning.
 
