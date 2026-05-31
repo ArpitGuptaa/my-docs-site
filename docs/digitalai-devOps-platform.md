@@ -339,7 +339,7 @@ A typical deployment creates:
 | Amazon EFS File Systems    | 1        |
 | Elastic IP Addresses       | 1        |
 
-*Note**: Production environments may require additional capacity.
+**Note**: Production environments may require additional capacity.
 
 # Additional Resources
 
