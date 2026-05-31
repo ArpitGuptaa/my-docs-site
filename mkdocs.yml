@@ -4,7 +4,7 @@ theme:
   name: material
 
 nav:
-  - About me: index.md
+  - About Me: index.md
   - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
   - Value of Savings: why-savings-matter.md
   - Deploy Digitalai DevOps Platform on AWS: digitalai-devOps-platform.md
