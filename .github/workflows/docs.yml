@@ -30,6 +30,10 @@ jobs:
           args: >
             --verbose
             --no-progress
+            --exclude "accounts.shopify.com"
+            --exclude "abdm.gov.in"
+            --exclude "financialeducation.rbi.org.in"
+            --exclude "epfindia.gov.in"
             docs/**/*.md
 
       # Install Python
