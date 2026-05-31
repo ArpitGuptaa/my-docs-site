@@ -38,7 +38,7 @@ Body parameters to use when capturing a charge:
 
 Request and response samples when running Capture a charge:
 
-```curl cURL Request
+```
 curl --request POST \
      --url' {{URL}}/v1/charges/chargeId/capture' \
      --header 'Accept: application/json' \
