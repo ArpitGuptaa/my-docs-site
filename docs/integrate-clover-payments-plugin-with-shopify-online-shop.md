@@ -15,23 +15,23 @@ updatedAt: "Thu Oct 17 2024 04:05:47 GMT+0000 (Coordinated Universal Time)"
 
 To integrate the Clover Payments plugin with a Clover merchant's Shopify Online Shop, note the following:
 
-- **Clover merchants**: The free Clover Payments plugin is available for Clover merchants. On the Clover Merchant Dashboard, a merchant:
+  - The free Clover Payments plugin is available for Clover merchants. On the Clover Merchant Dashboard, a merchant:
   - Can have multiple merchantIds but can associate only one merchantId with one or more Shopify Online Shops.
   - Can only create a Shopify Online Shop for a specific country and its currency.
 
   The merchant's Clover account agreement determines the charges for transactions. Shopify does not support surcharging; hence, only Clover merchants who do not support surcharging can connect with a Shopify Online Shop.
 
-- **Card networks**: Merchants with Shopify Online Shops must select the same card networks on Shopify to ensure a seamless payment transaction process. In case of any changes, Clover communicates the card network settings and updates to Shopify so they can apply the same settings.
+- Merchants with Shopify Online Shops must select the same card networks on Shopify to ensure a seamless payment transaction process. In case of any changes, Clover communicates the card network settings and updates to Shopify so they can apply the same settings.
 
-- **Best practices**: Review the best practices and recommendations and for additional information.
+- Review the best practices and recommendations and for additional information.
 
 ## Video Overview
 
 ### Learn how to:
 
-- Install and activate the Clover Payments plugin
-- Connect the Clover Payments for Shopify plugin with a merchant
-- Place an order on the Shopify Online Shop and pay with the Clover Payments plugin
+- Install and activate the Clover Payments plugin.
+- Connect the Clover Payments for Shopify plugin with a merchant.
+- Place an order on the Shopify Online Shop and pay with the Clover Payments plugin.
 
 ### Demo Video
 
