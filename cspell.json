@@ -1,0 +1,17 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "MkDocs",
+    "GitHub",
+    "DevOps",
+    "OpenAPI",
+    "Kubernetes",
+    "GenAI",
+    "Agentic"
+  ],
+  "ignorePaths": [
+    "site/**",
+    ".git/**"
+  ]
+}
