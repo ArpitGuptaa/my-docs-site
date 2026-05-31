@@ -39,13 +39,13 @@ To integrate the Clover Payments plugin with a Clover merchant's Shopify Online 
 
 # Prerequisites
 
-1. Clover merchant account with the Owner role and a Clover `merchantId`.
+- Clover merchant account with the Owner role and a Clover `merchantId`.
 
-   **Note:** Surcharge-enabled merchantId cannot be connected to a Shopify Online Shop.
+- Shopify Online Shop for the Clover merchant.
 
-2. Shopify Online Shop for the Clover merchant.
+# Steps
 
-# 1. Install the Clover Payments plugin
+## 1. Install the Clover Payments plugin
 
 1. Log in to your [Shopify Online Store account](https://accounts.shopify.com/lookup?rid=c5483bbc-2be4-41fb-99ce-6d3189b439f9&verify=1707130110-NDU4MzUzZDg5NDk1MDFjYjg3ZWRjMGI1NDdkNWM4Y2RjNWJlMGMzZmU1N2RkOTcxYzhkOWRiOWQzMmEwNDllYw).
 
@@ -71,14 +71,14 @@ To integrate the Clover Payments plugin with a Clover merchant's Shopify Online 
 
 9. Log in to your Merchant Dashboard and complete the steps to connect the Clover Payments plugin with a merchant.
 
-# 2. Connect the Clover Payments plugin with a merchant
+## 2. Connect the Clover Payments plugin with a merchant
 
 On the Clover Merchant Dashboard, select the merchant to integrate the Clover Payments plugin with the Shopify Online Shop.
 
 1. Log in to the Clover Merchant Dashboard.
 
    ![Clover Merchant Dashboard: Select a Merchant page](https://files.readme.io/9facbc4-Select-merchant.png)
-
+   
 2. From the Merchant column, click a merchant.
 
    ![Merchant Dashboard > More Tools > Clover Payments for Shopify plugin > Connect button](https://files.readme.io/e68e747-05-ConnectPlugin.png)
@@ -90,7 +90,7 @@ On the Clover Merchant Dashboard, select the merchant to integrate the Clover Pa
 4. Click **Connect** and reselect the merchant's name.
 
    **Note:** The page displays all the card network brands associated with merchant ID during onboarding. Merchants with Shopify Online Shops must select the same card networks on Shopify to ensure a seamless payment transaction process.
-
+   
    ![Clover Merchant Dashboard: Review credit card networks](https://files.readme.io/eff2cca-image.png)
 
 5. Review the information and click **Confirm**.
