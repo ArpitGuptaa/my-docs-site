@@ -2,7 +2,7 @@
 
 ## Senior Lead Technical Writer | API Documentation Specialist | Docs-as-Code Advocate
 
-Building scalable, developer-focused documentation experiences for AI platforms, APIs, SaaS products, cloud-native applications, and enterprise software.
+Building scalable, developer-focused documentation experiences for AI platforms, Fintech, Mortgage and Investment, IoT devices, APIs, SaaS products, cloud-native applications, and enterprise software.
 
 With 11+ years of experience in technical communication, I specialize in transforming complex technical systems into clear, structured, and user-centric documentation that improves developer onboarding, accelerates product adoption, and enhances customer self-service.
 
