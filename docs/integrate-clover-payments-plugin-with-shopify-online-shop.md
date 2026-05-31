@@ -37,21 +37,19 @@ To integrate the Clover Payments plugin with a Clover merchant's Shopify Online 
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/HtCaejo_Xqs?si=SdIf0P_DyOPfUbXk" title="Clover Payments plugin: Demo video" frameborder="0" allowfullscreen></iframe>
 
-# Prerequisites
+## Prerequisites
 
 - Clover merchant account with the Owner role and a Clover `merchantId`.
 
 - Shopify Online Shop for the Clover merchant.
 
-# Steps
+## Steps
 
-## 1. Install the Clover Payments plugin
+### 1. Install the Clover Payments plugin
 
 1. Log in to your [Shopify Online Store account](https://accounts.shopify.com/lookup?rid=c5483bbc-2be4-41fb-99ce-6d3189b439f9&verify=1707130110-NDU4MzUzZDg5NDk1MDFjYjg3ZWRjMGI1NDdkNWM4Y2RjNWJlMGMzZmU1N2RkOTcxYzhkOWRiOWQzMmEwNDllYw).
 
 2. Click **Settings** > **Payments**.
-
-   **Note:** Click test payment provider to use the Bogus Gateway to test a payment provider.
 
 3. In the Payment providers section, click **Choose a provider**.
 
@@ -65,7 +63,7 @@ To integrate the Clover Payments plugin with a Clover merchant's Shopify Online 
 
 8. Log in to your Merchant Dashboard and complete the steps to connect the Clover Payments plugin with a merchant.
 
-## 2. Connect the Clover Payments plugin with a merchant
+### 2. Connect the Clover Payments plugin with a merchant
 
 On the Clover Merchant Dashboard, select the merchant to integrate the Clover Payments plugin with the Shopify Online Shop.
 1. Log in to the Clover Merchant Dashboard.
@@ -74,10 +72,10 @@ On the Clover Merchant Dashboard, select the merchant to integrate the Clover Pa
 
 3. Click **Connect**.
 
-4. Click **Connect** and reselect the merchant's name.
+4. Click **Connect** and reselect the merchant's name.  
 
-   **Note:** The page displays all the card network brands associated with merchant ID during onboarding. Merchants with Shopify Online Shops must select the same card networks on Shopify to ensure a seamless payment transaction process.
+      **Note:** The page displays all the card network brands associated with merchant ID during onboarding. Merchants with Shopify Online Shops must select the same card networks on Shopify to ensure a seamless payment transaction process.
 
-5. Review the information and click **Confirm**.
+5. Review the information and click **Confirm**.  
 
-   **Note:** To integrate the Clover Payments plugin with another business's Shopify Online Shop, click **Choose your business**. Search for and select another merchant on the Select a Merchant page.
+      **Note:** To integrate the Clover Payments plugin with another business's Shopify Online Shop, click **Choose your business**. Search for and select another merchant on the Select a Merchant page.
