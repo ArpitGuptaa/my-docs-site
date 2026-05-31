@@ -16,6 +16,14 @@ jobs:
       - name: Checkout Files
         uses: actions/checkout@v4
 
+      - name: Run CSpell
+        uses: streetsidesoftware/cspell-action@v6
+        with:
+          files: "**/*.md"
+
+      - name: Run Vale
+        uses: errata-ai/vale-action@v2
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
