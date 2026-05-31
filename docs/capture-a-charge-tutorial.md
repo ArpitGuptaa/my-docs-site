@@ -11,7 +11,7 @@ createdAt: "Mon Jul 18 2022 23:18:36 GMT+0000 (Coordinated Universal Time)"
 updatedAt: "Mon Dec 11 2023 16:33:27 GMT+0000 (Coordinated Universal Time)"
 ---
 
-# Capture a charge
+# Capture a charge (API)
 
 Use the Capture a charge endpoint to retrieve details of an existing charge, previously created using the Create a charge endpoint. To return a charge, use the charge identifier (chargeId) from the create a charge request. `ChargeId` also returns when a charge is first created or refunded.
 
@@ -80,7 +80,7 @@ curl --request POST \
 
 ```
 
-## Responses
+## Response parameters
 
 The following table describes the possible responses when running the capture a charge endpoint:
 
