@@ -45,6 +45,8 @@ To integrate the Clover Payments plugin with a Clover merchant's Shopify Online 
 
 ## Steps
 
+Use the following steps to integrate plugin:
+
 ### 1. Install the Clover Payments plugin
 
 1. Log in to your [Shopify Online Store account](https://accounts.shopify.com/lookup?rid=c5483bbc-2be4-41fb-99ce-6d3189b439f9&verify=1707130110-NDU4MzUzZDg5NDk1MDFjYjg3ZWRjMGI1NDdkNWM4Y2RjNWJlMGMzZmU1N2RkOTcxYzhkOWRiOWQzMmEwNDllYw).
