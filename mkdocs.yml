@@ -6,7 +6,7 @@ theme:
 nav:
   - About me: index.md
   - Value of savings: why-savings-matter.md
-  - Deploy Digital.ai DevOps Platform on AWS: Digital.ai-DevOps-Platform-on-the-AWS-Cloud.md
+  - Deploy Digital.ai DevOps Platform on AWS: digitalai-devOps-platform.md
   - Integrate Clover payments plugin with Shopify: integrate-clover-payments-plugin-with-shopify-online-shop.md
   - Ecommerce tokenization overview: ecommerce-tokenization-overview.md
   - Error codes: ecommerce-error-codes.md

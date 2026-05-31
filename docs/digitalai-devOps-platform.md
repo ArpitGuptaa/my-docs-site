@@ -1,11 +1,9 @@
 ---
 title: "Deploy Digital.ai DevOps Platform on AWS"
-slug: "Digitalai-DevOps-Platform-on-the-AWS-Cloud.md"
+slug: "digitalai-devOps-platform"
 excerpt: ""
 hidden: true
 ---
-
-
 
 # Deploy Digital.ai DevOps Platform on AWS
 
