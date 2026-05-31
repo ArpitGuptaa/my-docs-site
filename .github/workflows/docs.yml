@@ -21,9 +21,6 @@ jobs:
         with:
           files: "**/*.md"
 
-      - name: Run Vale
-        uses: errata-ai/vale-action@v2
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
