@@ -30,7 +30,6 @@ jobs:
           args: >
             --verbose
             --no-progress
-            --exclude-file .lycheeignore
             docs/**/*.md
 
       # Install Python
