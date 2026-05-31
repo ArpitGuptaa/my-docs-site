@@ -13,23 +13,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout repository
       - name: Checkout Files
         uses: actions/checkout@v4
 
+      # Spell checking
       - name: Run CSpell
         uses: streetsidesoftware/cspell-action@v6
         with:
           files: "**/*.md"
 
+      # Markdown linting
+      - name: Run Markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: |
+            docs/**/*.md
+            README.md
+
+      # Broken link checking
+      - name: Run Lychee Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --verbose
+            --no-progress
+            docs/**/*.md
+
+      # Install Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: "3.11"
 
+      # Install MkDocs
       - name: Install MkDocs
         run: |
           pip install mkdocs mkdocs-material
 
+      # Deploy documentation site
       - name: Deploy Website
         run: |
           mkdocs gh-deploy --force
