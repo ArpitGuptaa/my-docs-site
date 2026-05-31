@@ -1,4 +1,4 @@
-https://accounts.shopify.com/*
-https://abdm.gov.in/*
-https://financialeducation.rbi.org.in/*
-https://www.epfindia.gov.in/*
+accounts.shopify.com
+abdm.gov.in
+financialeducation.rbi.org.in
+epfindia.gov.in
