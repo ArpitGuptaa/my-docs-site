@@ -1,5 +1,5 @@
 ---
-title: "Capture a charge"
+title: "Capture a charge (API)"
 slug: "capture-a-charge"
 excerpt: ""
 hidden: false
