@@ -55,43 +55,28 @@ To integrate the Clover Payments plugin with a Clover merchant's Shopify Online 
 
 3. In the Payment providers section, click **Choose a provider**.
 
-   ![Shopify Online Shop: Payments > Choose a provider](https://files.readme.io/20c0d09-01-ChooseProvider.png)
-
 4. Enter **Clover** in the **Filter third-party payment** field and click the search icon.
 
 5. Click **Clover Payments** and then click **Install**.
 
-6. Review or add information as needed.
+6. Click **Install**.
 
-7. Click **Install**.
+7. Click **Manage Account**.
 
-8. Click **Manage Account**.
-
-   ![Clover Payments: Manage Account](https://files.readme.io/1bfa344-CloverPaymentsInstalled.png)
-
-9. Log in to your Merchant Dashboard and complete the steps to connect the Clover Payments plugin with a merchant.
+8. Log in to your Merchant Dashboard and complete the steps to connect the Clover Payments plugin with a merchant.
 
 ## 2. Connect the Clover Payments plugin with a merchant
 
 On the Clover Merchant Dashboard, select the merchant to integrate the Clover Payments plugin with the Shopify Online Shop.
-
 1. Log in to the Clover Merchant Dashboard.
-
-   ![Clover Merchant Dashboard: Select a Merchant page](https://files.readme.io/9facbc4-Select-merchant.png)
    
-2. From the Merchant column, click a merchant.
-
-   ![Merchant Dashboard > More Tools > Clover Payments for Shopify plugin > Connect button](https://files.readme.io/e68e747-05-ConnectPlugin.png)
+2. From the Merchant column, select a merchant.
 
 3. Click **Connect**.
-
-   ![Pricing & Subscription Information pop-up](https://files.readme.io/0a85f50-06-Subscribe.png)
 
 4. Click **Connect** and reselect the merchant's name.
 
    **Note:** The page displays all the card network brands associated with merchant ID during onboarding. Merchants with Shopify Online Shops must select the same card networks on Shopify to ensure a seamless payment transaction process.
-   
-   ![Clover Merchant Dashboard: Review credit card networks](https://files.readme.io/eff2cca-image.png)
 
 5. Review the information and click **Confirm**.
 
