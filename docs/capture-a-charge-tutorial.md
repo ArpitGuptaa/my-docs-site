@@ -38,6 +38,8 @@ Body parameters to use when capturing a charge:
 
 Request and response samples when running Capture a charge:
 
+**Request sample**
+
 ```
 curl --request POST \
      --url' {{URL}}/v1/charges/chargeId/capture' \
@@ -45,8 +47,13 @@ curl --request POST \
      --header 'Authorization: Bearer ab86a5e8-48f3-b3bd-8c45-d415e9867833' \
      --header 'Content-Type: application/json'
      --header 'x-forwarded-for: {client_ip}' \
+
 ```
-```json JSON Response
+
+**Response sample**
+
+```
+
 {
   "id": "1AB2CDEF3G4H",
   "amount": 10,
@@ -70,6 +77,7 @@ curl --request POST \
     "last4": "1234"
   }
   }
+
 ```
 
 ## Responses
