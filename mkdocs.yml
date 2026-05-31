@@ -5,13 +5,14 @@ theme:
 
 nav:
   - About me: index.md
+  - Generative AI vs. Agentic AI vs. Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
   - Value of savings: why-savings-matter.md
   - Deploy Digitalai DevOps Platform on AWS: digitalai-devOps-platform.md
-  - Integrate Clover payments plugin with Shopify: integrate-clover-payments-plugin-with-shopify-online-shop.md
-  - Ecommerce tokenization overview: ecommerce-tokenization-overview.md
-  - Error codes: ecommerce-error-codes.md
-  - Compliance webhooks for Clover payments plugin: clover-payments-plugin-shopify-webhooks.md
   - Capture a charge: capture-a-charge-tutorial.md
+  - Error codes: ecommerce-error-codes.md
+  - Ecommerce tokenization overview: ecommerce-tokenization-overview.md
+  - Integrate Clover payments plugin with Shopify: integrate-clover-payments-plugin-with-shopify-online-shop.md
+  - Compliance webhooks for Clover payments plugin: clover-payments-plugin-shopify-webhooks.md
 
 markdown_extensions:
   - admonition
