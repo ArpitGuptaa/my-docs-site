@@ -60,6 +60,16 @@ Agentic AI works by understanding a goal, planning the required actions, using t
 
 Agent platforms provide the infrastructure required to build, deploy, manage, and govern AI agents at scale. Instead of creating agents from scratch, organizations use agent platforms to connect AI models with tools, workflows, enterprise applications, and data sources. An agent platform acts as the operating environment for AI agents.
 
+**Agent platforms based applications**
+
+* Microsoft Copilot Studio
+* LangGraph
+* CrewAI
+* AutoGen
+* N8N
+* Zapier AI
+* Salesforce Agentforce
+
 ### How It Works
 
 An Agent Platform provides the foundation for AI agents to operate. It connects agents with tools, data sources, and enterprise systems, while managing workflows, memory, security, and execution to achieve business goals at scale.
@@ -70,16 +80,6 @@ An Agent Platform provides the foundation for AI agents to operate. It connects 
 - Workflow Orchestration
 - Memory Management
 - Governance and Monitoring
-
-**Agent platforms based applications**
-
-* Microsoft Copilot Studio
-* LangGraph
-* CrewAI
-* AutoGen
-* N8N
-* Zapier AI
-* Salesforce Agentforce
 
 # Comparison
 
