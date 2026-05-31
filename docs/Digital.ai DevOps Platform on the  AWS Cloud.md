@@ -1,3 +1,12 @@
+---
+title: "Deploy Digital.ai DevOps Platform on AWS"
+slug: "Digitalai-DevOps-Platform-on-the-AWS-Cloud.md"
+excerpt: ""
+hidden: true
+---
+
+
+
 # Deploy Digital.ai DevOps Platform on AWS
 
 This guide explains the architecture, prerequisites, deployment options, configuration requirements, and validation steps for a successful deployment.
