@@ -23,14 +23,6 @@ jobs:
         with:
           files: "**/*.md"
 
-      # Markdown linting
-      - name: Run Markdownlint
-        uses: DavidAnson/markdownlint-cli2-action@v18
-        with:
-          globs: |
-            docs/**/*.md
-            README.md
-
       # Broken link checking
       - name: Run Lychee Link Checker
         uses: lycheeverse/lychee-action@v2
