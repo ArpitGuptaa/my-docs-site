@@ -27,7 +27,7 @@ Generative AI creates new content based on patterns learned from training data. 
 
 A user provides a prompt, and an LLM processes that prompt to generate an output. Once the output is generated, the interaction typically ends unless the user provides another instruction.
 
-### Key features
+### Key Features
 
 - Content creation
 - Software development
@@ -49,7 +49,7 @@ Agentic AI extends Generative AI by adding reasoning, planning, decision-making,
 
 Agentic AI works by understanding a goal, planning the required actions, using tools to execute those actions, and evaluating the results. It can adjust its approach and repeat the process until the objective is achieved with minimal human intervention.
 
-### Key features
+### Key Features
 
 - Business Process Automation
 - Research and Analysis
@@ -60,14 +60,18 @@ Agentic AI works by understanding a goal, planning the required actions, using t
 
 Agent platforms provide the infrastructure required to build, deploy, manage, and govern AI agents at scale. Instead of creating agents from scratch, organizations use agent platforms to connect AI models with tools, workflows, enterprise applications, and data sources. An agent platform acts as the operating environment for AI agents.
 
-### Key features
+### How It Works
+
+An Agent Platform provides the foundation for AI agents to operate. It connects agents with tools, data sources, and enterprise systems, while managing workflows, memory, security, and execution to achieve business goals at scale.
+
+### Key Features
 
 - Tool Integration
 - Workflow Orchestration
 - Memory Management
 - Governance and Monitoring
 
-### Agent platforms based applications
+**Agent platforms based applications**
 
 * Microsoft Copilot Studio
 * LangGraph
@@ -81,16 +85,16 @@ Agent platforms provide the infrastructure required to build, deploy, manage, an
 
 | Feature              | Generative AI    | Agentic AI    | Agent Platform            |
 | -------------------- | ---------------- | ------------- | ------------------------- |
-| Primary Purpose      | Generate content | Achieve goals | Build and manage agents   |
-| User Interaction     | Prompt-based     | Goal-based    | Platform-driven           |
-| Decision Making      | Limited          | Autonomous    | Supports agents           |
-| Tool Usage           | Optional         | Required      | Built-in                  |
-| Multi-Step Execution | Minimal          | Extensive     | Managed through workflows |
+| Primary purpose      | Generate content | Achieve goals | Build and manage agents   |
+| User interaction     | Prompt-based     | Goal-based    | Platform-driven           |
+| Decision making      | Limited          | Autonomous    | Supports agents           |
+| Tool usage           | Optional         | Required      | Built-in                  |
+| Multi-step execution | Minimal          | Extensive     | Managed through workflows |
 | Memory               | Session-based    | Persistent    | Platform-managed          |
-| Human Involvement    | High             | Moderate      | Configurable              |
+| Human involvement    | High             | Moderate      | configurable              |
 
 
-# Real world use case
+# Real World Use Case
 
 Consider a business traveler planning an international trip.
 
@@ -129,7 +133,7 @@ The platform coordinates multiple specialized agents responsible for:
 
 The platform manages communication, security, monitoring, and execution across all agents.
 
-# Choose the right tool
+# Choose the Right Tool
 
 - Use **Generative AI** when the goal is content creation, summarization, coding assistance, or conversational interactions.
 
