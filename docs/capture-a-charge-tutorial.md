@@ -34,7 +34,7 @@ Body parameters to use when capturing a charge:
 | `level2`          | object | Additional data for purchase card transactions (US only). |
 
 
-### Request and response examples
+## Request and response examples
 
 Request and response samples when running Capture a charge:
 
