@@ -37,6 +37,7 @@ jobs:
             --exclude "abdm.gov.in"
             --exclude "financialeducation.rbi.org.in"
             --exclude "epfindia.gov.in"
+            --exclude "rbi.org.in"
             docs/**/*.md
 
       # Install Python
