@@ -15,9 +15,10 @@ jobs:
     steps:
       # Checkout repository
       - name: Checkout Files
+        uses: actions/checkout@v4
+
       - name: Run Vale
         uses: errata-ai/vale-action@reviewdog
-        uses: actions/checkout@v4
 
       # Spell checking
       - name: Run CSpell
