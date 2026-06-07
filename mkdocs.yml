@@ -3,28 +3,26 @@ site_name: My Porfolio Site
 theme:
   name: material
 
+  icon:
+    logo: material/book-open-page-variant
+
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
     - navigation.top
-    - search.highlight
-    - search.share
-    - search.suggest
     - content.code.copy
-    - toc.follow
 
   palette:
 
     - scheme: default
-      primary: blue
+      primary: indigo
       accent: blue
       toggle:
         icon: material/weather-night
         name: Dark mode
 
     - scheme: slate
-      primary: blue
+      primary: indigo
       accent: blue
       toggle:
         icon: material/weather-sunny
@@ -32,6 +30,28 @@ theme:
 
 nav:
   - About Me: index.md
+
+  - Portfolio:
+      - Documentation Projects: portfolio/projects.md
+      - Writing Samples: portfolio/writing-samples.md
+
+  - AI Documentation:
+      - Agentic AI: ai/agentic-ai.md
+      - GenAI vs Agentic AI: ai/genai-vs-agentic.md
+      - AI Documentation Strategy: ai/ai-documentation.md
+
+  - Technical Writing:
+      - Microsoft Style Guide: writing/microsoft-style-guide.md
+      - Information Mapping: writing/information-mapping.md
+      - Docs-as-Code: writing/docs-as-code.md
+
+  - Resume:
+      - Experience: resume/experience.md
+      - Skills: resume/skills.md
+      - Certifications: resume/certifications.md
+
+  - Contact:
+      - Contact Me: contact.md
   - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
   - Value of Savings: why-savings-matter.md
   - Deploy Digitalai DevOps Platform on AWS: digitalai-devOps-platform.md
@@ -49,3 +69,17 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/arpitgupta007/
+
+    - icon: fontawesome/brands/github
+      link: https://arpitguptaa.github.io/my-docs-site/
+
+    - icon: fontawesome/solid/envelope
+      link: mailto: grtarpit2008@gmail.com
+
+copyright: >
+  © 2026 Arpit Gupta | Senior Lead Technical Writer | AI Documentation Specialist
