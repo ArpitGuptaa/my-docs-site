@@ -38,6 +38,7 @@ jobs:
             --exclude "financialeducation.rbi.org.in"
             --exclude "epfindia.gov.in"
             --exclude "rbi.org.in"
+            --exclude https://www.linkedin.com/.*
             docs/**/*.md
 
       # Install Python
