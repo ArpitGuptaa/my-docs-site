@@ -1,17 +1,13 @@
 {
   "version": "0.2",
-  "language": "en",
   "words": [
-    "MkDocs",
-    "GitHub",
-    "DevOps",
-    "OpenAPI",
-    "Kubernetes",
+    "Arpit",
+    "Kore",
+    "Koreai",
     "GenAI",
-    "Agentic"
-  ],
-  "ignorePaths": [
-    "site/**",
-    ".git/**"
+    "Agentic",
+    "LLM",
+    "LLMs",
+    "RAG"
   ]
 }
