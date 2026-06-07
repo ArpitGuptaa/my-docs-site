@@ -3,6 +3,33 @@ site_name: My Porfolio Site
 theme:
   name: material
 
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+
+  palette:
+
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
 nav:
   - About Me: index.md
   - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
