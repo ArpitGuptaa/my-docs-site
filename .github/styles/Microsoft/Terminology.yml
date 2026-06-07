@@ -1,0 +1,12 @@
+extends: substitution
+
+message: "Use '%s' instead of '%s'."
+
+level: warning
+
+swap:
+  login: sign in
+  logout: sign out
+  setup: set up
+  whitelist: allowlist
+  blacklist: blocklist

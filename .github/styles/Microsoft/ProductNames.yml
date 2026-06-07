@@ -1,0 +1,10 @@
+extends: substitution
+
+message: "Use approved product terminology."
+
+level: warning
+
+swap:
+  github: GitHub
+  openapi: OpenAPI
+  mkdocs: MkDocs
