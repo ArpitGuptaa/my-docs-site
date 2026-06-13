@@ -52,7 +52,7 @@ The pipeline automatically publishes approved content to the documentation porta
 
 The following image illustrate an architecture of CI/CD workflow of a document website.
 
-[CI/CD workflow](/docs/images/Documentation_CI_CD_Pipeline_Architecture_updated.png)
+[CI/CD workflow](images/Documentation_CI_CD_Pipeline_Architecture_updated.png)
 
 
 ## Tools and Technologies
