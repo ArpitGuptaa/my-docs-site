@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../capture-a-charge-tutorial/">
-      
-      
-        <link rel="next" href="../ecommerce-tokenization-overview/">
       
       
         
@@ -23,7 +19,7 @@
     
     
       
-        <title>Error codes - My Porfolio Site</title>
+        <title>Projects - My Porfolio Site</title>
       
     
     
@@ -76,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#error-codes" class="md-skip">
+        <a href="#projects" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Error codes
+              Projects
             
           </span>
         </div>
@@ -402,11 +398,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../ecommerce-error-codes/" class="md-tabs__link">
         
   
   
@@ -1279,37 +1273,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Error Codes
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ecommerce-error-codes/" class="md-nav__link">
         
   
   
@@ -1325,48 +1292,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#api-only-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        API only errors
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-and-iframe-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        API and iframe errors
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1479,24 +1404,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-only-errors" class="md-nav__link">
+  <a href="#documentation-cicd-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        API only errors
+        Documentation CI/CD Pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation CI/CD Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outcome
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#api-and-iframe-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        API and iframe errors
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1517,206 +1448,24 @@
 
 
 
-<h1 id="error-codes">Error codes</h1>
-<p>The Ecommerce API returns error codes and messages when a request contains invalid or incomplete data and server cannot process the request. These issues can be divided into two general categories:</p>
+<h1 id="projects">Projects</h1>
+<h2 id="documentation-cicd-pipeline">Documentation CI/CD Pipeline</h2>
+<p>Created an automated documentation workflow using:</p>
 <ul>
-<li>Errors that should be addressed by your app's logic (if you are integrating with the API only)</li>
-<li>Errors that should be handled at runtime (iframe and API integrations)</li>
+<li>GitHub Actions</li>
+<li>MkDocs Material</li>
+<li>CSpell</li>
+<li>Vale</li>
+<li>Lychee Link Checker</li>
 </ul>
-<p>Errors you may encounter are explained in the following sections.</p>
-<h2 id="api-only-errors">API only errors</h2>
-<p>You can prevent these errors by checking for the described issues in your application before submitting the API request.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Error code</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Request type(s)</th>
-<th style="text-align: left;">Prevention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>incorrect_cvc</code></td>
-<td style="text-align: left;">The <code>card.cvv</code> provided is not a three- or four-digit value</td>
-<td style="text-align: left;">Create token</td>
-<td style="text-align: left;">Verify that the CVV value is a three- or four-digit number</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_cvc</code></td>
-<td style="text-align: left;">The <code>card.cvv</code> provided is not a three- or four-digit value</td>
-<td style="text-align: left;">Create token, create or update customer</td>
-<td style="text-align: left;">Verify that the CVV value is a three- or four-digit number</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_expiry_month</code></td>
-<td style="text-align: left;">The <code>card.exp_month</code> provided is not a one- or two-digit value</td>
-<td style="text-align: left;">Create token</td>
-<td style="text-align: left;">Verify that the month value is a one- or two-digit number</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_expiry_year</code></td>
-<td style="text-align: left;">The <code>card.exp_month</code> provided is not a two- or four-digit value</td>
-<td style="text-align: left;">Create token</td>
-<td style="text-align: left;">Verify that the year value is a two- or four-digit number</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_number</code></td>
-<td style="text-align: left;">The PAN provided in <code>card.number</code> is invalid</td>
-<td style="text-align: left;">Create token</td>
-<td style="text-align: left;">Verify that the PAN is valid</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_tax_amount</code></td>
-<td style="text-align: left;">The <code>tax_amount</code> provided is not valid</td>
-<td style="text-align: left;">Create charge</td>
-<td style="text-align: left;">Verify that the amount is a positive number</td>
-</tr>
-</tbody>
-</table>
-<h2 id="api-and-iframe-errors">API and iframe errors</h2>
-<p>These errors can be handled at runtime and may be encountered by any Ecommerce app.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Error code</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Request type</th>
-<th style="text-align: left;">Next steps</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>amount_too_large</code></td>
-<td style="text-align: left;">The <code>amount</code> provided exceeds the amount allowed ($999,999.99).</td>
-<td style="text-align: left;">Create charge and pay for order</td>
-<td style="text-align: left;">If possible, split the charge or order into smaller amounts and retry as two transactions. If the customer's <code>source</code> token is single-use, the card will need to be tokenized again before attempting a second request when the first succeeds.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>card_declined</code></td>
-<td style="text-align: left;">The <code>source</code> provided was declined by the payment gateway</td>
-<td style="text-align: left;">Create charge and pay for order</td>
-<td style="text-align: left;">Allow the customer to enter a different card and retry the request with the new <code>source</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>card_on_file_missing</code></td>
-<td style="text-align: left;">The customer attempting to pay does not have a <code>source</code> on file to complete the payment</td>
-<td style="text-align: left;">Charge</td>
-<td style="text-align: left;">Direct the customer to enter their card information and update the customer's record with the new <code>source</code>. Then, retry the original charge request.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>charge_already_captured</code></td>
-<td style="text-align: left;">The <code>charge</code> provided has already been captured</td>
-<td style="text-align: left;">Capture charge</td>
-<td style="text-align: left;">Do not retry the request</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>charge_already_refunded</code></td>
-<td style="text-align: left;">The <code>charge</code> provided has already been refunded</td>
-<td style="text-align: left;">Refund</td>
-<td style="text-align: left;">Do not retry the request</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>email_invalid</code></td>
-<td style="text-align: left;">The <code>email</code> provided is not valid</td>
-<td style="text-align: left;">Create charge, create or update customer, pay for order</td>
-<td style="text-align: left;">Notify the customer of the issue and allow them to retry or enter a new email address</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>expired_card</code></td>
-<td style="text-align: left;">The expiration date (the combination of <code>card.exp_month</code> and <code>card.exp_year</code>) provided is in the past</td>
-<td style="text-align: left;">Token</td>
-<td style="text-align: left;">Notify the customer of the issue and allow them to retry by entering a new card</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>incorrect_cvc</code></td>
-<td style="text-align: left;">The <code>card.cvv</code> provided is not a three- or four-digit value</td>
-<td style="text-align: left;">Token</td>
-<td style="text-align: left;">Notify the customer of the issue and allow them to retry by entering a new card</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>incorrect_number</code></td>
-<td style="text-align: left;">The value provided in <code>card.number</code> is not valid</td>
-<td style="text-align: left;">Token</td>
-<td style="text-align: left;">Notify the customer of the issue and allow them to retry by entering a new card</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_card_type</code></td>
-<td style="text-align: left;">The <code>card.brand</code> provided is not a recognized value</td>
-<td style="text-align: left;">Token</td>
-<td style="text-align: left;">Before sending the request, verify that the <code>brand</code> is one of the enumerated values</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_charge_amount</code></td>
-<td style="text-align: left;">The <code>amount</code> provided exceeds the amount allowed.</td>
-<td style="text-align: left;">Charge</td>
-<td style="text-align: left;">If possible, split the charge or order into smaller amounts and retry as two transactions. If the customer's <code>source</code> token is single-use, the card will need to be tokenized again before attempting a second request when the first succeeds.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_request</code></td>
-<td style="text-align: left;">The value provided in <code>card.number</code> is not a valid raw or encrypted PAN</td>
-<td style="text-align: left;">Token</td>
-<td style="text-align: left;">Notify the customer of the issue and allow them to retry by entering a new card</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_tip_amount</code></td>
-<td style="text-align: left;">The <code>tip_amount</code> provided is not a valid amount</td>
-<td style="text-align: left;">Create charge and pay for order</td>
-<td style="text-align: left;">Notify the customer of the issue and allow them to retry by entering a new tip amount</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>invalid_tax_amount</code></td>
-<td style="text-align: left;">The <code>tax_amount</code> provided is not a valid amount</td>
-<td style="text-align: left;">Create charge</td>
-<td style="text-align: left;">Check that the amount is a positive number and, if the value has changed after the check, retry the request</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>missing</code></td>
-<td style="text-align: left;">The token request failed upstream and the upstream message could not be processed</td>
-<td style="text-align: left;">Token</td>
-<td style="text-align: left;">Allow the user to retry the transaction</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>order_already_paid</code></td>
-<td style="text-align: left;">The order identified by the ID in the request URL has already been paid</td>
-<td style="text-align: left;">Pay order</td>
-<td style="text-align: left;">Notify the user that the order has already been paid</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>processing_error</code></td>
-<td style="text-align: left;">A generic error indicating that the request could not be processed as submitted</td>
-<td style="text-align: left;">Any</td>
-<td style="text-align: left;">Notify the user that an error occurred and, if warranted, allow them to retry the request</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>rate_limit</code></td>
-<td style="text-align: left;">Your application has made too many requests and additional requests will not be processed until the rate limit expires</td>
-<td style="text-align: left;">Any</td>
-<td style="text-align: left;">Follow the best practices described in <code>API usage &amp; rate limits</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>resource_missing</code></td>
-<td style="text-align: left;">The data item (charge, order, or refund) provided in the request does not exist</td>
-<td style="text-align: left;">Any</td>
-<td style="text-align: left;">Notify the user that the data item could not be found. Allow the user to adjust the request and retry.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>token_already_used</code></td>
-<td style="text-align: left;">The <code>source</code> value is not a multipay token and was already used for a different payment</td>
-<td style="text-align: left;">Charge</td>
-<td style="text-align: left;">Notify the user of the issue and have them reenter their card details. Then, use the iframe to generate a new token.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="outcome">Outcome</h3>
+<p>Automated quality checks and website deployment for documentation.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
