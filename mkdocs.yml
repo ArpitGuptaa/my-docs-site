@@ -14,19 +14,18 @@ theme:
 
   palette:
 
-    - scheme: default
-      primary: indigo
-      accent: blue
-      toggle:
-        icon: material/weather-night
-        name: Dark mode
+  - scheme: default
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
 
-    - scheme: slate
-      primary: indigo
-      accent: blue
-      toggle:
-        icon: material/weather-sunny
-        name: Light mode
+  - scheme: slate
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - About Me: index.md
@@ -81,5 +80,3 @@ extra:
     - icon: fontawesome/solid/envelope
       link: mailto: grtarpit2008@gmail.com
 
-copyright: >
-  © 2026 Arpit Gupta | Senior Lead Technical Writer | AI Documentation Specialist
