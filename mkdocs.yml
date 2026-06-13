@@ -30,6 +30,8 @@ extra_css:
 nav:
   - About Me: index.md
   - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
+  - Document Automation with Agentic AI: documentation-automation-with-agenticAI.md
+  - Documentation CI/CD Pipeline Implementation: implementation-of-ci-cd-pipeline-for-documentation.md
   - Value of Savings: why-savings-matter.md
   - Deploy Digitalai DevOps Platform on AWS: digitalai-devOps-platform.md
   - Capture a Charge (API): capture-a-charge-tutorial.md
