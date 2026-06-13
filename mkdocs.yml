@@ -29,28 +29,6 @@ extra_css:
 
 nav:
   - About Me: index.md
-
-  - Portfolio:
-      - Documentation Projects: portfolio/projects.md
-      - Writing Samples: portfolio/writing-samples.md
-
-  - AI Documentation:
-      - Agentic AI: ai/agentic-ai.md
-      - GenAI vs Agentic AI: ai/genai-vs-agentic.md
-      - AI Documentation Strategy: ai/ai-documentation.md
-
-  - Technical Writing:
-      - Microsoft Style Guide: writing/microsoft-style-guide.md
-      - Information Mapping: writing/information-mapping.md
-      - Docs-as-Code: writing/docs-as-code.md
-
-  - Resume:
-      - Experience: resume/experience.md
-      - Skills: resume/skills.md
-      - Certifications: resume/certifications.md
-
-  - Contact:
-      - Contact Me: contact.md
   - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
   - Value of Savings: why-savings-matter.md
   - Deploy Digitalai DevOps Platform on AWS: digitalai-devOps-platform.md
