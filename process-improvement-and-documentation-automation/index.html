@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#process-improvement-and-documentation-automation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -501,6 +506,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Process Improvement and Documentation Automation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -518,6 +543,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -810,6 +887,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -826,7 +946,189 @@
 
 
 
-  <h1>Process Improvement and Documentation Automation</h1>
+<h1 id="process-improvement-and-documentation-automation">Process Improvement and Documentation Automation</h1>
+<h2 id="overview">Overview</h2>
+<p>As features in product releases grow in size and complexity, technical writers spend significant time collecting information from multiple sources, including Jira stories, PRDs, Confluence pages, wiki pages, pull requests, API specifications, and supporting assets such as screenshots, videos, GIFs, diagrams, and attachments. Much of this work is repetitive and can delay documentation publication.</p>
+<p>This document describes an automated documentation workflow that uses a Large Language Model (LLM) to gather release information, generate documentation drafts, perform quality checks, and support a structured review and publication process.</p>
+<h2 id="solution">Solution</h2>
+<p>The proposed solution introduces an automated documentation workflow that:</p>
+<ul>
+<li>Collects release information from approved sources</li>
+<li>Generates initial documentation drafts</li>
+<li>Performs automated quality and compliance checks</li>
+<li>Supports structured review and approval workflows</li>
+<li>Publishes approved documentation automatically</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before implementing the workflow, configure the following:</p>
+<ul>
+<li>Integrate Jira, Confluence, wiki repositories, GitHub, and API repositories with the LLM platform.</li>
+<li>Configure authentication and access permissions for all connected systems.</li>
+<li>Establish a centralized repository for documentation assets, including screenshots, videos, GIFs, and diagrams.</li>
+<li>Configure GitHub Actions or equivalent automation workflows.</li>
+<li>Define documentation templates and style guide requirements.</li>
+</ul>
+<h1 id="workflow">Workflow</h1>
+<h2 id="1-standardize-source-information">1. Standardize Source Information</h2>
+<p>Establish standardized templates for the following content sources:</p>
+<ul>
+<li>Jira stories</li>
+<li>Product Requirement Documents (PRDs)</li>
+<li>Wiki pages</li>
+<li>Confluence pages</li>
+<li>API specifications</li>
+<li>Release note summaries</li>
+</ul>
+<p>Each feature should include:</p>
+<ul>
+<li>Feature summary</li>
+<li>Customer impact</li>
+<li>Documentation requirements</li>
+<li>Release note information</li>
+</ul>
+<p>Standardized inputs improve content quality and reduce manual effort during documentation generation.</p>
+<h2 id="2-collect-release-information-and-assets">2. Collect Release Information and Assets</h2>
+<p>When a feature is released, the workflow automatically gathers information from approved sources, including:</p>
+<h3 id="source-content">Source Content</h3>
+<ul>
+<li>Jira stories and attachments</li>
+<li>Product Requirement Documents (PRDs)</li>
+<li>Figma files (if available)</li>
+<li>Confluence pages</li>
+<li>Wiki pages</li>
+<li>Pull requests</li>
+<li>API specifications</li>
+</ul>
+<h3 id="supported-assets">Supported Assets</h3>
+<ul>
+<li>Screenshots</li>
+<li>Videos</li>
+<li>GIFs</li>
+<li>Diagrams</li>
+<li>PDF files</li>
+</ul>
+<p>During collection, the workflow associates assets with their corresponding features using:</p>
+<ul>
+<li>Jira references</li>
+<li>Metadata</li>
+<li>Labels</li>
+<li>Naming conventions</li>
+<li>Linked repositories</li>
+</ul>
+<p>This process eliminates manual information collection and asset tracking activities.</p>
+<h2 id="3-generate-documentation-drafts">3. Generate Documentation Drafts</h2>
+<p>After collecting source information and assets, the workflow generates documentation drafts for:</p>
+<ul>
+<li>Release notes</li>
+<li>API documentation</li>
+<li>Feature documentation</li>
+</ul>
+<p>The generated documentation package includes:</p>
+<ul>
+<li>Feature information</li>
+<li>Generated content</li>
+<li>Screenshots</li>
+<li>Videos</li>
+<li>GIFs</li>
+<li>Diagrams</li>
+</ul>
+<p>The workflow analyzes:</p>
+<ul>
+<li>Source content</li>
+<li>Linked feature information</li>
+<li>Asset metadata</li>
+<li>Captions</li>
+<li>File naming conventions</li>
+</ul>
+<p>This analysis determines the appropriate placement of assets within the documentation.</p>
+<h3 id="draft-generation-activities">Draft Generation Activities</h3>
+<p>During draft generation, the workflow:</p>
+<ol>
+<li>Identifies relevant assets for each feature or workflow.</li>
+<li>Inserts asset references into generated content.</li>
+<li>Generates image captions when required.</li>
+<li>Creates placeholders or embedded references for videos and GIFs.</li>
+<li>Associates diagrams with relevant procedures or concepts.</li>
+</ol>
+<p>Generated content follows established documentation templates and formatting standards.</p>
+<h2 id="4-run-automated-quality-checks">4. Run Automated Quality Checks</h2>
+<p>Before review, automated validation workflows perform quality checks for:</p>
+<ul>
+<li>Microsoft Writing Style Guide compliance</li>
+<li>Grammar and spelling</li>
+<li>Broken links</li>
+<li>Formatting issues</li>
+<li>Terminology consistency</li>
+<li>Unsupported or inferred statements</li>
+</ul>
+<h3 id="asset-validation">Asset Validation</h3>
+<p>The workflow also validates supporting assets by checking:</p>
+<ul>
+<li>Referenced files exist</li>
+<li>Asset paths are correct</li>
+<li>Image quality standards</li>
+<li>Video resolution and duration requirements</li>
+<li>Diagram readability</li>
+<li>Caption availability</li>
+</ul>
+<p>Automated validation identifies issues early and reduces manual review effort.</p>
+<h2 id="5-perform-security-and-accessibility-checks">5. Perform Security and Accessibility Checks</h2>
+<p>The workflow scans documentation and supporting assets for sensitive information, including:</p>
+<ul>
+<li>Email addresses</li>
+<li>Phone numbers</li>
+<li>Customer names</li>
+<li>User IDs</li>
+<li>API keys</li>
+<li>Access tokens</li>
+<li>Internal URLs</li>
+</ul>
+<p>Sensitive information is automatically masked or flagged before publication.</p>
+<p>Accessibility validation helps ensure compliance requirements are met before review.</p>
+<h2 id="6-review-and-approval">6. Review and Approval</h2>
+<p>Documentation follows a structured review and approval workflow.</p>
+<table>
+<thead>
+<tr>
+<th>Reviewer</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engineering</td>
+<td>Technical accuracy</td>
+</tr>
+<tr>
+<td>Product Management</td>
+<td>Feature validation</td>
+</tr>
+<tr>
+<td>Technical Writer</td>
+<td>Content quality and usability</td>
+</tr>
+</tbody>
+</table>
+<p>Automated checks handle routine validation activities, allowing reviewers to focus on content accuracy, completeness, and usability.</p>
+<h2 id="7-publish-documentation">7. Publish Documentation</h2>
+<p>After review and approval:</p>
+<ol>
+<li>Documentation changes are merged into the repository.</li>
+<li>Content is automatically published to the documentation site.</li>
+<li>Approved documentation becomes immediately available to users.</li>
+</ol>
+<p>Automated publishing eliminates manual publication tasks and accelerates documentation delivery.</p>
+<h2 id="benefits">Benefits</h2>
+<p>Implementing this workflow provides the following benefits:</p>
+<ul>
+<li>Reduces manual documentation effort</li>
+<li>Improves documentation consistency</li>
+<li>Accelerates publication timelines</li>
+<li>Increases documentation quality</li>
+<li>Improves compliance and security validation</li>
+<li>Enhances collaboration across teams</li>
+<li>Supports scalable documentation operations</li>
+</ul>
 
 
 
@@ -834,7 +1136,8 @@
 
 
 
-
+  
+  
 
 
 
