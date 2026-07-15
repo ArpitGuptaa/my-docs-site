@@ -1,0 +1,2516 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../process-improvement-and-documentation-automation/">
+      
+      
+        <link rel="next" href="../implementation-of-ci-cd-pipeline-for-documentation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>DevOps Platform on AWS(Reference Deployment Guide) - My Porfolio Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#devops-platform-on-aws-reference-deployment-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Porfolio Site" class="md-header__button md-logo" aria-label="My Porfolio Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Porfolio Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DevOps Platform on AWS(Reference Deployment Guide)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  About Me
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../process-improvement-and-documentation-automation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Process Improvement and Documentation Automation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  DevOps Platform on AWS(Reference Deployment Guide)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../implementation-of-ci-cd-pipeline-for-documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Documentation CI/CD Pipeline Implementation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../documentation-automation-with-agenticAI/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Document Automation with Agentic AI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../generative-aI-vs-agentic-aI-vs-agent-platforms/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Generative AI vs Agentic AI vs Agent Platforms
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../why-savings-matter/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Value of Savings
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../digitalai-devOps-platform/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Deploy Digitalai DevOps Platform on AWS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../capture-a-charge-tutorial/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Capture a Charge (API)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ecommerce-error-codes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Error Codes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ecommerce-tokenization-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ecommerce Tokenization
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../integrate-clover-payments-plugin-with-shopify-online-shop/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Integrate Clover Payments Plugin with Shopify
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../clover-payments-plugin-shopify-webhooks/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Compliance Webhooks for Clover Payments Plugin
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Porfolio Site" class="md-nav__button md-logo" aria-label="My Porfolio Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    My Porfolio Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process-improvement-and-documentation-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Process Improvement and Documentation Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps Platform on AWS(Reference Deployment Guide)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps Platform on AWS(Reference Deployment Guide)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#costs-and-licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Costs and licensing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-prerequisites-audit-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional prerequisites (audit additions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-background-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended background knowledge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-prepare-your-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare your AWS account
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-obtain-a-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Obtain a license
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-launch-the-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Launch the stack
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Launch the stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-new-vpc-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters — new VPC deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-existing-vpc-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters — existing VPC deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-test-the-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Test the deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observation-through-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observation through an AI agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-deploy-an-autonomous-release-agent-integrated-with-slack-on-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case: Deploy an autonomous release agent integrated with Slack on AWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case: Deploy an autonomous release agent integrated with Slack on AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-the-agent-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the Agent does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perceivereasonact-loop-with-human-in-the-loop-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perceive–reason–act loop, with human-in-the-loop approval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementation-of-ci-cd-pipeline-for-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation CI/CD Pipeline Implementation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-automation-with-agenticAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Document Automation with Agentic AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generative-aI-vs-agentic-aI-vs-agent-platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generative AI vs Agentic AI vs Agent Platforms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-savings-matter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Value of Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digitalai-devOps-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy Digitalai DevOps Platform on AWS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../capture-a-charge-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capture a Charge (API)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecommerce-error-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Error Codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecommerce-tokenization-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecommerce Tokenization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrate-clover-payments-plugin-with-shopify-online-shop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrate Clover Payments Plugin with Shopify
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clover-payments-plugin-shopify-webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compliance Webhooks for Clover Payments Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#costs-and-licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Costs and licensing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-prerequisites-audit-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional prerequisites (audit additions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-background-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended background knowledge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-prepare-your-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare your AWS account
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-obtain-a-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Obtain a license
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-launch-the-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Launch the stack
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Launch the stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-new-vpc-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters — new VPC deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-existing-vpc-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters — existing VPC deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-test-the-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Test the deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observation-through-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observation through an AI agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-deploy-an-autonomous-release-agent-integrated-with-slack-on-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case: Deploy an autonomous release agent integrated with Slack on AWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case: Deploy an autonomous release agent integrated with Slack on AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-the-agent-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the Agent does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perceivereasonact-loop-with-human-in-the-loop-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perceive–reason–act loop, with human-in-the-loop approval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="devops-platform-on-aws-reference-deployment-guide">DevOps Platform on AWS: Reference Deployment Guide</h1>
+<h2 id="contents">Contents</h2>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#deployment-options">Deployment options</a></li>
+<li><a href="#deployment-steps">Deployment steps</a></li>
+<li><a href="#observation-through-an-ai-agent">AI Agent deployment</a></li>
+<li><a href="#use-case-deploy-an-autonomous-release-agent-integrated-with-slack-on-aws">Use case: deploy an autonomous release agent integrated with Slack on AWS</a></li>
+<li><a href="#best-practices">Best practices</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#additional-resources">Additional resources</a></li>
+</ol>
+<h2 id="overview">Overview</h2>
+<p>This guide helps in deploying a release-orchestration and deployment-automation platform on Amazon Web Services (AWS), then extend it with an <strong>AI Agent</strong> that lets your team monitor and control releases from Slack.</p>
+<p>The platform has two modules:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release orchestration module</td>
+<td>Defines and automates the steps in your software delivery pipeline, tracks dependencies between releases, and reports on release status and compliance metrics.</td>
+</tr>
+<tr>
+<td>Deployment automation module</td>
+<td>Generates provisioning and deployment plans from your infrastructure and application configuration, and performs automated rollbacks when a deployment fails.</td>
+</tr>
+</tbody>
+</table>
+<p>Both modules run as containers on Amazon Elastic Container Service (Amazon ECS). The AI Agent observes these modules, reasons about pipeline state, and acts on your behalf — with guardrails — through a Slack interface.</p>
+<h3 id="costs-and-licensing">Costs and licensing</h3>
+<p>You're responsible for the cost of the AWS resources this deployment creates. The base CloudFormation template doesn't add any cost on top of the underlying AWS services; the AI Agent extension adds a small number of serverless resources that are billed separately.</p>
+<p>Before you deploy:</p>
+<ul>
+<li>Use the <a href="https://calculator.aws">AWS Pricing Calculator</a> to estimate the monthly cost of the EC2, RDS, EFS, and load balancer resources.</li>
+<li>Set up an <a href="https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html">AWS Budget</a> with an alert threshold.</li>
+<li>Enable the <a href="https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html">AWS Cost and Usage Report</a> to track costs after deployment.</li>
+</ul>
+<p>You need a trial or commercial license for the platform before you deploy. Obtain a license from your software vendor and have the license file (or its base64-encoded contents) ready before you start Step 3.</p>
+<h2 id="architecture">Architecture</h2>
+<p>Deploying the following template with default parameters into a new VPC builds the environment displayed below.</p>
+<pre><code class="language-mermaid">flowchart TB
+    subgraph AWS[&quot;AWS Cloud&quot;]
+        IGW[&quot;Internet gateway&quot;]
+        subgraph AZ1[&quot;Availability Zone 1&quot;]
+            subgraph PUB1[&quot;Public subnet — 10.0.1.0/24&quot;]
+                NAT1[&quot;NAT gateway&quot;]
+                BAST1[&quot;Bastion host&quot;]
+            end
+            subgraph PRIV1[&quot;Private subnet — 10.0.8.0/24&quot;]
+                REL1[&quot;Release module&quot;]
+                DEP1[&quot;Deploy module&quot;]
+            end
+            subgraph DATA1[&quot;Private data subnet — 10.0.16.0/24&quot;]
+                DB1[(&quot;Aurora PostgreSQL — primary&quot;)]
+            end
+        end
+        subgraph AZ2[&quot;Availability Zone 2&quot;]
+            subgraph PUB2[&quot;Public subnet — 10.0.2.0/24&quot;]
+                NAT2[&quot;NAT gateway&quot;]
+                BAST2[&quot;Bastion host&quot;]
+            end
+            subgraph PRIV2[&quot;Private subnet — 10.0.9.0/24&quot;]
+                REL2[&quot;Release module&quot;]
+                DEP2[&quot;Deploy module&quot;]
+            end
+            subgraph DATA2[&quot;Private data subnet — 10.0.17.0/24&quot;]
+                DB2[(&quot;Aurora PostgreSQL — read replica&quot;)]
+            end
+        end
+        ALB[&quot;Application Load Balancer&quot;]
+        EFS[(&quot;Amazon EFS — encrypted&quot;)]
+        ECS[&quot;Amazon ECS cluster&quot;]
+
+        IGW --&gt; BAST1
+        IGW --&gt; BAST2
+        IGW --&gt; ALB
+        ALB --&gt; REL1
+        ALB --&gt; REL2
+        ALB --&gt; DEP1
+        ALB --&gt; DEP2
+        REL1 -.-&gt; EFS
+        DEP1 -.-&gt; EFS
+        REL2 -.-&gt; EFS
+        DEP2 -.-&gt; EFS
+        DB1 --- DB2
+        ECS -.contains.- REL1
+        ECS -.contains.- DEP1
+    end
+</code></pre>
+<p>Traffic enters through the internet gateway. The Application Load Balancer distributes requests across the release and deployment containers in both Availability Zones. Each container reads and writes shared configuration on the encrypted EFS volume, and the Aurora PostgreSQL cluster provides highly available storage for platform data, with a primary instance in one zone and a read replica in the other. Bastion hosts give you SSH access to the private subnets without exposing the ECS hosts directly to the internet.</p>
+<p>The template sets up:</p>
+<ul>
+<li>A highly available architecture spanning two Availability Zones.</li>
+<li>A VPC with public, private, and private data subnets, following AWS best practices.</li>
+<li>An internet gateway for bastion host and load balancer traffic.</li>
+<li>NAT gateways in the public subnets for outbound internet access from private subnets.</li>
+<li>A Linux bastion host in an Auto Scaling group for inbound SSH access.</li>
+<li>An Amazon ECS cluster running on EC2 instances, hosting the release orchestration and deployment automation containers.</li>
+<li>The release orchestration module in full cluster mode.</li>
+<li>The deployment automation module in high-availability (hot-standby) mode.</li>
+<li>An Amazon Aurora PostgreSQL cluster in the private data subnets.</li>
+<li>An encrypted Amazon EFS volume for disk-based configuration and data.</li>
+<li>An Application Load Balancer that routes incoming requests to the platform containers.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: The architecture description states that bastion hosts are always created, but the <code>InstallBastionHost</code> parameter defaults to <code>False</code>. If you need SSH access to the environment, set this parameter to <code>True</code>; otherwise no bastion host is created and the diagram's bastion path doesn't apply.</p>
+</blockquote>
+<p>The template that deploys into an existing VPC skips VPC-level tasks (marked above) and instead prompts you for your existing subnet and networking configuration.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="technical-requirements">Technical requirements</h3>
+<ul>
+<li>An AWS account. <a href="https://aws.amazon.com">Create one</a> if you don't already have one.</li>
+<li>Permission to launch AWS CloudFormation templates that create AWS Identity and Access Management (IAM) roles.</li>
+<li>A trial or commercial license for the platform.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: Obtain the following permissions for your IAM identity:</p>
+</blockquote>
+<ul>
+<li><code>cloudformation</code></li>
+<li><code>ec2</code></li>
+<li><code>ecs</code></li>
+<li><code>rds</code></li>
+<li><code>elasticfilesystem</code></li>
+<li><code>elasticloadbalancing</code></li>
+<li><code>iam</code></li>
+<li><code>autoscaling</code></li>
+<li><code>lambda</code></li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: Scope the above permissions down after deployment, per your organization's least-privilege policy.</p>
+</blockquote>
+<h3 id="additional-prerequisites-audit-additions">Additional prerequisites (audit additions)</h3>
+<ul>
+<li><strong>Service quotas</strong>: Check your account's quota for the EC2 instance types this template uses (<code>m5.xlarge</code> for the platform nodes, <code>db.r4.large</code> for the database). <a href="https://console.aws.amazon.com/servicequotas/">Request a quota increase</a> if you're near the default limit.</li>
+<li><strong>A key pair</strong>: Create an <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pair</a> in the AWS Region where you plan to deploy.</li>
+<li><strong>A TLS certificate (recommended)</strong>: If you want HTTPS access to both modules, request or import a certificate in <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs.html">AWS Certificate Manager (ACM)</a> before you launch the stack, and supply its ARN as the <code>SslCertificateArn</code> parameter. If you leave this parameter at its default, only the deployment automation module is reachable over HTTPS.</li>
+<li><strong>A restricted remote-access CIDR</strong>: Have the IP range that should be allowed to reach the bastion host and load balancer. Don't use <code>0.0.0.0/0</code> in production.</li>
+<li><strong>Existing-VPC deployments only</strong>: four private subnets across two Availability Zones (two application subnets with NAT routes, two data subnets with no internet route), and the DNS <code>domain-name</code> DHCP option set as described in the <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dhcp-options.html">Amazon VPC documentation</a>.</li>
+</ul>
+<h3 id="recommended-background-knowledge">Recommended background knowledge</h3>
+<ul>
+<li>Amazon Aurora</li>
+<li>Amazon EC2</li>
+<li>Amazon EFS</li>
+<li>Amazon VPC</li>
+<li>AWS CloudFormation</li>
+<li>AWS IAM</li>
+<li>AWS Lambda</li>
+<li>Container concepts (Docker, Amazon ECS)</li>
+<li>Foundation of AI Agent model basics</li>
+</ul>
+<h2 id="deployment-options">Deployment options</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New VPC</td>
+<td>Builds a new VPC, subnets, NAT gateways, security groups, and bastion hosts, then deploys the platform into it.</td>
+<td>You want an end-to-end, self-contained environment.</td>
+</tr>
+<tr>
+<td>Existing VPC</td>
+<td>Deploys the platform into subnets you already manage.</td>
+<td>You need to integrate with existing networking, security, or shared-services accounts.</td>
+</tr>
+</tbody>
+</table>
+<p>Both options let you configure CIDR blocks, instance types, and platform settings. Each deployment takes about 40 minutes.</p>
+<h2 id="deployment-steps">Deployment steps</h2>
+<h3 id="step-1-prepare-your-aws-account">Step 1: Prepare your AWS account</h3>
+<ol>
+<li><a href="https://aws.amazon.com">Create an AWS account</a> if you don't already have one.</li>
+<li>In the AWS Management Console navigation bar, select the Region where you want to deploy.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: Amazon EFS isn't available in every AWS Region. Confirm your target Region appears on the <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">AWS Regions and Endpoints</a> page before you continue.
+3. Create a <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">key pair</a> in your target Region.
+4. If necessary, <a href="https://console.aws.amazon.com/servicequotas/">request a service quota increase</a> for the EC2 instance types you plan to use.
+5. Set up an AWS Budget alert for the account or tag you use to track this deployment's cost. Refer the cost and licensing section.</p>
+</blockquote>
+<h3 id="step-2-obtain-a-license">Step 2: Obtain a license</h3>
+<p>To obtain a trial or commercial license from your software vendor, you require:</p>
+<ul>
+<li>The license file, base64-encoded, if the template requires it as a parameter.</li>
+<li>Confirmation that you accept the vendor's end-user license agreement (EULA) — required regardless of license type.</li>
+</ul>
+<h3 id="step-3-launch-the-stack">Step 3: Launch the stack</h3>
+<ol>
+<li>Open the AWS CloudFormation console and choose to create a new stack, using the template for your chosen <a href="#4-deployment-options">deployment option</a>.</li>
+<li>Confirm the Region shown in the console matches the Region you validated in Step 1.</li>
+<li>On the Select Template page, keep the default template URL and choose <strong>Next</strong>.</li>
+<li>On the Specify Details page, enter a stack name and set the parameters described below. Select <strong>Next</strong> when you're done.</li>
+</ol>
+<h4 id="parameters-new-vpc-deployment">Parameters — new VPC deployment</h4>
+<p><strong>VPC network configuration</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remote access CIDR</td>
+<td><em>Required</em></td>
+<td>CIDR range allowed to reach the environment. Use a constrained range, not <code>0.0.0.0/0</code>.</td>
+</tr>
+<tr>
+<td>Availability Zones</td>
+<td><em>Required</em></td>
+<td>Two Availability Zones for the subnets.</td>
+</tr>
+<tr>
+<td>VPC CIDR</td>
+<td>10.0.0.0/19</td>
+<td>CIDR block for the VPC.</td>
+</tr>
+<tr>
+<td>Private subnet 1 / 2</td>
+<td>10.0.8.0/24 / 10.0.9.0/24</td>
+<td>Application subnets, one per Availability Zone.</td>
+</tr>
+<tr>
+<td>Private data subnet 1 / 2</td>
+<td>10.0.16.0/24 / 10.0.17.0/24</td>
+<td>Database subnets, one per Availability Zone.</td>
+</tr>
+<tr>
+<td>Public subnet 1 / 2</td>
+<td>10.0.1.0/24 / 10.0.2.0/24</td>
+<td>DMZ subnets, one per Availability Zone.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Database configuration</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database administrator username</td>
+<td>xldevops</td>
+<td>1–16 alphanumeric characters, starting with a letter.</td>
+</tr>
+<tr>
+<td>Database administrator password</td>
+<td><em>Required</em></td>
+<td>8–41 alphanumeric characters. No spaces, <code>@</code>, <code>/</code>, or <code>"</code>.</td>
+</tr>
+<tr>
+<td>DB backup retention period</td>
+<td>7</td>
+<td>Days to retain automatic snapshots.</td>
+</tr>
+<tr>
+<td>DB instance class</td>
+<td>db.r4.large</td>
+<td>Compute and memory class for the database instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HTTP configuration</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSL certificate ARN</td>
+<td><code>default</code></td>
+<td>ARN of the ACM certificate that secures access. The default value doesn't secure the release orchestration module.</td>
+</tr>
+<tr>
+<td>Load balancer type</td>
+<td>internet-facing</td>
+<td><code>internet-facing</code> or <code>internal</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>General settings</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment name</td>
+<td>devops</td>
+<td>Logical name for the environment.</td>
+</tr>
+<tr>
+<td>Key name</td>
+<td><em>Required</em></td>
+<td>Existing EC2 key pair name.</td>
+</tr>
+<tr>
+<td>Install bastion host</td>
+<td>False</td>
+<td>Whether to create a bastion host for SSH access. Set to <code>True</code> if you need direct SSH access.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Platform configuration</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform instance type</td>
+<td>m5.xlarge</td>
+<td>Instance type for the platform's ECS container hosts.</td>
+</tr>
+<tr>
+<td>Install deployment automation module</td>
+<td>True</td>
+<td>Whether to install this module in the cluster.</td>
+</tr>
+<tr>
+<td>Deployment automation module version</td>
+<td>Required</td>
+<td>Version to deploy.</td>
+</tr>
+<tr>
+<td>Deployment automation module administrator password</td>
+<td>Required</td>
+<td>8+ characters.</td>
+</tr>
+<tr>
+<td>Deployment automation module cluster mode</td>
+<td>default</td>
+<td>Cluster mode setting.</td>
+</tr>
+<tr>
+<td>Deployment automation module license</td>
+<td>trial</td>
+<td>Base64-encoded license.</td>
+</tr>
+<tr>
+<td>Install release orchestration module</td>
+<td>True</td>
+<td>Whether to install this module in the cluster.</td>
+</tr>
+<tr>
+<td>Release orchestration module version</td>
+<td>Required</td>
+<td>Version to deploy.</td>
+</tr>
+<tr>
+<td>Release orchestration module administrator password</td>
+<td>Required</td>
+<td>8+ characters.</td>
+</tr>
+<tr>
+<td>Release orchestration module cluster mode</td>
+<td>default</td>
+<td>Cluster mode setting.</td>
+</tr>
+<tr>
+<td>Release orchestration module license</td>
+<td>trial</td>
+<td>Base64-encoded license.</td>
+</tr>
+<tr>
+<td>Accept license terms</td>
+<td>Required</td>
+<td>Must be set to <code>yes</code> to deploy, regardless of license type.</td>
+</tr>
+<tr>
+<td>EFS mount point</td>
+<td>/mnt/efs</td>
+<td>Documented only for the existing-VPC template in the original guide, but it also applies here. Set it explicitly in both.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quick Start configuration</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S3 bucket name</td>
+<td>(vendor default)</td>
+<td>Bucket containing the deployment assets, if you're using a customized copy.</td>
+</tr>
+<tr>
+<td>S3 bucket Region</td>
+<td>us-east-1</td>
+<td>Region where that bucket is hosted.</td>
+</tr>
+<tr>
+<td>S3 key prefix</td>
+<td>(vendor default)</td>
+<td>Key prefix simulating a folder for the deployment assets.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="parameters-existing-vpc-deployment">Parameters — existing VPC deployment</h4>
+<p>Addition to the following, use the same Database, HTTP, Platform, and Quick Start parameters as above:</p>
+<p><strong>Network configuration</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VPC ID</td>
+<td>Required</td>
+<td>ID of your existing VPC.</td>
+</tr>
+<tr>
+<td>VPC CIDR</td>
+<td>10.0.0.0/19</td>
+<td>CIDR range of your VPC.</td>
+</tr>
+<tr>
+<td>Remote access CIDR</td>
+<td>Required</td>
+<td>CIDR range allowed to reach the environment.</td>
+</tr>
+<tr>
+<td>Public subnet 1 / 2</td>
+<td>Required</td>
+<td>Existing public subnets, one per Availability Zone.</td>
+</tr>
+<tr>
+<td>Private subnet 1 / 2</td>
+<td>Required</td>
+<td>Existing application subnets, one per Availability Zone.</td>
+</tr>
+<tr>
+<td>Private data subnet 1 / 2</td>
+<td>Required</td>
+<td>Existing database subnets, one per Availability Zone.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>General settings (existing VPC only)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bastion security group</td>
+<td>Required</td>
+<td>Security group that allows SSH access to the ECS hosts.</td>
+</tr>
+<tr>
+<td>Use external database</td>
+<td>True</td>
+<td>Whether to use an externally managed database instead of provisioning Aurora.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>On the Options page, add tags and set advanced options, then choose <strong>Next</strong>.</li>
+<li>On the Review page, confirm your settings. Under Capabilities, select the acknowledgment that the template creates IAM resources, and select <strong>CAPABILITY_AUTO_EXPAND</strong>.</li>
+<li>Select <strong>Create</strong> to deploy the stack.</li>
+<li>Monitor the stack until its status is <code>CREATE_COMPLETE</code>.</li>
+<li>Select the <strong>Outputs</strong> tab to get the URLs for the deployed modules.</li>
+</ol>
+<h3 id="step-4-test-the-deployment">Step 4: Test the deployment</h3>
+<p>After the stack reaches <code>CREATE_COMPLETE</code>, retrieve the hostname from the stack's Outputs tab — it's the DNS name of the Application Load Balancer. Use it to reach:</p>
+<ul>
+<li><code>https://&lt;load-balancer-dns-name&gt;:4516</code> — deployment automation module</li>
+<li><code>http://&lt;load-balancer-dns-name&gt;:5516</code> — release orchestration module</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: Both modules should ideally be reached over HTTPS, but the default configuration secures only port 4516. If you need HTTPS on both, supply a valid <code>SslCertificateArn</code> and confirm the release orchestration module's listener is also configured for TLS.</p>
+</blockquote>
+<p>Log in using the administrator username and the password you set for each module's <code>Password</code> parameter.</p>
+<blockquote>
+<p><strong>Note</strong>: Check your vendor's documentation for the default account name (commonly <code>admin</code>) if you weren't prompted to set one during deployment.</p>
+</blockquote>
+<h2 id="observation-through-an-ai-agent">Observation through an AI agent</h2>
+<p>An AI Agent observes the state of your pipeline, reasons about what action to take, and calls tools on your behalf, instead of only reacting to a fixed webhook payload like a traditional notification integration. Apply the following principles wherever you extend this platform with AI-driven automation.</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Goal-directed autonomy</td>
+<td>The agent pursues a stated goal (for example, "keep the team informed and unblock stuck releases") rather than executing one hardcoded step.</td>
+</tr>
+<tr>
+<td>Tool augmentation</td>
+<td>The agent reasons over a fixed set of callable tools (APIs) instead of freeform actions, so its capabilities are explicit and auditable.</td>
+</tr>
+<tr>
+<td>Perceive–reason–act loop</td>
+<td>The agent repeatedly observes pipeline state, decides the next step, and acts, rather than running a single linear script.</td>
+</tr>
+<tr>
+<td>Bounded memory and context</td>
+<td>The agent persists only the conversation and release context it needs for the current task, with a defined retention period.</td>
+</tr>
+<tr>
+<td>Human-in-the-loop guardrails</td>
+<td>Any action with a production impact (for example, a rollback) requires explicit human approval before the agent executes it.</td>
+</tr>
+<tr>
+<td>Least-privilege tool access</td>
+<td>The agent's IAM role and platform API credentials grant only the specific calls its tools need — never broad administrative access.</td>
+</tr>
+<tr>
+<td>Observability and auditability</td>
+<td>Every reasoning step and tool call is logged, so you can reconstruct why the agent took an action.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong>: These principles apply beyond the Slack use case. If you build additional agents against this platform (for example, an agent that manages database backups or scales the ECS cluster), apply the same table before you grant it any new tool or permission.</p>
+</blockquote>
+<h2 id="use-case-deploy-an-autonomous-release-agent-integrated-with-slack-on-aws">Use case: Deploy an autonomous release agent integrated with Slack on AWS</h2>
+<p>This use case extends the deployment with an agent that your team interacts with directly in Slack. Instead of a one-way webhook that only posts static text, the agent can answer questions about release state, explain <em>why</em> a release is stuck, and — with your approval — trigger a rollback through the deployment automation module.</p>
+<h3 id="what-the-agent-does">What the Agent does</h3>
+<ul>
+<li><strong>Answers questions</strong> such as <em>what's blocking the payments-service release?</em> by querying the release orchestration module's API and summarizing the result.</li>
+<li><strong>Watches for stuck or failed releases</strong> and proactively posts a summary to the channel.</li>
+<li><strong>Proposes and, on approval, executes actions</strong> such as retrying a failed task or rolling back a deployment, using the deployment automation module's API.</li>
+<li><strong>Keeps a record</strong> of every action it proposed and whether a human approved it.</li>
+</ul>
+<h3 id="architecture_1">Architecture</h3>
+<pre><code class="language-mermaid">flowchart TB
+    subgraph Slack[&quot;Slack workspace&quot;]
+        SU[&quot;Release owner&quot;]
+        SC[&quot;Team channel&quot;]
+    end
+
+    subgraph AWSAgent[&quot;AWS Cloud — agent components&quot;]
+        APIGW[&quot;Amazon API Gateway&lt;br/&gt;Slack events endpoint&quot;]
+        LAMBDA[&quot;AWS Lambda&lt;br/&gt;agent orchestrator&quot;]
+        BEDROCK[&quot;Amazon Bedrock&lt;br/&gt;reasoning model&quot;]
+        DDB[(&quot;Amazon DynamoDB&lt;br/&gt;conversation and audit state&quot;)]
+        SECRETS[&quot;AWS Secrets Manager&lt;br/&gt;Slack + platform credentials&quot;]
+        CW[&quot;Amazon CloudWatch&lt;br/&gt;logs and alarms&quot;]
+    end
+
+    subgraph Platform[&quot;Existing platform deployment&quot;]
+        ALB2[&quot;Application Load Balancer&quot;]
+        REL[&quot;Release orchestration module&quot;]
+        DEP[&quot;Deploy module&quot;]
+    end
+
+    SU -- &quot;slash command or message&quot; --&gt; SC
+    SC --&gt; APIGW
+    APIGW --&gt; LAMBDA
+    LAMBDA --&gt; BEDROCK
+    LAMBDA --&gt; DDB
+    LAMBDA --&gt; SECRETS
+    LAMBDA -- &quot;read release status&quot; --&gt; ALB2
+    LAMBDA -- &quot;propose or execute rollback&quot; --&gt; ALB2
+    ALB2 --&gt; REL
+    ALB2 --&gt; DEP
+    LAMBDA --&gt; CW
+    LAMBDA -- &quot;post message / approval buttons&quot; --&gt; SC
+</code></pre>
+<p><strong>Description</strong>:</p>
+<ul>
+<li><strong>Slack workspace</strong>: The release owner interacts with the agent using a slash command (for example, <code>/release status payments-service</code>) or by mentioning the agent in a channel. Slack delivers this event over HTTPS.</li>
+<li><strong>Amazon API Gateway</strong>: Exposes a single HTTPS endpoint that receives Slack events and slash-command payloads, and validates the Slack request signature before forwarding anything to the agent.</li>
+<li><strong>AWS Lambda (agent orchestrator)</strong>: This is the core of the perceive–reason–act loop. It retrieves conversation context from DynamoDB, calls Amazon Bedrock to decide which tool to use, calls the platform's API through the existing Application Load Balancer, and posts the result back to Slack.</li>
+<li><strong>Amazon Bedrock</strong>: It hosts the reasoning model. The Lambda function sends it the user's request plus a fixed list of available tools (<code>get_release_status</code>, <code>list_blocked_tasks</code>, <code>propose_rollback</code>, <code>execute_rollback</code>); the model returns which tool to call and with what arguments — it never calls AWS or platform APIs directly itself.</li>
+<li><strong>Amazon DynamoDB</strong>: It stores short-lived conversation state (so follow-up questions like "why?" have context) and a permanent audit record of every proposed and executed action.</li>
+<li><strong>AWS Secrets Manager</strong>: It holds the Slack signing secret, the Slack bot token, and the platform API credentials, so none of them appear in Lambda environment variables or code.</li>
+<li><strong>The Existing Platform Deployment</strong>: The agent calls the same Application Load Balancer endpoint that a human user would use in a browser, through the release orchestration and deployment automation module APIs.</li>
+<li><strong>Amazon CloudWatch</strong>: It captures structured logs of every reasoning step and tool call, and can alarm if the agent's error rate rises or if it proposes an unusually high number of production rollbacks in a short window.</li>
+</ul>
+<h3 id="tool-definitions">Tool definitions</h3>
+<p>Define the agent's callable tools narrowly, so its capabilities are explicit and reviewable:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Underlying API call</th>
+<th>Risk level</th>
+<th>Approval required?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_release_status</code></td>
+<td>Release orchestration module: read release state</td>
+<td>Low</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>list_blocked_tasks</code></td>
+<td>Release orchestration module: read task queue</td>
+<td>Low</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>propose_rollback</code></td>
+<td>Deploy module: read deployment history (read-only)</td>
+<td>Low</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>execute_rollback</code></td>
+<td>Deploy module: trigger rollback</td>
+<td>High</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Only <code>execute_rollback</code> changes production state. Every other tool is read-only, which limits the blast radius of a reasoning error.</p>
+<h3 id="perceivereasonact-loop-with-human-in-the-loop-approval">Perceive–reason–act loop, with human-in-the-loop approval</h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant U as Release owner (Slack)
+    participant G as API Gateway
+    participant L as Agent orchestrator (Lambda)
+    participant B as Reasoning model (Bedrock)
+    participant P as Platform API (ALB → Release/Deploy modules)
+    participant D as DynamoDB (state and audit log)
+
+    U-&gt;&gt;G: &quot;/release status payments-service&quot;
+    G-&gt;&gt;L: Forward verified event
+    L-&gt;&gt;D: Load conversation context
+    L-&gt;&gt;B: Reasoning request + tool list + context
+    B--&gt;&gt;L: Call get_release_status(payments-service)
+    L-&gt;&gt;P: GET release status
+    P--&gt;&gt;L: Release state: blocked on approval gate
+    L-&gt;&gt;B: Tool result
+    B--&gt;&gt;L: Final answer (natural-language summary)
+    L-&gt;&gt;D: Persist conversation + audit entry
+    L-&gt;&gt;U: Post summary to channel
+
+    Note over U,L: Later — user asks for a rollback
+    U-&gt;&gt;G: &quot;/release rollback payments-service&quot;
+    G-&gt;&gt;L: Forward verified event
+    L-&gt;&gt;B: Reasoning request
+    B--&gt;&gt;L: Call execute_rollback(payments-service)
+    L-&gt;&gt;U: Post interactive approval request (Approve / Deny)
+    U-&gt;&gt;L: Approve
+    L-&gt;&gt;P: POST rollback
+    P--&gt;&gt;L: Rollback started
+    L-&gt;&gt;D: Persist audit entry (who approved, when)
+    L-&gt;&gt;U: Post rollback confirmation
+</code></pre>
+<p><strong>Description</strong>: The first exchange is fully autonomous, because every tool it uses is read-only. The second exchange follows the same perceive–reason–act pattern, but because <code>execute_rollback</code> is a high-risk tool, the agent pauses after reasoning and posts an interactive approval request instead of acting immediately. Only after the release owner approves does the agent call the platform API — and it records who approved the action and when, in DynamoDB, for audit purposes.</p>
+<h3 id="deployment-steps_1">Deployment steps</h3>
+<ol>
+<li><strong>Create a Slack app</strong></li>
+<li>In Slack, navigate to <strong>api.slack.com/apps</strong> and create an app for your workspace.</li>
+<li>Enable <strong>Interactivity &amp; Shortcuts</strong> (for the Approve/Deny buttons) and add a <strong>slash command</strong> (for example, <code>/release</code>).</li>
+<li>Enable <strong>Event Subscriptions</strong> and point the request URL to the API Gateway endpoint you create in the next step.</li>
+<li>
+<p>Copy the Signing Secret and Bot User OAuth Tokens.</p>
+</li>
+<li>
+<p><strong>Store credentials in AWS Secrets Manager</strong></p>
+</li>
+<li>Create one secret for the Slack signing secret and bot token.</li>
+<li>
+<p>Create a second secret for the platform API credentials (the administrator or a dedicated service account for each module).</p>
+</li>
+<li>
+<p><strong>Deploy the agent's AWS resources</strong></p>
+</li>
+<li>Create the DynamoDB table for conversation state and audit records, with a time-to-live (TTL) attribute on conversation items so short-lived context expires automatically. Keep audit items without a TTL.</li>
+<li>Create the Lambda function (agent orchestrator) and grant it an IAM role scoped to: <code>secretsmanager:GetSecretValue</code> on the two secrets above, <code>dynamodb:GetItem</code>/<code>PutItem</code>/<code>Query</code> on the table, <code>bedrock:InvokeModel</code> on the specific model you select, and outbound HTTPS to the platform's Application Load Balancer.</li>
+<li>Create the API Gateway HTTPS endpoint and connect it to the Lambda function.</li>
+<li>
+<p>Enable a model in Amazon Bedrock and record its model ID for the Lambda function's configuration.</p>
+</li>
+<li>
+<p><strong>Configure the tool list</strong>: In the Lambda function's code or configuration, and confirm <code>execute_rollback</code> is marked as requiring approval.</p>
+</li>
+<li>
+<p><strong>Test in a non-production environment</strong></p>
+</li>
+<li>Run a read-only query (<code>/release status &lt;test-release&gt;</code>) and confirm the agent responds correctly.</li>
+<li>Trigger a test rollback request and confirm the approval flow blocks execution until you approve it in Slack.</li>
+<li>
+<p>Deny a test rollback request and confirm no action is taken against the platform.</p>
+</li>
+<li>
+<p><strong>Enable monitoring</strong></p>
+</li>
+<li>Create a CloudWatch alarm on the Lambda function's error rate.</li>
+<li>
+<p>Create a CloudWatch alarm that notifies you if <code>execute_rollback</code> is called more than a defined number of times per hour, as a safeguard against reasoning loops or misuse.</p>
+</li>
+<li>
+<p><strong>Review</strong>: Roll out to production channels, and review the DynamoDB audit log periodically to confirm the agent's proposed actions match your team's expectations.</p>
+</li>
+</ol>
+<hr />
+<h2 id="best-practices">Best practices</h2>
+<h3 id="backups">Backups</h3>
+<p>Regularly back up the Aurora PostgreSQL data and the contents of the EFS volume. This protects you against accidental stack deletion or data corruption.</p>
+<h3 id="security">Security</h3>
+<p>The default security groups and IAM roles provide minimal access. Review and adjust them for your organization's requirements. For platform users and groups, see your vendor's product documentation.</p>
+<ul>
+<li>Restrict the <code>RemoteAccessCIDR</code> parameter to a known IP range; never leave it open to <code>0.0.0.0/0</code> in production.</li>
+<li>Rotate the database administrator and module administrator passwords on a schedule, and store them in AWS Secrets Manager rather than as plain CloudFormation parameters after initial setup.</li>
+<li>Enable <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail</a> in the account to log API activity against the stack's resources.</li>
+<li>Enable multi-factor authentication (MFA) for any IAM user or role with permission to modify this stack.</li>
+<li>For the AI Agent extension, apply the least-privilege tool access and human-in-the-loop principles to every new tool you add.</li>
+</ul>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html">Amazon CloudWatch alarms</a> on ECS service CPU/memory utilization and Aurora CPU/storage metrics.</li>
+<li>A CloudWatch alarm on ALB target health, so you're notified if either module becomes unreachable.</li>
+<li>For the agent, alarms on Lambda error rate and on the frequency of high-risk tool calls.</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Question</strong>: I got a <code>CREATE_FAILED</code> error when I launched the stack.</p>
+<p><strong>Answer</strong>: Relaunch the template with Rollback on failure set to <strong>No</strong> (under Advanced on the CloudFormation Options page). This keeps the stack and its instances running so you can review the logs. Delete the stack when you finish troubleshooting, since it continues to incur AWS charges while it exists.</p>
+<p><strong>Question</strong>: I got a size-limitation error when I deployed the template.</p>
+<p><strong>Answer</strong>: Launch the template from an S3-hosted URL rather than a local copy. See the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">AWS CloudFormation limits documentation</a>.</p>
+<p><strong>Question</strong>: Can I use a <code>latest</code> tag for the module version?</p>
+<p><strong>Answer</strong>: No. A <code>latest</code> tag makes deployments non-repeatable, because you can't tell which version is running. Use an exact version number, or your vendor's <code>latest in stream</code> tag if one is published.</p>
+<p><strong>Question</strong>: Can I run this on the AWS Free Tier?</p>
+<p><strong>Answer</strong>: No. The minimum instance sizes this deployment needs exceed Free Tier limits.</p>
+<p><strong>Question</strong>: How many AWS resources does this deployment use?</p>
+<p><strong>Answer</strong>: Two to four EC2 hosts in a single ECS cluster for the platform containers, plus one EC2 host for the bastion (if enabled) and one Elastic IP address. The AI Agent adds serverless resources (Lambda, API Gateway, DynamoDB) that don't require dedicated EC2 capacity.</p>
+<p><strong>Question</strong>: The agent keeps proposing rollbacks that don't make sense.</p>
+<p><strong>Answer</strong>: Review the DynamoDB audit log for the reasoning trace that led to the proposal, and check the CloudWatch alarm. Because <code>execute_rollback</code> requires human approval, no incorrect action can execute without your confirmation — but repeated bad proposals usually mean the tool descriptions or context passed to the reasoning model need to be more specific.</p>
+<h2 id="additional-resources">Additional resources</h2>
+<p><strong>AWS services</strong></p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/ec2/">Amazon EC2</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html">Amazon ECS</a></li>
+<li><a href="https://docs.aws.amazon.com/efs/">Amazon EFS</a></li>
+<li><a href="https://docs.aws.amazon.com/vpc/">Amazon VPC</a></li>
+<li><a href="https://docs.aws.amazon.com/cloudformation/">AWS CloudFormation</a></li>
+<li><a href="https://docs.aws.amazon.com/iam/">AWS IAM</a></li>
+<li><a href="https://docs.aws.amazon.com/bedrock/">Amazon Bedrock</a></li>
+<li><a href="https://docs.aws.amazon.com/lambda/">AWS Lambda</a></li>
+<li><a href="https://docs.aws.amazon.com/dynamodb/">Amazon DynamoDB</a></li>
+<li><a href="https://docs.aws.amazon.com/secretsmanager/">AWS Secrets Manager</a></li>
+</ul>
+<p><strong>Reference deployments</strong></p>
+<p><a href="https://aws.amazon.com/quickstart/">AWS Quick Start home page</a></p>
+<p>For platform-specific documentation, licensing, and support, contact your software vendor directly.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/arpitgupta007/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://arpitguptaa.github.io/my-docs-site/" target="_blank" rel="noopener" title="arpitguptaa.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
