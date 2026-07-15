@@ -9,7 +9,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.top
+    - navigation.left
     - content.code.copy
 
   palette:

@@ -1,4 +1,4 @@
-# DevOps Platform on AWS: Reference Deployment Guide
+# AWS Deployment Guide
 
 ## Contents
 
@@ -40,9 +40,9 @@ You need a trial or commercial license for the platform before you deploy. Obtai
 
 ## Architecture
 
-![architecture](images/architecture01.jpg)
-
 Traffic enters through the internet gateway. The Application Load Balancer distributes requests across the release and deployment containers in both Availability Zones. Each container reads and writes shared configuration on the encrypted EFS volume, and the Aurora PostgreSQL cluster provides highly available storage for platform data, with a primary instance in one zone and a read replica in the other. Bastion hosts give you SSH access to the private subnets without exposing the ECS hosts directly to the internet.
+
+![architecture](images/architecture01.jpg)
 
 The template sets up:
 
