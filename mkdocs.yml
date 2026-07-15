@@ -7,7 +7,7 @@ theme:
     logo: material/book-open-page-variant
 
   features:
-    - navigation.sections
+    - navigation.tabs
     - navigation.left
     - content.code.copy
 

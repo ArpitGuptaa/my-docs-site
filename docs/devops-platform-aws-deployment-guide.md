@@ -335,8 +335,6 @@ The first exchange is fully autonomous, because every tool it uses is read-only.
 
 7. **Review**: Roll out to production channels, and review the DynamoDB audit log periodically to confirm the agent's proposed actions match your team's expectations.
 
----
-
 ## Best practices
 
 ### Backups
