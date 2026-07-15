@@ -8,6 +8,8 @@
     "Agentic",
     "LLM",
     "LLMs",
-    "RAG"
+    "RAG",
+    "xlarge",
+    "xldevops"
   ]
 }
