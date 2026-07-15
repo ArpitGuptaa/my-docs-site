@@ -1645,13 +1645,13 @@
 <li><a href="#deployment-options">Deployment options</a></li>
 <li><a href="#deployment-steps">Deployment steps</a></li>
 <li><a href="#observation-through-an-ai-agent">AI Agent deployment</a></li>
-<li><a href="#use-case-deploy-an-autonomous-release-agent-integrated-with-slack-on-aws">Use case: deploy an autonomous release agent integrated with Slack on AWS</a></li>
+<li><a href="#use-case-deploy-an-autonomous-release-agent-integrated-with-slack-on-aws">Use case: Deploy an autonomous release agent integrated with Slack on AWS</a></li>
 <li><a href="#best-practices">Best practices</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 <li><a href="#additional-resources">Additional resources</a></li>
 </ol>
 <h2 id="overview">Overview</h2>
-<p>This guide helps in deploying a release-orchestration and deployment-automation platform on Amazon Web Services (AWS), then extend it with an <strong>AI Agent</strong> that lets your team monitor and control releases from Slack.</p>
+<p>This quick start guide helps in deploying a release-orchestration and deployment-automation platform on Amazon Web Services (AWS), then extend it with an <strong>AI Agent</strong> that lets your team monitor and control releases from Slack.</p>
 <p>The platform has two modules:</p>
 <table>
 <thead>
@@ -1673,65 +1673,16 @@
 </table>
 <p>Both modules run as containers on Amazon Elastic Container Service (Amazon ECS). The AI Agent observes these modules, reasons about pipeline state, and acts on your behalf — with guardrails — through a Slack interface.</p>
 <h3 id="costs-and-licensing">Costs and licensing</h3>
-<p>You're responsible for the cost of the AWS resources this deployment creates. The base CloudFormation template doesn't add any cost on top of the underlying AWS services; the AI Agent extension adds a small number of serverless resources that are billed separately.</p>
+<p>You're responsible for the cost of the AWS resources this deployment creates. The base CloudFormation template doesn't add an additional cost on top of the underlying AWS services; the AI Agent extension adds a small number of serverless resources that are billed separately.</p>
 <p>Before you deploy:</p>
 <ul>
 <li>Use the <a href="https://calculator.aws">AWS Pricing Calculator</a> to estimate the monthly cost of the EC2, RDS, EFS, and load balancer resources.</li>
 <li>Set up an <a href="https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html">AWS Budget</a> with an alert threshold.</li>
 <li>Enable the <a href="https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html">AWS Cost and Usage Report</a> to track costs after deployment.</li>
 </ul>
-<p>You need a trial or commercial license for the platform before you deploy. Obtain a license from your software vendor and have the license file (or its base64-encoded contents) ready before you start Step 3.</p>
+<p>You need a trial or commercial license for the platform before you deploy. Obtain a license from your software vendor and have the license file (or its base64-encoded contents) ready before you begin the process.</p>
 <h2 id="architecture">Architecture</h2>
-<p>Deploying the following template with default parameters into a new VPC builds the environment displayed below.</p>
-<pre><code class="language-mermaid">flowchart TB
-    subgraph AWS[&quot;AWS Cloud&quot;]
-        IGW[&quot;Internet gateway&quot;]
-        subgraph AZ1[&quot;Availability Zone 1&quot;]
-            subgraph PUB1[&quot;Public subnet — 10.0.1.0/24&quot;]
-                NAT1[&quot;NAT gateway&quot;]
-                BAST1[&quot;Bastion host&quot;]
-            end
-            subgraph PRIV1[&quot;Private subnet — 10.0.8.0/24&quot;]
-                REL1[&quot;Release module&quot;]
-                DEP1[&quot;Deploy module&quot;]
-            end
-            subgraph DATA1[&quot;Private data subnet — 10.0.16.0/24&quot;]
-                DB1[(&quot;Aurora PostgreSQL — primary&quot;)]
-            end
-        end
-        subgraph AZ2[&quot;Availability Zone 2&quot;]
-            subgraph PUB2[&quot;Public subnet — 10.0.2.0/24&quot;]
-                NAT2[&quot;NAT gateway&quot;]
-                BAST2[&quot;Bastion host&quot;]
-            end
-            subgraph PRIV2[&quot;Private subnet — 10.0.9.0/24&quot;]
-                REL2[&quot;Release module&quot;]
-                DEP2[&quot;Deploy module&quot;]
-            end
-            subgraph DATA2[&quot;Private data subnet — 10.0.17.0/24&quot;]
-                DB2[(&quot;Aurora PostgreSQL — read replica&quot;)]
-            end
-        end
-        ALB[&quot;Application Load Balancer&quot;]
-        EFS[(&quot;Amazon EFS — encrypted&quot;)]
-        ECS[&quot;Amazon ECS cluster&quot;]
-
-        IGW --&gt; BAST1
-        IGW --&gt; BAST2
-        IGW --&gt; ALB
-        ALB --&gt; REL1
-        ALB --&gt; REL2
-        ALB --&gt; DEP1
-        ALB --&gt; DEP2
-        REL1 -.-&gt; EFS
-        DEP1 -.-&gt; EFS
-        REL2 -.-&gt; EFS
-        DEP2 -.-&gt; EFS
-        DB1 --- DB2
-        ECS -.contains.- REL1
-        ECS -.contains.- DEP1
-    end
-</code></pre>
+<p><img alt="architecture" src="../images/architecture01.jpg" /></p>
 <p>Traffic enters through the internet gateway. The Application Load Balancer distributes requests across the release and deployment containers in both Availability Zones. Each container reads and writes shared configuration on the encrypted EFS volume, and the Aurora PostgreSQL cluster provides highly available storage for platform data, with a primary instance in one zone and a read replica in the other. Bastion hosts give you SSH access to the private subnets without exposing the ECS hosts directly to the internet.</p>
 <p>The template sets up:</p>
 <ul>
@@ -1839,7 +1790,7 @@
 <h3 id="step-3-launch-the-stack">Step 3: Launch the stack</h3>
 <ol>
 <li>Open the AWS CloudFormation console and choose to create a new stack, using the template for your chosen <a href="#4-deployment-options">deployment option</a>.</li>
-<li>Confirm the Region shown in the console matches the Region you validated in Step 1.</li>
+<li>Confirm the Region displayed in the console.</li>
 <li>On the Select Template page, keep the default template URL and choose <strong>Next</strong>.</li>
 <li>On the Specify Details page, enter a stack name and set the parameters described below. Select <strong>Next</strong> when you're done.</li>
 </ol>
@@ -1856,12 +1807,12 @@
 <tbody>
 <tr>
 <td>Remote access CIDR</td>
-<td><em>Required</em></td>
+<td>Required</td>
 <td>CIDR range allowed to reach the environment. Use a constrained range, not <code>0.0.0.0/0</code>.</td>
 </tr>
 <tr>
 <td>Availability Zones</td>
-<td><em>Required</em></td>
+<td>Required</td>
 <td>Two Availability Zones for the subnets.</td>
 </tr>
 <tr>
@@ -1903,7 +1854,7 @@
 </tr>
 <tr>
 <td>Database administrator password</td>
-<td><em>Required</em></td>
+<td>Required</td>
 <td>8–41 alphanumeric characters. No spaces, <code>@</code>, <code>/</code>, or <code>"</code>.</td>
 </tr>
 <tr>
@@ -1957,7 +1908,7 @@
 </tr>
 <tr>
 <td>Key name</td>
-<td><em>Required</em></td>
+<td>Required</td>
 <td>Existing EC2 key pair name.</td>
 </tr>
 <tr>
@@ -2210,40 +2161,7 @@
 <li><strong>Keeps a record</strong> of every action it proposed and whether a human approved it.</li>
 </ul>
 <h3 id="architecture_1">Architecture</h3>
-<pre><code class="language-mermaid">flowchart TB
-    subgraph Slack[&quot;Slack workspace&quot;]
-        SU[&quot;Release owner&quot;]
-        SC[&quot;Team channel&quot;]
-    end
-
-    subgraph AWSAgent[&quot;AWS Cloud — agent components&quot;]
-        APIGW[&quot;Amazon API Gateway&lt;br/&gt;Slack events endpoint&quot;]
-        LAMBDA[&quot;AWS Lambda&lt;br/&gt;agent orchestrator&quot;]
-        BEDROCK[&quot;Amazon Bedrock&lt;br/&gt;reasoning model&quot;]
-        DDB[(&quot;Amazon DynamoDB&lt;br/&gt;conversation and audit state&quot;)]
-        SECRETS[&quot;AWS Secrets Manager&lt;br/&gt;Slack + platform credentials&quot;]
-        CW[&quot;Amazon CloudWatch&lt;br/&gt;logs and alarms&quot;]
-    end
-
-    subgraph Platform[&quot;Existing platform deployment&quot;]
-        ALB2[&quot;Application Load Balancer&quot;]
-        REL[&quot;Release orchestration module&quot;]
-        DEP[&quot;Deploy module&quot;]
-    end
-
-    SU -- &quot;slash command or message&quot; --&gt; SC
-    SC --&gt; APIGW
-    APIGW --&gt; LAMBDA
-    LAMBDA --&gt; BEDROCK
-    LAMBDA --&gt; DDB
-    LAMBDA --&gt; SECRETS
-    LAMBDA -- &quot;read release status&quot; --&gt; ALB2
-    LAMBDA -- &quot;propose or execute rollback&quot; --&gt; ALB2
-    ALB2 --&gt; REL
-    ALB2 --&gt; DEP
-    LAMBDA --&gt; CW
-    LAMBDA -- &quot;post message / approval buttons&quot; --&gt; SC
-</code></pre>
+<p><img alt="Architecture" src="../images/architecture03.jpg" /></p>
 <p><strong>Description</strong>:</p>
 <ul>
 <li><strong>Slack workspace</strong>: The release owner interacts with the agent using a slash command (for example, <code>/release status payments-service</code>) or by mentioning the agent in a channel. Slack delivers this event over HTTPS.</li>
@@ -2295,39 +2213,8 @@
 </table>
 <p>Only <code>execute_rollback</code> changes production state. Every other tool is read-only, which limits the blast radius of a reasoning error.</p>
 <h3 id="perceivereasonact-loop-with-human-in-the-loop-approval">Perceive–reason–act loop, with human-in-the-loop approval</h3>
-<pre><code class="language-mermaid">sequenceDiagram
-    participant U as Release owner (Slack)
-    participant G as API Gateway
-    participant L as Agent orchestrator (Lambda)
-    participant B as Reasoning model (Bedrock)
-    participant P as Platform API (ALB → Release/Deploy modules)
-    participant D as DynamoDB (state and audit log)
-
-    U-&gt;&gt;G: &quot;/release status payments-service&quot;
-    G-&gt;&gt;L: Forward verified event
-    L-&gt;&gt;D: Load conversation context
-    L-&gt;&gt;B: Reasoning request + tool list + context
-    B--&gt;&gt;L: Call get_release_status(payments-service)
-    L-&gt;&gt;P: GET release status
-    P--&gt;&gt;L: Release state: blocked on approval gate
-    L-&gt;&gt;B: Tool result
-    B--&gt;&gt;L: Final answer (natural-language summary)
-    L-&gt;&gt;D: Persist conversation + audit entry
-    L-&gt;&gt;U: Post summary to channel
-
-    Note over U,L: Later — user asks for a rollback
-    U-&gt;&gt;G: &quot;/release rollback payments-service&quot;
-    G-&gt;&gt;L: Forward verified event
-    L-&gt;&gt;B: Reasoning request
-    B--&gt;&gt;L: Call execute_rollback(payments-service)
-    L-&gt;&gt;U: Post interactive approval request (Approve / Deny)
-    U-&gt;&gt;L: Approve
-    L-&gt;&gt;P: POST rollback
-    P--&gt;&gt;L: Rollback started
-    L-&gt;&gt;D: Persist audit entry (who approved, when)
-    L-&gt;&gt;U: Post rollback confirmation
-</code></pre>
-<p><strong>Description</strong>: The first exchange is fully autonomous, because every tool it uses is read-only. The second exchange follows the same perceive–reason–act pattern, but because <code>execute_rollback</code> is a high-risk tool, the agent pauses after reasoning and posts an interactive approval request instead of acting immediately. Only after the release owner approves does the agent call the platform API — and it records who approved the action and when, in DynamoDB, for audit purposes.</p>
+<p><img alt="architecture02" src="../images/architecture02.jpg" /></p>
+<p>The first exchange is fully autonomous, because every tool it uses is read-only. The second exchange follows the same perceive–reason–act pattern, but because <code>execute_rollback</code> is a high-risk tool, the agent pauses after reasoning and posts an interactive approval request instead of acting immediately. Only after the release owner approves does the agent call the platform API — and it records who approved the action and when, in DynamoDB, for audit purposes.</p>
 <h3 id="deployment-steps_1">Deployment steps</h3>
 <ol>
 <li><strong>Create a Slack app</strong></li>
@@ -2423,7 +2310,6 @@
 </ul>
 <p><strong>Reference deployments</strong></p>
 <p><a href="https://aws.amazon.com/quickstart/">AWS Quick Start home page</a></p>
-<p>For platform-specific documentation, licensing, and support, contact your software vendor directly.</p>
 
 
 
