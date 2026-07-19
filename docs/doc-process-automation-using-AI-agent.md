@@ -14,7 +14,7 @@ A supervisor coordinates a set of specialized services. Each service performs a 
 
 This modular approach keeps responsibilities separate, making the workflow easier to maintain, monitor, and extend.
 
-![pipeline-overview](/docs/images/pipeline-overview.png)
+![pipeline-overview](images/pipeline-overview.png)
 
 ## Architecture
 
@@ -51,7 +51,7 @@ Project information from connected systems is collected into a shared knowledge 
 - **Supervisor agent**: owns the end-to-end sequence and hands off between sub-agents.
 - **Sub-agents**: Content Agent, API Agent, Release Note Agent, Diagram Agent, QA Agent, and Publishing Agent.
 
-![system-architecture](/docs/images/system-architecture.png)
+![system-architecture](images/system-architecture.png)
 
 Connected systems include:
 
@@ -71,7 +71,7 @@ The supervisor coordinates the workflow by assigning work to the appropriate ser
 
 Instead of assigning every task to a single service, the platform separates the work into individual components. Each component performs one well-defined function with clearly defined inputs and outputs.
 
-![agent-architecture](/docs/images/agent-architecture.png)
+![agent-architecture](images/agent-architecture.png)
 
 | Component | Responsibility |
 |-----------|----------------|
@@ -87,13 +87,13 @@ Instead of assigning every task to a single service, the platform separates the 
 
 The workflow begins when a release becomes available. The supervisor coordinates each activity from information collection through publication and records the status of every stage.
 
-![supervisor-workflow](/docs/images/supervisor-workflow.png)
+![supervisor-workflow](images/supervisor-workflow.png)
 
 ### Knowledge Architecture
 
 Documentation is generated using information stored in a shared knowledge repository. Content is indexed, stored, and retrieved through a vector search process that provides relevant project information from connected systems.
 
-![knowledge-architecture](/docs/images/knowledge-architecture.png)
+![knowledge-architecture](images/knowledge-architecture.png)
 
 ### MCP Connectors
 
@@ -109,7 +109,7 @@ Each connector provides access to a specific business system.
 | SharePoint          | Retrieves product documents                           |
 | Deployment Pipeline | Retrieves deployment and release pipeline information |
 
-![deployment-pipeline](/docs/images/deployment-pipeline.png)
+![deployment-pipeline](images/deployment-pipeline.png)
 
 Each environment performs the same validation checks for documentation quality, accessibility, and security before content progresses to the next stage.
 
@@ -128,7 +128,7 @@ Both methods follow the same workflow.
 
 #### End-to-End Flow
 
-![end-to-end-flow](/docs/images/end-to-end-flow.png)
+![end-to-end-flow](images/end-to-end-flow.png)
 
 Each stage is completed by the responsible component. The supervisor coordinates the workflow and waits for each stage to finish before continuing.
 
