@@ -31,10 +31,9 @@ nav:
   - Process Improvement and Documentation Automation: process-improvement-and-documentation-automation.md
   - AWS Deployment Guide: devops-platform-aws-deployment-guide.md
   - Documentation CI/CD Pipeline Implementation: implementation-of-ci-cd-pipeline-for-documentation.md
-  - Document Automation with Agentic AI: documentation-automation-with-agenticAI.md
+  - Document Automation using Agentic AI workflow: doc-process-automation-using-AI-agent.md
   - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
   - Value of Savings: why-savings-matter.md
-  - Deploy Digitalai DevOps Platform on AWS: digitalai-devOps-platform.md
   - Capture a Charge (API): capture-a-charge-tutorial.md
   - Error Codes: ecommerce-error-codes.md
   - Ecommerce Tokenization: ecommerce-tokenization-overview.md
