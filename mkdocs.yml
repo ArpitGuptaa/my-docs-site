@@ -28,11 +28,11 @@ extra_css:
 
 nav:
   - About Me: index.md
+  - Document Automation using Agentic AI workflow: doc-process-automation-using-AI-agent.md
+  - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
   - Process Improvement and Documentation Automation: process-improvement-and-documentation-automation.md
   - AWS Deployment Guide: devops-platform-aws-deployment-guide.md
   - Documentation CI/CD Pipeline Implementation: implementation-of-ci-cd-pipeline-for-documentation.md
-  - Document Automation using Agentic AI workflow: doc-process-automation-using-AI-agent.md
-  - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
   - Value of Savings: why-savings-matter.md
   - Capture a Charge (API): capture-a-charge-tutorial.md
   - Error Codes: ecommerce-error-codes.md
