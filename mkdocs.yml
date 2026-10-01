@@ -41,12 +41,11 @@ extra_css:
 nav:
   - About:
       - Arpit Gupta: index.md
-      - Overview & Expertise: about/overview.md
+      - Overview: about/overview.md
       - Experience: about/experience.md
-      - Products & Platforms: about/products-platforms.md
-      - Certifications: about/certifications.md
+      - Expertise & Platforms: about/products-platforms.md
+      - Education & Certifications: about/certifications.md
       - Awards: about/awards.md
-      - Education: about/education.md
   - Projects:
       - Projects Overview: projects/index.md
       - Documentation Automation:
@@ -87,7 +86,7 @@ nav:
       - Technical Writing: resources/technical-writing.md
       - API Documentation: resources/api-documentation.md
       - Documentation Quality: resources/documentation-quality.md
-      - Business Analysis: resources/business-analysis.md
+      - Business Analyst: resources/business-analysis.md
   - Contact: contact/index.md
 
 markdown_extensions:
