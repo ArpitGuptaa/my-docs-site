@@ -1,21 +1,30 @@
 
 # Arpit Gupta
 
-## Senior Lead Technical Writer | AI Documentation Specialist
+## Senior Lead Technical Writer | Developer Documentation | Business Analyst | AI Documentation Specialist | API & SDK | Docs-as-Code | Process Automation
 
-Building scalable documentation systems, Docs-as-Code workflows, and AI-assisted content operations.
+## Professional Summary
 
-11+ years of experience in:
+Senior Lead Technical Writer with 11 years of experience creating API, SDK, developer, product, and business process documentation for AI, SaaS, FinTech, mortgage, healthcare, DevOps, IoT, and cloud platforms.
 
-- Technical Documentation
-- API Documentation
-- Agentic AI Documentation
-- Knowledge Management
-- Content Quality Automation
+## About
 
-- [📄 Download Resume](assets/resume/arpit-resume.pdf)
+My expertise includes **API and developer documentation, information architecture, docs-as-code, content strategy, business process documentation, requirements analysis, product documentation, and documentation automation**. I work closely with product managers, engineers, architects, QA teams, and business stakeholders to connect product requirements with accurate and usable documentation.
 
-- [💼 LinkedIn](https://www.linkedin.com/in/arpitgupta007/)
+As a **Certified Business Analysis Professional (CBAP)**, I bring business analysis practices into my technical writing work. I analyze requirements, understand business processes and workflows, clarify functional requirements with stakeholders, and translate complex product and technical concepts into clear, user-focused documentation.
+
+I also use AI-assisted authoring and automation to improve documentation quality, consistency, and delivery efficiency.
+
+## Expertise in
+
+- Developer Documentation
+- API & SDK Documentation
+- AI Documentation
+- Docs-as-Code
+- Information Architecture
+- Documentation Automation & Documentation CI/CD
+- Agentic AI Workflows
+
 
 
 ## Areas of Expertise

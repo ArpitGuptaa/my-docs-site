@@ -10,9 +10,6 @@ I work closely with product managers, engineers, architects, QA teams, and busin
 
 As a **Certified Business Analysis Professional (CBAP)**, I also apply business analysis practices to requirements analysis, workflow analysis, stakeholder collaboration, and product documentation.
 
-[View My Experience](about/experience.md){ .md-button .md-button--primary }
-[Explore My Projects](projects/index.md){ .md-button }
-
 ---
 
 ## What I Do
@@ -146,8 +143,6 @@ A portfolio project exploring how AI and automation can reduce repetitive docume
 
 **Focus:** Documentation workflow, content intake, AI-assisted authoring, quality checks, and publishing.
 
-[View Project →](projects/documentation-automation/index.md)
-
 ---
 
 ### AI Agent Documentation Suite
@@ -156,8 +151,6 @@ A fictional documentation suite for an AI agent orchestration platform. The proj
 
 **Focus:** Information architecture, API documentation, SDK documentation, architecture, and developer experience.
 
-[View Project →](projects/ai-agent-documentation/index.md)
-
 ---
 
 ### Documentation CI/CD
@@ -165,8 +158,6 @@ A fictional documentation suite for an AI agent orchestration platform. The proj
 A documentation engineering project demonstrating how documentation can be integrated into a development pipeline for validation, quality checks, and publishing.
 
 **Focus:** Docs-as-Code, Git, automated validation, style checks, and CI/CD.
-
-[View Project →](projects/documentation-cicd/index.md)
 
 ---
 
@@ -178,25 +169,20 @@ The work samples section contains self-authored documentation created to demonst
 
 Documentation covering AI concepts, AI-assisted documentation workflows, and practical documentation use cases.
 
-[View Work Sample →](work-samples/ai-documentation/index.md)
 
 ### AWS Deployment Guide
 
 A structured deployment guide demonstrating technical procedures, prerequisites, configuration steps, troubleshooting, and deployment workflows.
 
-[View Work Sample →](work-samples/aws-deployment/index.md)
 
 ### API Documentation
 
 Sample API documentation covering endpoints, parameters, authentication, requests, responses, and error handling.
 
-[View Work Sample →](work-samples/api-documentation/index.md)
 
 ### Technical Guides
 
 Selected technical guides demonstrating information architecture, task-based writing, procedures, and troubleshooting content.
-
-[View Work Sample →](work-samples/technical-guides/index.md)
 
 ---
 
@@ -224,7 +210,6 @@ Healthcare applications, clinical research platforms, and technical workflows
 
 Release automation, cloud-native applications, deployment workflows, and documentation engineering
 
-[View Products & Platforms →](about/products-platforms.md)
 
 ---
 
