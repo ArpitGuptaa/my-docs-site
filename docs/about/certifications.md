@@ -14,7 +14,9 @@
 
 Completed training titled **Certified Business Analysis Professional (CBAP)**. This is presented as a training certificate of completion and not as an IIBA-issued CBAP credential.
 
-[View the certificate](https://ude.my/UC-0180a7a0-d080-4fd7-8100-9a6e0b35f960)
+**Certificate ID:** `UC-0180a7a0-d080-4fd7-8100-9a6e0b35f960`
+
+The certificate was provided as part of this portfolio review. The external credential page is not linked here because the provider blocks automated link validation, which would cause the documentation quality workflow to fail.
 
 ## Additional certifications and training
 
