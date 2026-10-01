@@ -1,41 +1,12 @@
+# Awards & recognition
 
-# Arpit Gupta
+Recognition received across technical writing roles for individual contribution, teamwork, and delivery.
 
-## Senior Lead Technical Writer | AI Documentation Specialist
+<div class="portfolio-grid">
+<div class="portfolio-card"><span class="label">Recognition</span><h3>Global Spotlight Award</h3><p>Professional recognition received during my technical writing career.</p></div>
+<div class="portfolio-card"><span class="label">Recognition</span><h3>Living Proof Recognition</h3><p>Recognition for contribution and professional impact.</p></div>
+<div class="portfolio-card"><span class="label">Individual</span><h3>Most Valuable Performer</h3><p>Individual performance recognition.</p></div>
+<div class="portfolio-card"><span class="label">Team</span><h3>Most Valuable Performer</h3><p>Team performance recognition.</p></div>
+</div>
 
-Building scalable documentation systems, Docs-as-Code workflows, and AI-assisted content operations.
-
-11+ years of experience in:
-
-- Technical Documentation
-- API Documentation
-- Agentic AI Documentation
-- Knowledge Management
-- Content Quality Automation
-
-
-## Areas of Expertise
-
-- Technical Documentation
-- Agentic AI Workflows
-- GenAI Documentation
-- Docs-as-Code
-- Microsoft Style Guide
-- Information Mapping
-- Documentation Quality Assurance
-
-## Current Focus
-
-At Kore.ai, I work on AI-powered documentation workflows, content governance, knowledge management, and documentation quality automation.
-
-## Featured Projects
-
-- AI Procurement Documentation
-- Agentic AI Workflow Documentation
-- Digital.ai Release Documentation
-- API Documentation Strategy
-
-## Explore
-
-- Writing Samples
-- Technical Writing Resources
+Award dates and employer-specific details are intentionally omitted where they are not required to demonstrate the portfolio skill set.

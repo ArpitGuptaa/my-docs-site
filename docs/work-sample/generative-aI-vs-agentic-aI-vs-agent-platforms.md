@@ -1,144 +1,80 @@
 ---
 title: "Generative AI vs Agentic AI vs Agent Platforms"
 slug: "generative-aI-vs-agentic-aI-vs-agent-platforms"
-excerpt: ""
 hidden: false
 ---
 
-# Introduction
+# Generative AI vs Agentic AI vs Agent Platforms
 
-Artificial Intelligence is changing simple content generation toward systems that can reason, plan, make decisions, and execute tasks autonomously. Over the past few years, Generative AI tools such as ChatGPT, Claude, and Gemini have transformed how people create content, write code, summarize information, and interact with technology. As organizations look for greater productivity and automation, the focus is shifting from AI that responds to prompts to AI that can independently pursue goals and complete multi-step tasks.
-
-This evolution has introduced new concepts such as AI agents, Agentic AI, and agent platforms. Businesses are increasingly adopting AI-powered assistants that can access enterprise systems, retrieve information, interact with applications, and automate complex workflows. At the same time, low-code and no-code platforms are making it easier to build and deploy AI-driven solutions without extensive development effort. As a result, modern AI solutions often combine Large Language Models (LLMs), retrieval systems, workflows, agents, and orchestration platforms to create intelligent applications that can both generate content and take action. Understanding the differences between Generative AI, Agentic AI, and Agent Platforms is essential for selecting the right approach and building effective AI-powered business solutions.
+Generative AI, agentic systems, and agent platforms solve different parts of an automation problem. This overview explains the distinctions, typical capabilities, and situations in which each approach is useful.
 
 ## Generative AI
 
-Generative AI creates new content based on patterns learned from training data. It responds to prompts and generates outputs such as Text images, audio, Video, and code.
+Generative AI creates content from a prompt. Common outputs include text, images, audio, video, and code.
 
-**GenAI based LLMs**
-
-* ChatGPT
-* Claude
-* Gemini
-* Copilot
-* Cursor
-
-### How It Works
-
-A user provides a prompt, and an LLM processes that prompt to generate an output. Once the output is generated, the interaction typically ends unless the user provides another instruction.
-
-### Key Features
+### Typical applications
 
 - Content creation
-- Software development
+- Software development assistance
 - Knowledge assistance
-- Creative Applications
+- Summarization and drafting
 
+### How it works
 
-## Agentic AI
-
-Agentic AI extends Generative AI by adding reasoning, planning, decision-making, and action capabilities. Instead of generating content, an Agentic AI system works toward achieving a goal. It can:
-  
-* Break down complex tasks
-* Select appropriate actions
-* Use external tools
-* Evaluate results
-* Iterate until the goal is achieved
-
-### How It Works
-
-Agentic AI works by understanding a goal, planning the required actions, using tools to execute those actions, and evaluating the results. It can adjust its approach and repeat the process until the objective is achieved with minimal human intervention.
-
-### Key Features
-
-- Business Process Automation
-- Research and Analysis
-- IT Operations
-- Travel and Logistics
-
-## Agent Platforms
-
-Agent platforms provide the infrastructure required to build, deploy, manage, and govern AI agents at scale. Instead of creating agents from scratch, organizations use agent platforms to connect AI models with tools, workflows, enterprise applications, and data sources. An agent platform acts as the operating environment for AI agents.
-
-**Agent platforms based applications**
-
-* Microsoft Copilot Studio
-* LangGraph
-* CrewAI
-* AutoGen
-* N8N
-* Zapier AI
-* Salesforce Agentforce
-
-### How It Works
-
-An Agent Platform provides the foundation for AI agents to operate. It connects agents with tools, data sources, and enterprise systems, while managing workflows, memory, security, and execution to achieve business goals at scale.
-
-### Key Features
-
-- Tool Integration
-- Workflow Orchestration
-- Memory Management
-- Governance and Monitoring
-
-# Comparison
-
-| Feature              | Generative AI    | Agentic AI    | Agent Platform            |
-| -------------------- | ---------------- | ------------- | ------------------------- |
-| Primary purpose      | Generate content | Achieve goals | Build and manage agents   |
-| User interaction     | Prompt-based     | Goal-based    | Platform-driven           |
-| Decision making      | Limited          | Autonomous    | Supports agents           |
-| Tool usage           | Optional         | Required      | Built-in                  |
-| Multi-step execution | Minimal          | Extensive     | Managed through workflows |
-| Memory               | Session-based    | Persistent    | Platform-managed          |
-| Human involvement    | High             | Moderate      | configurable              |
-
-
-# Real World Use Case
-
-Consider a business traveler planning an international trip.
-
-## Generative AI
-
-The user asks:
-
-> Create a travel plan from Mumbai to New York.
-
-The system generates recommendations and itinerary suggestions.
+A user provides a prompt, and a model generates a response. The interaction usually ends after the response unless the user provides another instruction or an application adds workflow logic around the model.
 
 ## Agentic AI
 
-The user asks:
+Agentic AI combines model capabilities with planning, tool use, state, and execution logic so a system can work toward a defined goal.
 
-> Arrange my business trip to New York next week while minimizing cost and layovers.
+### Typical capabilities
 
-The system:
+- Break a task into steps
+- Select an available tool
+- Use external systems or data
+- Evaluate intermediate results
+- Continue or adjust a workflow based on results
 
-* Searches flights
-* Checks visa requirements
-* Books hotels
-* Arranges transportation
-* Optimizes costs
-* Provides a completed itinerary
+### How it works
 
-## Agent Platform
+The system interprets a goal, determines the actions required, uses approved tools, and evaluates results. The amount of autonomy depends on the design, permissions, controls, and human-review requirements.
 
-The platform coordinates multiple specialized agents responsible for:
+## Agent platforms
 
-* Flight booking
-* Visa verification
-* Hotel reservations
-* Expense optimization
-* Travel approvals
+Agent platforms provide infrastructure for building, deploying, managing, and governing agent-based applications. They can connect models with tools, workflows, enterprise applications, knowledge sources, security controls, and monitoring.
 
-The platform manages communication, security, monitoring, and execution across all agents.
+### Platform capabilities
 
-# Choose the Right Tool
+- Tool integration
+- Workflow orchestration
+- State and memory services
+- Authentication and access controls
+- Governance and monitoring
+- Deployment and operational management
 
-- Use **Generative AI** when the goal is content creation, summarization, coding assistance, or conversational interactions.
+## Comparison
 
-- Use **Agentic AI** when tasks require reasoning, planning, tool usage, and autonomous execution.
+| Feature | Generative AI | Agentic AI | Agent platform |
+| --- | --- | --- | --- |
+| Primary purpose | Generate content | Work toward a goal | Build and manage agent applications |
+| Interaction | Prompt-oriented | Goal-oriented | Application and platform oriented |
+| Tool use | Optional | Common | Managed as a platform capability |
+| Multi-step execution | Application dependent | Core design pattern | Orchestrated and governed |
+| State or memory | Implementation dependent | Often required | Typically provided or integrated |
+| Human involvement | Depends on workflow | Depends on risk and controls | Configured through governance and workflow design |
 
-- Use an **Agent Platform** when multiple agents, workflows, integrations, governance controls, and enterprise-scale management are required.
+## Example: business travel workflow
 
-The future of enterprise AI is likely to combine all three. Generative AI will continue to provide intelligence and content generation, Agentic AI will drive autonomous decision-making, and Agent Platforms will serve as the foundation for deploying intelligent, business-ready AI systems.
+A travel-planning example shows how the approaches differ.
+
+**Generative AI:** A user asks for an itinerary and receives recommendations based on the supplied context.
+
+**Agentic AI:** A goal-oriented application can search approved services, compare options, request required approvals, and continue through a multi-step travel workflow.
+
+**Agent platform:** The platform provides the runtime, integrations, permissions, monitoring, and orchestration needed to operate one or more specialized agents used by the travel application.
+
+## Choose an approach
+
+Use generative AI when the primary task is producing or transforming content. Use an agentic design when the application must reason across multiple steps and use tools to pursue a goal. Use an agent platform when an organization needs reusable infrastructure, integrations, governance, and operational controls for multiple agent-based applications.
+
+In practice, these approaches can overlap. A platform can host agentic applications that use generative models as one component of a larger workflow.
