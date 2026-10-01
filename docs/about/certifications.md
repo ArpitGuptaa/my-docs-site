@@ -1,4 +1,4 @@
-# Education & Certifications
+# Education and Certifications
 
 ## Education
 
@@ -6,15 +6,15 @@
 
 **Bundelkhand University**
 
-## Professional certification
+## Professional training
 
-### Certified Business Analysis Professional (CBAP)
+### Certified Business Analysis Professional (CBAP) training
 
-**IIBA — International Institute of Business Analysis**
+**YouAccel Training · Certificate of Completion · September 21, 2026 · 18.5 hours**
 
-CBAP stands for **Certified Business Analysis Professional**. The certification covers business-analysis practices such as requirements analysis, stakeholder collaboration, business-process analysis, and solution evaluation.
+Completed training titled **Certified Business Analysis Professional (CBAP)**. This is presented as a training certificate of completion and not as an IIBA-issued CBAP credential.
 
-I apply these practices when understanding product requirements, analyzing workflows, clarifying stakeholder needs, and planning technical documentation.
+[View the certificate](https://ude.my/UC-0180a7a0-d080-4fd7-8100-9a6e0b35f960)
 
 ## Additional certifications and training
 
@@ -24,3 +24,5 @@ I apply these practices when understanding product requirements, analyzing workf
 - Prompt Engineering — AI Tools
 - Introduction to ChatGPT and Generative AI
 - Agentic AI Workflow
+
+Certificate links for the additional training items are not listed because source credential URLs were not provided.

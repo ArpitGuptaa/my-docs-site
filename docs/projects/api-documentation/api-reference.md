@@ -1,26 +1,46 @@
 # API reference pattern
 
-## Create a charge
+## Create a project
 
-`POST /v1/charges`
+`POST /v1/projects`
 
-Creates a charge against a valid payment source.
+Creates a project in the sample API.
 
 ### Request fields
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `amount` | integer | Yes | Amount in the API's smallest supported currency unit. |
-| `currency` | string | Yes | Three-letter currency code supported by the account. |
-| `source` | string | Yes | Token or payment source identifier. |
-| `description` | string | No | Short description for reconciliation or display. |
+| `name` | string | Yes | Display name for the project. |
+| `region` | string | Yes | Region in which the project is created. |
+| `description` | string | No | Short project description. |
 
-### Response guidance
+### Request
 
-A production reference should show a tested response example and document field semantics rather than only displaying raw JSON.
+```json
+{
+  "name": "documentation-demo",
+  "region": "us-east",
+  "description": "Example project for API documentation"
+}
+```
+
+### Response
+
+```json
+{
+  "id": "prj_1042",
+  "name": "documentation-demo",
+  "region": "us-east",
+  "status": "active"
+}
+```
 
 ### Errors
 
-Document errors next to the endpoint when developers need them to complete the task, and maintain a central error reference for reusable details.
+| Status | Meaning | Action |
+| --- | --- | --- |
+| `400` | The request is invalid. | Check required fields and supported values. |
+| `401` | Authentication failed. | Verify the access token. |
+| `409` | A conflicting resource exists. | Review the existing resource before retrying. |
 
-[See the full self-authored API tutorial](../../clover-project/capture-a-charge-tutorial.md)
+[Explore additional API samples](api-samples.md)
