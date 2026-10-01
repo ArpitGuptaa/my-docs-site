@@ -1,67 +1,89 @@
-# Products & Platforms
+# Expertise & Platforms
 
-My documentation experience spans enterprise AI, financial technology, mortgage technology, DevOps, cloud, and software platforms.
+This page brings together the documentation skills, tools, domains, and product environments I have worked with. It is intended as a quick capability reference; project and work-sample pages show these skills in practice.
 
-## Kore.ai
+## Core expertise
 
-**Enterprise AI**
+### Technical documentation
 
-* Agent Platform
-* AI for IT
-* AI for Service
-* AI for HR
-* AI for Procurement
-* AI for Banking
-* AI for Healthcare
-* Contact Center AI
-* Artimis Platform
+- Product and user documentation
+- API and SDK documentation
+- Developer and integration guides
+- Implementation and deployment guidance
+- Release notes and technical specifications
+- Knowledge-base content and technical editing
 
-**Documentation areas:** API documentation, developer documentation, product documentation, implementation guides, integrations, release documentation, and knowledge content.
+### Information architecture and content quality
 
----
+- Task-oriented information architecture
+- Content organization and reusable patterns
+- Microsoft-style technical writing and active voice
+- Terminology and editorial review
+- Accessibility and meaningful link text
+- Vale, CSpell, and link validation
 
-## Fiserv
+### Documentation engineering
 
-**Financial Technology**
+- Markdown and MkDocs
+- Git and GitHub workflows
+- Docs-as-code review and publishing
+- Automated documentation quality checks
+- REST APIs, OpenAPI/Swagger, JSON, and Postman
 
-* Ecommerce APIs
-* Merchant Management
-* Payment Tokenization
-* Automated Clearing House
-* Order Management
-* Google Pay & Apple Pay
-* Point of Sale
-* Internet of Things (IoTs)
-* Developer documentation
+### Business Analyst skills
 
-**Documentation areas:** Product documentation, business process documentation, knowledge bases, developer content, and documentation strategy.
+I use analysis practices to support documentation discovery and product understanding, including:
 
----
+- Requirement clarification
+- Workflow and business-process analysis
+- Stakeholder collaboration
+- Assumption and dependency identification
+- Acceptance-criteria review
+- Process improvement
 
-## ICE Mortgage Technology
+## Products, platforms, and domains
 
-**Mortgage Technology**
+### Kore.ai
 
-* Mortgage origination platforms
-* Loan processing systems
-* Mortgage APIs
-* Mortgage Data Management
-* Robotic Process Automation
-* Automatic Data Recognition
-* Integrations
+**Domain:** Enterprise AI
 
-**Documentation areas:** API references, SDK guides, integration documentation, user guides, FAQs, and release documentation.
+Products and areas include Agent Platform, AI for IT, AI for Service, AI for HR, AI for Procurement, AI for Banking, AI for Healthcare, Contact Center AI, and Artimis Platform.
 
----
+**Documentation focus:** API documentation, developer documentation, product documentation, implementation guides, integrations, release documentation, and knowledge content.
 
-## XebiaLabs
+### Fiserv
 
-**DevOps & Cloud**
+**Domain:** Financial technology
 
-* DevOps platforms
-* Release automation solutions
-* Cloud-native applications
-* Continuous Integration
-* Continuous Delivery
+Products and areas include ecommerce APIs, merchant management, payment tokenization, Automated Clearing House, order management, Google Pay and Apple Pay, point of sale, and Internet of Things integrations.
 
-**Documentation areas:** Developer documentation, product documentation, cloud documentation, and technical guides.
+**Documentation focus:** Product documentation, business-process documentation, knowledge bases, developer content, and documentation strategy.
+
+### ICE Mortgage Technology
+
+**Domain:** Mortgage technology
+
+Products and areas include mortgage origination, loan processing, mortgage APIs, data management, robotic process automation, automatic data recognition, and integrations.
+
+**Documentation focus:** API references, SDK guides, integration documentation, user guides, FAQs, and release documentation.
+
+### XebiaLabs
+
+**Domain:** DevOps and cloud
+
+Products and areas include DevOps platforms, release automation, cloud-native applications, continuous integration, and continuous delivery.
+
+**Documentation focus:** Developer documentation, product documentation, cloud documentation, and technical guides.
+
+## Tools
+
+| Area | Tools and technologies |
+| --- | --- |
+| Version control | Git, GitHub |
+| Documentation | Markdown, MkDocs, MadCap Flare, DITA, ReadMe.io |
+| Collaboration | Confluence, Jira |
+| API | Postman, OpenAPI / Swagger, JSON |
+| Development | Visual Studio Code |
+| Design | Figma |
+| Content quality | Vale, CSpell, link validation |
+| Web | WordPress |
