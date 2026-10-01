@@ -1,50 +1,86 @@
-site_name: My Porfolio Site
+site_name: Arpit Gupta | Technical Writing Portfolio
+site_description: Technical writing portfolio featuring API documentation, deployment guides, documentation automation, and docs-as-code work.
+site_url: https://arpitguptaa.github.io/my-docs-site/
+repo_url: https://github.com/ArpitGuptaa/my-docs-site
+repo_name: ArpitGuptaa/my-docs-site
 
 theme:
   name: material
-
+  language: en
   icon:
     logo: material/book-open-page-variant
-
   features:
     - navigation.sections
-    - navigation.left
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
     - content.code.copy
-
+    - content.tabs.link
+    - search.highlight
+    - search.share
   palette:
-
-  - scheme: default
-    toggle:
-      icon: material/weather-night
-      name: Switch to dark mode
-
-  - scheme: slate
-    toggle:
-      icon: material/weather-sunny
-      name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 extra_css:
   - stylesheets/extra.css
 
 nav:
-  - About Me: index.md
-  - Document Automation using Agentic AI workflow: doc-process-automation-using-AI-agent.md
-  - Generative AI vs Agentic AI vs Agent Platforms: generative-aI-vs-agentic-aI-vs-agent-platforms.md
-  - Process Improvement and Documentation Automation: process-improvement-and-documentation-automation.md
-  - AWS Deployment Guide: devops-platform-aws-deployment-guide.md
-  - Documentation CI/CD Pipeline Implementation: implementation-of-ci-cd-pipeline-for-documentation.md
-  - Value of Savings: why-savings-matter.md
-  - Capture a Charge (API): capture-a-charge-tutorial.md
-  - Error Codes: ecommerce-error-codes.md
-  - Ecommerce Tokenization: ecommerce-tokenization-overview.md
-  - Integrate Clover Payments Plugin with Shopify: integrate-clover-payments-plugin-with-shopify-online-shop.md
-  - Compliance Webhooks for Clover Payments Plugin: clover-payments-plugin-shopify-webhooks.md
+  - Home: index.md
+  - About:
+      - Overview: about/overview.md
+      - Experience: about/experience.md
+      - Expertise: about/expertise.md
+      - Products and Platforms: about/products-platforms.md
+      - Certifications: about/certifications.md
+      - Awards: about/awards.md
+      - Education: about/education.md
+  - Work Samples:
+      - Portfolio Overview: work-sample/index.md
+      - Documentation Automation: work-sample/doc-process-automation-using-AI-agent.md
+      - Process Improvement: work-sample/process-improvement-and-documentation-automation.md
+      - AWS Deployment Guide: work-sample/devops-platform-aws-deployment-guide.md
+      - AI and Agent Platforms: work-sample/generative-aI-vs-agentic-aI-vs-agent-platforms.md
+      - Documentation CI/CD: doc-automation/implementation-of-ci-cd-pipeline-for-documentation.md
+  - API Documentation:
+      - Capture a Charge: clover-project/capture-a-charge-tutorial.md
+      - Tokenization Overview: clover-project/ecommerce-tokenization-overview.md
+      - Error Codes: clover-project/ecommerce-error-codes.md
+      - Shopify Integration: clover-project/integrate-clover-payments-plugin-with-shopify-online-shop.md
+      - Compliance Webhooks: clover-project/clover-payments-plugin-shopify-webhooks.md
+  - Additional Projects:
+      - Project Overview: other-projects/index.md
+      - AI Agent Documentation: other-projects/ai-agent-documentation/index.md
+      - API Documentation Project: other-projects/api-documentation/index.md
+      - Documentation Automation Project: other-projects/documentation-automation/index.md
+      - Documentation CI/CD Project: other-projects/documentation-cicd/index.md
+      - Documentation Migration: other-projects/documentation-migration/index.md
+      - DevOps Platform: other-projects/digitalai-devOps-platform.md
+  - Contact: contact.md
 
 markdown_extensions:
   - admonition
   - tables
   - attr_list
   - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
 
 plugins:
   - search
@@ -53,7 +89,5 @@ extra:
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/arpitgupta007/
-
     - icon: fontawesome/brands/github
-      link: https://arpitguptaa.github.io/my-docs-site/
-
+      link: https://github.com/ArpitGuptaa
