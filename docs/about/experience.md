@@ -1,93 +1,45 @@
-# Professional Experience
+# Experience
 
-## Senior Lead Technical Writer
+My experience spans enterprise AI, financial technology, mortgage technology, DevOps, cloud, and engineering products. The entries below focus on the documentation work and transferable practices relevant to a senior technical writing role.
 
-**Kore.ai Software India Pvt. Ltd.**
-**Jan 2025 – Present · Hyderabad**
+<div class="experience-card"><div class="experience-head"><strong>Senior Lead Technical Writer · Kore.ai</strong><span>JAN 2025 — PRESENT · HYDERABAD</span></div><div class="experience-body">
 
-### Scope
+- Deliver product, developer, API, implementation, release, and knowledge content for enterprise products.
+- Document product capabilities, workflows, integrations, and APIs in collaboration with product managers, architects, engineers, QA, and business stakeholders.
+- Supported documentation delivery across **55+ product releases**.
+- Use Git, Markdown, and MkDocs for docs-as-code workflows and apply automated style and spelling checks.
+- Mentor writers on information architecture, review practices, and documentation quality.
 
-Enterprise AI products, developer platforms, APIs, integrations, product documentation, and business process documentation.
+<div class="skill-row"><span class="skill">Technical writing</span><span class="skill">API documentation</span><span class="skill">Docs-as-code</span><span class="skill">Information architecture</span></div>
+</div></div>
 
-### Key Contributions
+<div class="experience-card"><div class="experience-head"><strong>Specialist Technical Writer · Fiserv</strong><span>JUN 2022 — NOV 2024 · NOIDA</span></div><div class="experience-body">
 
-* Deliver documentation for enterprise AI products including Agent Platform, AI for IT, AI for HR, AI for Procurement, AI for Banking, AI for Healthcare, and Contact Center AI.
-* Published documentation for **55+ product releases**, ensuring timely delivery of accurate technical and business information.
-* Partner with product managers, architects, engineers, QA teams, and business stakeholders to analyze requirements and document product capabilities, workflows, APIs, and integrations.
-* Create API documentation, developer guides, implementation guides, release notes, knowledge articles, and user documentation.
-* Established docs-as-code repositories using Git, MkDocs, and Markdown.
-* Improved content quality through structured review processes, Vale linting, and Cspell validation aligned with Microsoft Style Guide practices.
-* Use content analytics and stakeholder feedback to improve content discoverability and user engagement.
-* Mentor technical writers on information architecture, documentation standards, docs-as-code practices, and content quality.
+- Developed content plans and technical documentation for enterprise financial technology products.
+- Worked with product owners and engineers to convert product and business requirements into structured documentation.
+- Designed information architecture for documentation portals and knowledge bases.
+- Used docs-as-code practices to improve version control, review, and publishing.
+- Supported documentation governance and mentored writers.
 
-### Key Skills
+<div class="skill-row"><span class="skill">FinTech</span><span class="skill">API documentation</span><span class="skill">Content strategy</span><span class="skill">Git</span></div>
+</div></div>
 
-`Technical Writing` `API Documentation` `AI` `Requirements Analysis` `Docs-as-Code` `Information Architecture`
+<div class="experience-card"><div class="experience-head"><strong>Technical Writer · ICE Mortgage Technology</strong><span>OCT 2020 — JUN 2022 · PUNE</span></div><div class="experience-body">
 
----
+- Authored API documentation, SDK guidance, user guides, FAQs, release notes, and integration documentation.
+- Gathered requirements from product and engineering teams and documented software behavior and workflows.
+- Developed API references, technical specifications, and online help content.
 
-## Specialist Technical Writer
+<div class="skill-row"><span class="skill">API</span><span class="skill">SDK</span><span class="skill">Integration guides</span><span class="skill">Mortgage technology</span></div>
+</div></div>
 
-**Fiserv India Pvt. Ltd.**
-**Jun 2022 – Nov 2024 · Noida**
+## Earlier roles
 
-### Scope
+| Organization | Role | Period | Focus |
+| --- | --- | --- | --- |
+| Agiliad Technologies / XebiaLabs | Senior Technical Writer | Jan 2020 – Oct 2020 | Cloud, DevOps, microservices, developer documentation |
+| Cyient Ltd. | Senior Technical Writer | Jun 2018 – Nov 2019 | Engineering and software documentation |
+| AAE | Technical Author | Oct 2017 – May 2018 | Engineering and software documentation |
+| AAA | Technical Author | Jul 2013 – Aug 2015 | User-focused technical and product content |
 
-Enterprise financial technology products and documentation portals.
-
-### Key Contributions
-
-* Developed documentation strategies and content plans for enterprise financial technology products.
-* Collaborated with product owners, engineers, and stakeholders to translate business requirements into structured technical documentation.
-* Designed information architecture for documentation portals and knowledge bases.
-* Implemented docs-as-code workflows to improve version control, review cycles, and publishing.
-* Used API validation and testing tools to verify technical accuracy.
-* Mentored junior writers and supported documentation governance initiatives.
-
-### Key Skills
-
-`FinTech` `Information Architecture` `API Documentation` `Business Analysis` `Docs-as-Code`
-
----
-
-## Technical Writer
-
-**ICE Mortgage Technology India Pvt. Ltd.**
-**Oct 2020 – Jun 2022 · Pune**
-
-* Authored API documentation, SDK guides, user guides, FAQs, release notes, and integration documentation.
-* Worked with product and engineering teams to gather requirements and document software functionality.
-* Developed API references, technical specifications, and online help content.
-* Participated in product reviews and stakeholder discussions to ensure documentation accuracy and completeness.
-
-### Key Skills
-
-`API Documentation` `SDK Documentation` `Mortgage Technology` `Integration Documentation`
-
----
-
-## Previous Experience
-
-### Senior Technical Writer — Agiliad Technologies / XebiaLabs
-
-**Jan 2020 – Oct 2020**
-
-Created developer-focused documentation for cloud, DevOps, and microservices-based products.
-
-### Senior Technical Writer — Cyient Ltd.
-
-**Jun 2018 – Nov 2019**
-
-Developed technical documentation for engineering and software products.
-
-### Technical Author — AAE
-
-**Oct 2017 – May 2018**
-
-Produced and maintained technical documentation for engineering and software initiatives.
-
-### Technical Author — AAA
-
-**Jul 2013 – Aug 2015**
-
-Created user-focused technical documentation and product content for software and engineering projects.
+[Explore the portfolio projects](../projects/){ .cta .primary }

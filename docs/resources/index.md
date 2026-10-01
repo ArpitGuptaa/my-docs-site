@@ -1,43 +1,10 @@
+# Resources
 
-# Arpit Gupta
+This section summarizes the working practices behind the portfolio. It is intentionally concise: the projects and work samples show the practices in use.
 
-## Senior Lead Technical Writer | AI Documentation Specialist
-
-Building scalable documentation systems, Docs-as-Code workflows, and AI-assisted content operations.
-
-11+ years of experience in:
-
-- Technical Documentation
-- API Documentation
-- Agentic AI Documentation
-- Knowledge Management
-- Content Quality Automation
-
-- [💼 LinkedIn](https://www.linkedin.com/in/arpitgupta007/)
-
-
-## Areas of Expertise
-
-- Technical Documentation
-- Agentic AI Workflows
-- GenAI Documentation
-- Docs-as-Code
-- Microsoft Style Guide
-- Information Mapping
-- Documentation Quality Assurance
-
-## Current Focus
-
-At Kore.ai, I work on AI-powered documentation workflows, content governance, knowledge management, and documentation quality automation.
-
-## Featured Projects
-
-- AI Procurement Documentation
-- Agentic AI Workflow Documentation
-- Digital.ai Release Documentation
-- API Documentation Strategy
-
-## Explore
-
-- Writing Samples
-- Technical Writing Resources
+<div class="portfolio-grid">
+<div class="portfolio-card"><span class="label">Writing</span><h3>Technical writing</h3><p>Task orientation, active voice, headings, procedures, terminology, and accessibility.</p><p><a href="technical-writing.md">Read →</a></p></div>
+<div class="portfolio-card"><span class="label">Developers</span><h3>API documentation</h3><p>Concepts, tutorials, references, errors, webhooks, and examples.</p><p><a href="api-documentation.md">Read →</a></p></div>
+<div class="portfolio-card"><span class="label">Quality</span><h3>Documentation quality</h3><p>Editorial review plus automated checks for spelling, style, links, and builds.</p><p><a href="documentation-quality.md">Read →</a></p></div>
+<div class="portfolio-card"><span class="label">Analysis</span><h3>Business analysis</h3><p>Requirements, workflows, stakeholders, assumptions, and traceability in documentation work.</p><p><a href="business-analysis.md">Read →</a></p></div>
+</div>

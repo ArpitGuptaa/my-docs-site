@@ -1,5 +1,5 @@
 site_name: Arpit Gupta | Technical Writing Portfolio
-site_description: Technical writing portfolio featuring API documentation, deployment guides, documentation automation, and docs-as-code work.
+site_description: Portfolio of technical writing, API documentation, information architecture, docs-as-code, and documentation engineering work.
 site_url: https://arpitguptaa.github.io/my-docs-site/
 repo_url: https://github.com/ArpitGuptaa/my-docs-site
 repo_name: ArpitGuptaa/my-docs-site
@@ -7,30 +7,22 @@ repo_name: ArpitGuptaa/my-docs-site
 theme:
   name: material
   language: en
+  custom_dir: overrides
   icon:
-    logo: material/book-open-page-variant
+    logo: material/file-document-outline
   features:
     - navigation.sections
-    - navigation.expand
-    - navigation.top
     - navigation.indexes
+    - navigation.top
+    - navigation.tracking
     - content.code.copy
     - content.tabs.link
     - search.highlight
-    - search.share
+    - search.suggest
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+      primary: custom
+      accent: custom
 
 extra_css:
   - stylesheets/extra.css
@@ -41,39 +33,64 @@ nav:
       - Overview: about/overview.md
       - Experience: about/experience.md
       - Expertise: about/expertise.md
-      - Products and Platforms: about/products-platforms.md
+      - Products & Platforms: about/products-platforms.md
       - Certifications: about/certifications.md
       - Awards: about/awards.md
       - Education: about/education.md
+  - Projects:
+      - Projects Overview: projects/index.md
+      - Documentation Automation:
+          - Overview: projects/documentation-automation/index.md
+          - Architecture: projects/documentation-automation/architecture.md
+          - Workflow: projects/documentation-automation/workflow.md
+          - Implementation: projects/documentation-automation/implementation.md
+      - AI Agent Documentation:
+          - Overview: projects/ai-agent-documentation/index.md
+          - Architecture: projects/ai-agent-documentation/architecture.md
+          - Developer Guide: projects/ai-agent-documentation/developer-guide.md
+          - API & SDK: projects/ai-agent-documentation/api-sdk.md
+      - Documentation CI/CD:
+          - Overview: projects/documentation-cicd/index.md
+          - Architecture: projects/documentation-cicd/architecture.md
+          - Workflow: projects/documentation-cicd/workflow.md
+      - API Documentation:
+          - Overview: projects/api-documentation/index.md
+          - API Reference: projects/api-documentation/api-reference.md
+          - Tutorials: projects/api-documentation/tutorials.md
+      - Documentation Migration:
+          - Overview: projects/documentation-migration/index.md
+          - Migration Process: projects/documentation-migration/migration-process.md
+          - Validation: projects/documentation-migration/validation.md
   - Work Samples:
-      - Portfolio Overview: work-sample/index.md
+      - Overview: work-sample/index.md
+      - AWS Deployment Guide: work-sample/devops-platform-aws-deployment-guide.md
       - Documentation Automation: work-sample/doc-process-automation-using-AI-agent.md
       - Process Improvement: work-sample/process-improvement-and-documentation-automation.md
-      - AWS Deployment Guide: work-sample/devops-platform-aws-deployment-guide.md
-      - AI and Agent Platforms: work-sample/generative-aI-vs-agentic-aI-vs-agent-platforms.md
-      - Documentation CI/CD: doc-automation/implementation-of-ci-cd-pipeline-for-documentation.md
-  - API Documentation:
-      - Capture a Charge: clover-project/capture-a-charge-tutorial.md
+      - AI & Agent Platforms: work-sample/generative-aI-vs-agentic-aI-vs-agent-platforms.md
+      - API - Capture a Charge: clover-project/capture-a-charge-tutorial.md
       - Tokenization Overview: clover-project/ecommerce-tokenization-overview.md
       - Error Codes: clover-project/ecommerce-error-codes.md
       - Shopify Integration: clover-project/integrate-clover-payments-plugin-with-shopify-online-shop.md
       - Compliance Webhooks: clover-project/clover-payments-plugin-shopify-webhooks.md
-  - Additional Projects:
-      - Project Overview: other-projects/index.md
-      - AI Agent Documentation: other-projects/ai-agent-documentation/index.md
-      - API Documentation Project: other-projects/api-documentation/index.md
-      - Documentation Automation Project: other-projects/documentation-automation/index.md
-      - Documentation CI/CD Project: other-projects/documentation-cicd/index.md
-      - Documentation Migration: other-projects/documentation-migration/index.md
-      - DevOps Platform: other-projects/digitalai-devOps-platform.md
-  - Contact: contact.md
+  - Resources:
+      - Overview: resources/index.md
+      - Technical Writing: resources/technical-writing.md
+      - API Documentation: resources/api-documentation.md
+      - Documentation Quality: resources/documentation-quality.md
+      - Business Analysis: resources/business-analysis.md
+  - Contact: contact/index.md
 
 markdown_extensions:
   - admonition
-  - tables
   - attr_list
   - md_in_html
+  - tables
+  - toc:
+      permalink: true
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -86,6 +103,7 @@ plugins:
   - search
 
 extra:
+  generator: false
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/arpitgupta007/

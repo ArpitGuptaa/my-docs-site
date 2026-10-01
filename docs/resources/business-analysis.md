@@ -1,43 +1,20 @@
+# Business analysis in documentation
 
-# Arpit Gupta
+Technical writing often begins before drafting. Requirements can be incomplete, workflows can contain exceptions, and stakeholders can use different terms for the same behavior.
 
-## Senior Lead Technical Writer | AI Documentation Specialist
+## Analysis flow
 
-Building scalable documentation systems, Docs-as-Code workflows, and AI-assisted content operations.
+1. Define the user or business problem.
+2. Identify the affected users and systems.
+3. Separate known facts from assumptions.
+4. Map the current workflow and expected behavior.
+5. Identify gaps, dependencies, rules, and exceptions.
+6. Confirm acceptance criteria or expected outcomes.
+7. Decide what users need to know or do.
+8. Structure the documentation around those needs.
 
-11+ years of experience in:
+## Hypotheses
 
-- Technical Documentation
-- API Documentation
-- Agentic AI Documentation
-- Knowledge Management
-- Content Quality Automation
+When the cause of a problem is not confirmed, use hypotheses to organize investigation rather than jumping to a solution. A useful hypothesis is specific enough to test and identifies the evidence that would support or reject it.
 
-- [💼 LinkedIn](https://www.linkedin.com/in/arpitgupta007/)
-
-
-## Areas of Expertise
-
-- Technical Documentation
-- Agentic AI Workflows
-- GenAI Documentation
-- Docs-as-Code
-- Microsoft Style Guide
-- Information Mapping
-- Documentation Quality Assurance
-
-## Current Focus
-
-At Kore.ai, I work on AI-powered documentation workflows, content governance, knowledge management, and documentation quality automation.
-
-## Featured Projects
-
-- AI Procurement Documentation
-- Agentic AI Workflow Documentation
-- Digital.ai Release Documentation
-- API Documentation Strategy
-
-## Explore
-
-- Writing Samples
-- Technical Writing Resources
+This approach improves documentation discovery work because it prevents early assumptions from becoming published instructions.

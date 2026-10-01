@@ -1,40 +1,16 @@
+# Work samples
 
-# Arpit Gupta
+These self-authored samples demonstrate technical writing, developer documentation, information architecture, procedural writing, and documentation engineering. They are portfolio material and do not reproduce confidential employer documentation.
 
-## Senior Lead Technical Writer | AI Documentation Specialist
+<div class="portfolio-grid">
+<div class="portfolio-card"><span class="label">Deployment guide</span><h3>AWS deployment</h3><p>Prerequisites, architecture, deployment flow, configuration, and troubleshooting.</p><p><a href="devops-platform-aws-deployment-guide.md">Read sample →</a></p></div>
+<div class="portfolio-card"><span class="label">Process design</span><h3>Documentation automation</h3><p>Documentation workflow and automation concepts for a maintainable content lifecycle.</p><p><a href="doc-process-automation-using-AI-agent.md">Read sample →</a></p></div>
+<div class="portfolio-card"><span class="label">Process improvement</span><h3>Documentation operations</h3><p>Practical improvements to documentation intake, review, validation, and publishing.</p><p><a href="process-improvement-and-documentation-automation.md">Read sample →</a></p></div>
+<div class="portfolio-card"><span class="label">Developer concepts</span><h3>Agent platforms</h3><p>Conceptual comparison and documentation framing for modern agent platforms.</p><p><a href="generative-aI-vs-agentic-aI-vs-agent-platforms.md">Read sample →</a></p></div>
+<div class="portfolio-card"><span class="label">API tutorial</span><h3>Capture a charge</h3><p>Task-based API tutorial with request, response, and developer guidance.</p><p><a href="../clover-project/capture-a-charge-tutorial.md">Read sample →</a></p></div>
+<div class="portfolio-card"><span class="label">API reference</span><h3>Error codes</h3><p>Error reference designed to help developers diagnose and recover from failures.</p><p><a href="../clover-project/ecommerce-error-codes.md">Read sample →</a></p></div>
+</div>
 
-Building scalable documentation systems, Docs-as-Code workflows, and AI-assisted content operations.
+## What to look for
 
-11+ years of experience in:
-
-- Technical Documentation
-- API Documentation
-- Agentic AI Documentation
-- Knowledge Management
-- Content Quality Automation
-
-## Areas of Expertise
-
-- Technical Documentation
-- Agentic AI Workflows
-- GenAI Documentation
-- Docs-as-Code
-- Microsoft Style Guide
-- Information Mapping
-- Documentation Quality Assurance
-
-## Current Focus
-
-At Kore.ai, I work on AI-powered documentation workflows, content governance, knowledge management, and documentation quality automation.
-
-## Featured Projects
-
-- AI Procurement Documentation
-- Agentic AI Workflow Documentation
-- Digital.ai Release Documentation
-- API Documentation Strategy
-
-## Explore
-
-- Writing Samples
-- Technical Writing Resources
+When reviewing these samples, consider structure, task orientation, terminology, prerequisites, examples, cross-references, and how each page helps a specific audience complete a task or understand a system.

@@ -1,41 +1,20 @@
+# Technical writing practice
 
-# Arpit Gupta
+## Write for user intent
 
-## Senior Lead Technical Writer | AI Documentation Specialist
+Start with the audience and the task. A page should make its purpose clear from the title and opening paragraph, then provide only the context needed to complete or understand that task.
 
-Building scalable documentation systems, Docs-as-Code workflows, and AI-assisted content operations.
+## Editorial conventions
 
-11+ years of experience in:
+- Prefer active voice when the actor matters.
+- Use direct, descriptive headings.
+- Put prerequisites before procedures.
+- Use one action per numbered step where practical.
+- State expected results when users need confirmation.
+- Use consistent product terms and UI labels.
+- Use meaningful link text instead of “click here.”
+- Provide alt text that explains the purpose of an informative image.
 
-- Technical Documentation
-- API Documentation
-- Agentic AI Documentation
-- Knowledge Management
-- Content Quality Automation
+## Microsoft-style principles
 
-
-## Areas of Expertise
-
-- Technical Documentation
-- Agentic AI Workflows
-- GenAI Documentation
-- Docs-as-Code
-- Microsoft Style Guide
-- Information Mapping
-- Documentation Quality Assurance
-
-## Current Focus
-
-At Kore.ai, I work on AI-powered documentation workflows, content governance, knowledge management, and documentation quality automation.
-
-## Featured Projects
-
-- AI Procurement Documentation
-- Agentic AI Workflow Documentation
-- Digital.ai Release Documentation
-- API Documentation Strategy
-
-## Explore
-
-- Writing Samples
-- Technical Writing Resources
+I use Microsoft-style guidance as an editorial baseline: concise language, user-focused instructions, consistent terminology, accessible content, and direct procedures. Product-specific terminology and requirements take precedence when they are documented and intentional.
