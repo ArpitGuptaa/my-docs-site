@@ -1,9 +1,4 @@
 
----
-
-## File: `docs/projects/documentation-migration/migration-process.md`
-
-```markdown
 # Documentation Migration Process
 
 ## Phase 1: Discovery
