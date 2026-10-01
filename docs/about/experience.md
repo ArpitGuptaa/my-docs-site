@@ -17,4 +17,4 @@ My experience spans enterprise AI, financial technology, mortgage technology, De
 | AAE | Technical Author | Oct 2017 – May 2018 | Engineering and software documentation |
 | AAA | Technical Author | Jul 2013 – Aug 2015 | User-focused technical and product content |
 
-[Explore the portfolio projects](../../projects/){ .cta .primary }
+[Explore the portfolio projects](../projects/index.md){ .cta .primary }
