@@ -75,7 +75,7 @@ When you install Python on Windows, enable the installer option that adds Python
 
 ## Resolve missing dependencies
 
-If MkDocs reports a missing plugin or extension, install the dependency required by the repository instead of adding packages indiscriminately. Common dependencies for Material for MkDocs projects can include the Material theme and extensions, image lightbox support, and redirect support.
+If MkDocs reports a missing plugin or extension, install the dependency required by the repository instead of adding packages indiscriminately. Common dependencies for Material for MkDocs projects can include theme extensions, image display support, and redirect support.
 
 Install the packages declared by the project configuration or requirements file. A repository-level requirements file is preferable because it gives contributors a repeatable environment.
 
