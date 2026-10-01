@@ -13,8 +13,6 @@ Building scalable documentation systems, Docs-as-Code workflows, and AI-assisted
 - Knowledge Management
 - Content Quality Automation
 
-- [📄 Download Resume](assets/resume/arpit-resume.pdf)
-
 - [💼 LinkedIn](https://www.linkedin.com/in/arpitgupta007/)
 
 
