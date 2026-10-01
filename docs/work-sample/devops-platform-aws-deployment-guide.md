@@ -33,7 +33,7 @@ You're responsible for the cost of the AWS resources this deployment creates. Th
 Before you deploy:
 
 - Use the [AWS Pricing Calculator](https://calculator.aws) to estimate the monthly cost of the EC2, RDS, EFS, and load balancer resources.
-- Setup an [AWS Budget](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) with an alert threshold.
+- Set up an [AWS Budget](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) with an alert threshold.
 - Enable the [AWS Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html) to track costs after deployment.
 
 You need a trial or commercial license for the platform before you deploy. Obtain a license from your software vendor and have the license file (or its base64-encoded contents) ready before you begin the process.
