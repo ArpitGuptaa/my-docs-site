@@ -67,10 +67,7 @@ nav:
           - Overview: projects/api-documentation/index.md
           - API Reference: projects/api-documentation/api-reference.md
           - Tutorials: projects/api-documentation/tutorials.md
-      - Documentation Migration:
-          - Overview: projects/documentation-migration/index.md
-          - Migration Process: projects/documentation-migration/migration-process.md
-          - Validation: projects/documentation-migration/validation.md
+      - Local Documentation Preview: projects/local-documentation-preview/index.md
   - Work Samples:
       - Overview: work-sample/index.md
       - AWS Deployment Guide: work-sample/devops-platform-aws-deployment-guide.md
