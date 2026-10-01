@@ -39,11 +39,10 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - Arpit Gupta: index.md
   - About:
-      - Overview: about/overview.md
+      - Arpit Gupta: index.md
+      - Overview & Expertise: about/overview.md
       - Experience: about/experience.md
-      - Expertise: about/expertise.md
       - Products & Platforms: about/products-platforms.md
       - Certifications: about/certifications.md
       - Awards: about/awards.md
