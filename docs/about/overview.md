@@ -1,81 +1,64 @@
-# Professional Overview
+# Overview & Expertise
 
-## About Me
+I am a Senior Lead Technical Writer with 11+ years of experience creating technical documentation for software products and enterprise platforms. My work spans enterprise AI, SaaS, financial technology, mortgage technology, DevOps, cloud, healthcare, and engineering products.
 
-I am a Senior Lead Technical Writer with 11 years of experience creating technical documentation for software products and enterprise platforms across AI, SaaS, FinTech, mortgage, healthcare, DevOps, IoT, and cloud domains.
+I work with product managers, engineers, architects, QA teams, and business stakeholders to understand product behavior, clarify requirements, analyze workflows, and turn complex information into documentation that users can act on.
 
-My work spans API documentation, SDK documentation, developer guides, product documentation, integration guides, user documentation, release notes, technical specifications, and business process documentation.
+## Technical documentation
 
-I work closely with product managers, engineers, architects, QA teams, and business stakeholders to understand product requirements, analyze workflows, clarify requirements, and create accurate, user-focused documentation.
+My core documentation work includes:
 
-## Technical Writing
+- API and SDK documentation
+- Developer and integration guides
+- Product documentation
+- User and administrator guides
+- Release notes
+- Technical specifications
+- Knowledge-base content
+- Technical editing
 
-My technical-writing experience includes:
+## Information architecture and content quality
 
-* API and SDK documentation
-* Developer documentation
-* Product documentation
-* User and administrator guides
-* Integration documentation
-* Release notes
-* Technical specifications
-* Knowledge-base content
-* Information architecture
-* Content strategy
-* Content governance
-* Technical editing
+I design documentation around user tasks rather than internal product structure. My work includes:
 
-## Business Analysis
+- Information architecture and content organization
+- Content strategy and governance
+- Documentation portals and knowledge bases
+- Terminology and documentation standards
+- Microsoft-style technical writing and active voice
+- Editorial review and content-quality checks
+- Vale, CSpell, and link validation
 
-As a **Certified Business Analysis Professional (CBAP)**, I apply business analysis practices to my documentation work.
+## API and developer technologies
 
-My experience includes:
+I work with REST APIs and developer workflows and use tools and formats such as OpenAPI/Swagger, JSON, Postman, Markdown, Git, GitHub, and MkDocs. I also apply docs-as-code practices to support version control, peer review, automated validation, and repeatable publishing.
 
-* Requirements analysis
-* Requirement clarification
-* Business process documentation
-* Workflow analysis
-* Functional documentation
-* Product analysis
-* Stakeholder collaboration
-* Process improvement
+## Business analysis
 
-This combination helps me understand not only **what needs to be documented**, but also **why a product capability exists, how it supports a business process, and what users need to accomplish with it**.
+As a Certified Business Analysis Professional (CBAP), I apply business-analysis practices when gathering and validating documentation requirements. These include requirement clarification, workflow analysis, business-process documentation, stakeholder collaboration, product analysis, and process improvement.
 
-## AI and Documentation Automation
+This combination helps me understand why a capability exists, how it fits into a workflow, and what a user needs to accomplish before I decide how to document it.
 
-I have experience exploring AI-assisted documentation and automation approaches for collecting product information, analyzing source material, generating content, performing documentation quality checks, and supporting publishing workflows.
+## Documentation automation
 
-My areas of interest include:
+I explore practical ways to improve documentation intake, source analysis, quality validation, review, and publishing. The focus is on reducing repetitive work while keeping technical accuracy, editorial judgment, and human review in the documentation lifecycle.
 
-* Generative AI
-* Agentic AI
-* Retrieval-Augmented Generation (RAG)
-* Prompt engineering
-* Documentation automation
-* AI-assisted authoring
-* Content quality automation
+## Tools
 
-## Documentation Engineering
+| Area | Tools and technologies |
+| --- | --- |
+| Version control | Git, GitHub |
+| Documentation | Markdown, MkDocs, MadCap Flare, DITA, ReadMe.io |
+| Collaboration | Confluence, Jira |
+| API | Postman, OpenAPI / Swagger, JSON |
+| Development | Visual Studio Code |
+| Design | Figma |
+| Content quality | Vale, CSpell, link validation |
+| Web | WordPress |
 
-I follow docs-as-code practices to manage documentation using version control, structured content, automated validation, and repeatable publishing workflows.
+## Working approach
 
-My experience includes:
-
-* Git
-* GitHub
-* Markdown
-* MkDocs
-* CI/CD concepts
-* Vale
-* Cspell
-* Documentation build and publishing workflows
-
-## Approach
-
-My approach to technical documentation is based on four principles:
-
-1. **Understand the user** — Identify the audience, use case, and task.
-2. **Understand the product** — Work with product and engineering teams to understand functionality and dependencies.
-3. **Structure information clearly** — Apply information architecture and content-design principles.
-4. **Validate the result** — Review technical accuracy, usability, consistency, accessibility, and content quality.
+1. **Understand the audience and task.** Identify who needs the information and what they need to accomplish.
+2. **Understand the product.** Validate functionality, dependencies, requirements, and workflows with subject-matter experts.
+3. **Structure the information.** Use clear information architecture, descriptive headings, reusable patterns, and task-oriented content.
+4. **Validate the result.** Check technical accuracy, terminology, usability, links, accessibility, and build quality before publication.
