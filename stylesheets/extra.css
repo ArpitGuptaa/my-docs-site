@@ -1,16 +1,64 @@
-site_name: My Documentation Site
+:root {
+  --portfolio-border: rgba(127, 127, 127, 0.22);
+  --portfolio-surface: rgba(127, 127, 127, 0.06);
+}
 
-theme:
-  name: material
+.md-grid {
+  max-width: 1440px;
+}
 
-extra_css:
-  - stylesheets/extra.css
+.md-content__inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
 
-markdown_extensions:
-  - admonition
-  - tables
-  - attr_list
-  - md_in_html
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
 
-plugins:
-  - search
+.md-typeset h2 {
+  border-bottom: 1px solid var(--portfolio-border);
+  padding-bottom: 0.35rem;
+  margin-top: 2.2rem;
+}
+
+.md-typeset p,
+.md-typeset li {
+  line-height: 1.7;
+}
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border: 1px solid var(--portfolio-border);
+  border-radius: 0.6rem;
+  box-shadow: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--portfolio-border);
+}
+
+.md-typeset img {
+  border-radius: 0.4rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.md-typeset code {
+  word-break: normal;
+}
+
+@media screen and (max-width: 76.234375em) {
+  .md-content__inner {
+    max-width: none;
+  }
+}
