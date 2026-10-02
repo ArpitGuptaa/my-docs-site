@@ -1,89 +1,21 @@
 # Experience
 
-My experience spans enterprise AI and agent platforms, enterprise software, financial technology, mortgage technology, DevOps, cloud, SaaS, IaaS, APIs, SDKs, databases, microservices, and engineering products. The entries below focus on documentation work, tools, and transferable practices relevant to senior technical writing roles.
+My career spans enterprise AI, FinTech, mortgage technology, DevOps, cloud, engineering, APIs, SDKs, and enterprise software. The timeline below highlights the documentation focus and transferable practices from each role.
 
-## Kore.ai
+<div class="experience-timeline">
+<div class="changelog-entry"><div class="changelog-head"><div><span class="ver">2025 → Present</span><span class="role">Senior Lead Technical Writer <span class="org">· Kore.ai</span></span></div><span class="dates">Hyderabad</span></div><div class="changelog-body"><div class="diff-line"><span class="plus">+</span><span>Create product, developer, API, implementation, release, and knowledge content for enterprise AI products and AI agent platforms.</span></div><div class="diff-line"><span class="plus">+</span><span>Document AI-driven capabilities, agent workflows, integrations, APIs, platform behavior, implementation requirements, and enterprise use cases.</span></div><div class="diff-line"><span class="plus">+</span><span>Collaborate with product managers, architects, engineers, QA teams, and business stakeholders to validate end-to-end workflows.</span></div><div class="diff-line"><span class="plus">+</span><span>Supported documentation delivery across 55+ product releases and contribute to information architecture, terminology, review, and mentoring.</span></div><div class="chip-row"><span class="chip">Enterprise AI</span><span class="chip">AI agents</span><span class="chip">API documentation</span><span class="chip">MkDocs</span><span class="chip">Git</span><span class="chip">Vale</span><span class="chip">CSpell</span></div></div></div>
 
-**Senior Lead Technical Writer · Jan 2025 – Present · Hyderabad**
+<div class="changelog-entry"><div class="changelog-head"><div><span class="ver">2022 → 2024</span><span class="role">Specialist Technical Writer <span class="org">· Fiserv</span></span></div><span class="dates">Noida</span></div><div class="changelog-body"><div class="diff-line"><span class="plus">+</span><span>Developed content plans and technical documentation for enterprise financial technology products.</span></div><div class="diff-line"><span class="plus">+</span><span>Converted product, business, and engineering requirements into structured product and developer documentation.</span></div><div class="diff-line"><span class="plus">+</span><span>Worked on ecommerce APIs, merchant management, payment tokenization, order management, payment integrations, point-of-sale concepts, and IoT integrations.</span></div><div class="diff-line"><span class="plus">+</span><span>Designed information architecture for documentation portals and knowledge bases and supported documentation governance.</span></div><div class="chip-row"><span class="chip">FinTech</span><span class="chip">APIs</span><span class="chip">Postman</span><span class="chip">OpenAPI</span><span class="chip">Information architecture</span></div></div></div>
 
-- Create product, developer, API, implementation, release, and knowledge content for enterprise AI products and AI agent platforms.
-- Document AI-driven product capabilities, agent and platform workflows, integrations, APIs, platform behavior, implementation requirements, and enterprise use cases.
-- Translate emerging AI concepts and complex platform behavior into task-oriented guidance for enterprise users, developers, implementers, and technical stakeholders.
-- Work with product managers, architects, engineers, QA teams, and business stakeholders to understand requirements, validate technical behavior, and document end-to-end workflows.
-- Supported documentation delivery across more than 55 product releases, including ongoing product enhancements and platform changes.
-- Use Git, Markdown, and MkDocs in docs-as-code workflows and apply Vale, CSpell, link checks, and build validation to improve content quality.
-- Support information architecture, content review, terminology, and mentoring for documentation work.
+<div class="changelog-entry"><div class="changelog-head"><div><span class="ver">2020 → 2022</span><span class="role">Technical Writer <span class="org">· ICE Mortgage Technology</span></span></div><span class="dates">Pune</span></div><div class="changelog-body"><div class="diff-line"><span class="plus">+</span><span>Authored API references, SDK guidance, user guides, FAQs, release notes, technical specifications, online help, and integration documentation.</span></div><div class="diff-line"><span class="plus">+</span><span>Gathered requirements from product and engineering teams and documented mortgage software behavior and workflows.</span></div><div class="diff-line"><span class="plus">+</span><span>Worked with mortgage APIs, loan-processing concepts, data management, integrations, robotic process automation, and automatic data recognition.</span></div><div class="chip-row"><span class="chip">Mortgage technology</span><span class="chip">API reference</span><span class="chip">SDK documentation</span><span class="chip">Integrations</span></div></div></div>
 
-**Domain focus:** Enterprise AI, AI agents, agent platforms, enterprise software, APIs, integrations, developer experience, and implementation documentation.
+<div class="changelog-entry"><div class="changelog-head"><div><span class="ver">2020</span><span class="role">Senior Technical Writer <span class="org">· Agiliad Technologies / XebiaLabs</span></span></div><span class="dates">Jan → Oct</span></div><div class="changelog-body"><div class="diff-line"><span class="plus">+</span><span>Created developer and product documentation for DevOps and cloud products.</span></div><div class="diff-line"><span class="plus">+</span><span>Documented release automation, continuous integration, continuous delivery, cloud-native applications, microservices, deployment concepts, and technical workflows.</span></div><div class="chip-row"><span class="chip">DevOps</span><span class="chip">Cloud</span><span class="chip">CI/CD</span><span class="chip">Microservices</span></div></div></div>
 
-**Tools:** Git, GitHub, Markdown, MkDocs, Vale, CSpell, Jira, Confluence, Visual Studio Code, API tools.
+<div class="changelog-entry"><div class="changelog-head"><div><span class="ver">2018 → 2019</span><span class="role">Senior Technical Writer <span class="org">· Cyient Ltd.</span></span></div><span class="dates">Jun → Nov</span></div><div class="changelog-body"><div class="diff-line"><span class="plus">+</span><span>Produced engineering and software documentation for technical audiences.</span></div><div class="diff-line"><span class="plus">+</span><span>Worked with subject-matter experts to gather source information, validate technical details, and maintain documentation through product changes.</span></div><div class="chip-row"><span class="chip">Engineering documentation</span><span class="chip">Technical editing</span><span class="chip">SME collaboration</span></div></div></div>
 
-**Skills:** Enterprise AI documentation, technical writing, API documentation, developer documentation, docs-as-code, information architecture, content strategy, release documentation, stakeholder collaboration, editorial review.
+<div class="changelog-entry"><div class="changelog-head"><div><span class="ver">2017 → 2018</span><span class="role">Technical Author <span class="org">· AAE</span></span></div><span class="dates">Oct → May</span></div><div class="changelog-body"><div class="diff-line"><span class="plus">+</span><span>Created and maintained engineering and software documentation and organized technical source information into structured, user-focused content.</span></div><div class="chip-row"><span class="chip">Technical authoring</span><span class="chip">Structured content</span><span class="chip">Technical review</span></div></div></div>
 
-## Fiserv
-
-**Specialist Technical Writer · Jun 2022 – Nov 2024 · Noida**
-
-- Developed content plans and technical documentation for enterprise financial technology products.
-- Converted product, business, and engineering requirements into structured product and developer documentation.
-- Worked on ecommerce APIs, merchant management, payment tokenization, order management, payment integrations, point-of-sale concepts, and Internet of Things integrations.
-- Designed information architecture for documentation portals and knowledge bases and supported documentation governance.
-- Used version-control and review practices to support maintainable documentation and collaborated with product owners and engineers on technical accuracy.
-
-**Tools:** Git, GitHub, Confluence, Jira, Postman, OpenAPI and Swagger, Markdown, developer portals.
-
-**Skills:** FinTech documentation, API documentation, content strategy, information architecture, requirements analysis, developer experience, integration documentation, documentation governance.
-
-## ICE Mortgage Technology
-
-**Technical Writer · Oct 2020 – Jun 2022 · Pune**
-
-- Authored API references, SDK guidance, user guides, FAQs, release notes, technical specifications, online help, and integration documentation.
-- Gathered requirements from product and engineering teams and documented mortgage software behavior and workflows.
-- Worked with mortgage APIs, loan-processing concepts, data management, integrations, robotic process automation, and automatic data recognition.
-- Structured developer and user content so readers could move from concepts and prerequisites to implementation tasks and reference information.
-
-**Tools:** API and SDK tooling, Postman, OpenAPI and Swagger, Confluence, Jira, structured authoring and online-help tools.
-
-**Skills:** API reference, SDK documentation, integration guides, mortgage technology, requirements gathering, technical specifications, user assistance, release documentation.
-
-## Agiliad Technologies and XebiaLabs
-
-**Senior Technical Writer · Jan 2020 – Oct 2020**
-
-- Created developer and product documentation for DevOps and cloud products.
-- Documented release automation, continuous integration, continuous delivery, cloud-native applications, microservices, deployment concepts, and technical workflows.
-- Worked with engineering teams to understand product behavior and convert technical implementation details into usable guidance.
-
-**Tools:** Git, documentation authoring tools, developer tooling, issue tracking and collaboration platforms.
-
-**Skills:** DevOps documentation, cloud documentation, CI/CD, microservices, developer documentation, deployment guidance.
-
-## Cyient Ltd.
-
-**Senior Technical Writer · Jun 2018 – Nov 2019**
-
-- Produced engineering and software documentation for technical audiences.
-- Worked with subject-matter experts to gather source information, validate technical details, and maintain documentation through product changes.
-
-**Skills:** Engineering documentation, technical editing, information gathering, stakeholder collaboration, content maintenance.
-
-## AAE
-
-**Technical Author · Oct 2017 – May 2018**
-
-- Created and maintained engineering and software documentation.
-- Organized technical source information into structured, user-focused content and supported review cycles with subject-matter experts.
-
-**Skills:** Technical authoring, structured content, technical review, engineering documentation.
-
-## AAA
-
-**Technical Author · Jul 2013 – Aug 2015**
-
-- Created user-focused technical and product content.
-- Supported content maintenance, review, and publication for engineering information.
-
-**Skills:** Technical writing, user documentation, content maintenance, editorial review.
+<div class="changelog-entry"><div class="changelog-head"><div><span class="ver">2013 → 2015</span><span class="role">Technical Author <span class="org">· AAA</span></span></div><span class="dates">Jul → Aug</span></div><div class="changelog-body"><div class="diff-line"><span class="plus">+</span><span>Created user-focused technical and product content and supported content maintenance, review, and publication for engineering information.</span></div><div class="chip-row"><span class="chip">Technical writing</span><span class="chip">User documentation</span><span class="chip">Editorial review</span></div></div></div>
+</div>
 
 [Explore the portfolio projects](../projects/index.md){ .cta .primary }
