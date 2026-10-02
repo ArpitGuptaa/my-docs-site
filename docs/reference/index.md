@@ -35,8 +35,8 @@ A quick reference to the value I bring to senior technical writing roles, follow
 
 <h2 id="certifications">Certifications and professional training</h2>
 <div class="credential-grid">
-  <div class="credential-card"><span class="ref-tag">Business analysis</span><h3>Certified Business Analysis Professional (CBAP) training</h3><p>YouAccel Training · Certificate of Completion · September 21, 2026 · 18.5 hours.</p><small>Presented as training completion, not as an IIBA-issued CBAP credential.</small></div>
-  <div class="credential-card"><span class="ref-tag">Technical writing</span><h3>Advanced Technical Writing</h3><p>TechTotal Soft Systems Pvt. Ltd. · Certificate of Training · May 10, 2017 · 2-month long-term course.</p><small>Training covered written communication, editing and presentation, DDLC, SDLC and Agile, style guides and templates, structured authoring, XML, DITA, and technical writing tools.</small></div>
+  <div class="credential-card"><span class="ref-tag">Business analysis</span><h3>Certified Business Analysis Professional (CBAP) training</h3></div>
+  <div class="credential-card"><span class="ref-tag">Technical writing</span><h3>Advanced Technical Writing</h3><small>Training covered written communication, editing and presentation, DDLC, SDLC and Agile, style guides and templates, structured authoring, XML, DITA, and technical writing tools.</small></div>
   <div class="credential-card"><span class="ref-tag">Documentation</span><h3>Technical writing and developer documentation</h3><p>GitHub for Technical Writers · The Art of API Documentation.</p></div>
   <div class="credential-card"><span class="ref-tag">AI</span><h3>AI and prompt engineering</h3><p>Prompt Engineering — AI Tools · Introduction to ChatGPT and Generative AI · Agentic AI Workflow.</p></div>
 </div>
