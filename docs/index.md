@@ -1,14 +1,13 @@
 <div class="hero about-hero">
 <div class="about-hero__top">
   <div class="about-hero__intro">
-    <span class="about-kicker">ABOUT ME</span>
     <h1>Arpit Gupta</h1>
     <div class="profile-skill-pills">
       <span>Senior Lead Technical Writer</span><span>Gen AI &amp; LLMs</span><span>Agentic Apps</span><span>DevOps</span><span>Enterprise platforms</span><span>Cloud documentation</span><span>Doc-as-code framework</span><span>SDK &amp; API documentation</span><span>UX writing</span><span>Developer docs</span><span>Content Strategy</span><span>DITA</span>
     </div>
   </div>
-  <div class="about-hero__visual" aria-hidden="true">
-    <span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span><span class="leaf leaf-four"></span><span class="leaf leaf-five"></span><span class="leaf-stem"></span>
+  <div class="about-hero__visual">
+    <img class="about-hero__portrait" src="assets/images/a52fc5d7-e39f-4577-a8e4-bef33bf34025.JPG" alt="Portrait of Arpit Gupta">
   </div>
 </div>
 
