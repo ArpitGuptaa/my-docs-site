@@ -1,20 +1,24 @@
 # Experience
 
-My experience spans enterprise platforms, financial technology, mortgage technology, DevOps, cloud, SaaS, IaaS, APIs, SDKs, databases, microservices, and engineering products. The entries below focus on documentation work, tools, and transferable practices relevant to senior technical writing roles.
+My experience spans enterprise AI and agent platforms, enterprise software, financial technology, mortgage technology, DevOps, cloud, SaaS, IaaS, APIs, SDKs, databases, microservices, and engineering products. The entries below focus on documentation work, tools, and transferable practices relevant to senior technical writing roles.
 
 ## Kore.ai
 
 **Senior Lead Technical Writer · Jan 2025 – Present · Hyderabad**
 
-- Deliver product, developer, API, implementation, release, and knowledge content for enterprise products.
-- Document workflows, integrations, APIs, platform behavior, and implementation requirements with product managers, architects, engineers, QA, and business stakeholders.
-- Supported documentation delivery across more than 55 product releases.
+- Create product, developer, API, implementation, release, and knowledge content for enterprise AI products and AI agent platforms.
+- Document AI-driven product capabilities, agent and platform workflows, integrations, APIs, platform behavior, implementation requirements, and enterprise use cases.
+- Translate emerging AI concepts and complex platform behavior into task-oriented guidance for enterprise users, developers, implementers, and technical stakeholders.
+- Work with product managers, architects, engineers, QA teams, and business stakeholders to understand requirements, validate technical behavior, and document end-to-end workflows.
+- Supported documentation delivery across more than 55 product releases, including ongoing product enhancements and platform changes.
 - Use Git, Markdown, and MkDocs in docs-as-code workflows and apply Vale, CSpell, link checks, and build validation to improve content quality.
 - Support information architecture, content review, terminology, and mentoring for documentation work.
 
+**Domain focus:** Enterprise AI, AI agents, agent platforms, enterprise software, APIs, integrations, developer experience, and implementation documentation.
+
 **Tools:** Git, GitHub, Markdown, MkDocs, Vale, CSpell, Jira, Confluence, Visual Studio Code, API tools.
 
-**Skills:** Technical writing, API documentation, developer documentation, docs-as-code, information architecture, content strategy, release documentation, stakeholder collaboration, editorial review.
+**Skills:** Enterprise AI documentation, technical writing, API documentation, developer documentation, docs-as-code, information architecture, content strategy, release documentation, stakeholder collaboration, editorial review.
 
 ## Fiserv
 
