@@ -24,4 +24,4 @@
 
 I use reader feedback to improve the structure, clarity, examples, navigation, and usefulness of this portfolio. If you notice an unclear explanation, broken link, missing example, navigation issue, or another improvement opportunity, I would appreciate your suggestion.
 
-<a class="feedback-email" href="mailto:grtarpit2008@gmail.com?subject=Portfolio%20feedback" aria-label="Email portfolio feedback"><span class="feedback-email__icon">✉</span><span><strong>Email portfolio feedback</strong><small>grtarpit2008@gmail.com</small></span></a>
+<a class="feedback-email" href="mailto:grtarpit2008@gmail.com?subject=Portfolio%20feedback" aria-label="Email feedback"><span class="feedback-email__icon">✉</span><span><strong>Email feedback</strong></span></a>
