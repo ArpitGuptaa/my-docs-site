@@ -1921,6 +1921,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#payment-api-portfolio-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payment API portfolio samples
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1942,16 +1953,25 @@
 
 
 <h1 id="api-documentation">API documentation<a class="headerlink" href="#api-documentation" title="Permanent link">&para;</a></h1>
-<p>This project demonstrates how I structure developer documentation so that reference content and task-based guidance work together.</p>
+<p>This project demonstrates how I structure developer documentation so that reference content and task-based guidance work together. All endpoints, host names, credentials, identifiers, and payment data in this section are fictional portfolio examples.</p>
 <h2 id="content-model">Content model<a class="headerlink" href="#content-model" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Overview</strong> — what the API does and who should use it.</li>
 <li><strong>Get started</strong> — base URL, authentication, first request, and first response.</li>
-<li><strong>Concepts</strong> — resource model, lifecycle, identifiers, pagination, and idempotency.</li>
+<li><strong>Concepts</strong> — resource models, lifecycle, identifiers, pagination, tokenization, and idempotency.</li>
 <li><strong>Tutorials</strong> — complete developer tasks and integration flows.</li>
 <li><strong>API reference</strong> — endpoint-level contract details.</li>
 <li><strong>Errors</strong> — status codes, error objects, causes, and recovery guidance.</li>
 <li><strong>Webhooks</strong> — event catalog, signatures, retries, and testing.</li>
+</ul>
+<h2 id="payment-api-portfolio-samples">Payment API portfolio samples<a class="headerlink" href="#payment-api-portfolio-samples" title="Permanent link">&para;</a></h2>
+<p>These pages demonstrate API documentation skills through a neutral payment workflow. They show how I document endpoint purpose, prerequisites, HTTP methods, headers, parameters, request bodies, response bodies, resource states, idempotency, tokenization, errors, and developer recovery actions.</p>
+<ul>
+<li><a href="create-charge/">Create a charge</a> — create or authorize a fictional payment charge.</li>
+<li><a href="capture-charge/">Capture a charge</a> — document a delayed-capture workflow and charge-state validation.</li>
+<li><a href="tokenization-overview/">Tokenization overview</a> — explain a client-to-server tokenization flow and sensitive-data boundaries.</li>
+<li><a href="error-codes/">Error codes</a> — define HTTP statuses, stable application error codes, recovery actions, and retry guidance.</li>
+<li><a href="api-samples/">Additional API samples</a> — demonstrate CRUD operations, pagination, errors, and webhooks.</li>
 </ul>
 <p><a class="cta primary" href="api-reference/">API reference pattern</a> <a class="cta secondary" href="tutorials/">Tutorial pattern</a></p>
 
