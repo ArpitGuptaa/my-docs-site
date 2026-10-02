@@ -1,25 +1,40 @@
 # Work samples
 
-These self-authored samples demonstrate technical writing, developer documentation, information architecture, procedural writing, and documentation engineering. They do not reproduce confidential employer documentation.
+The following public documentation portals represent products and domains I worked with during my career. They provide a clearer view of the type of enterprise, developer, API, FinTech, mortgage, and DevOps documentation environments represented in my experience. Links open the corresponding public documentation sites.
 
-<div class="portfolio-grid" markdown="1">
-<div class="portfolio-card" markdown="1"><span class="label">Deployment guide</span><h3>AWS deployment</h3><p>Prerequisites, architecture, deployment flow, configuration, and troubleshooting.</p><p markdown="1">[Read sample →](devops-platform-aws-deployment-guide.md)</p></div>
-<div class="portfolio-card" markdown="1"><span class="label">Process design</span><h3>Documentation automation</h3><p>Documentation workflow and maintainable content operations.</p><p markdown="1">[Read sample →](doc-process-automation-using-AI-agent.md)</p></div>
-<div class="portfolio-card" markdown="1"><span class="label">Process improvement</span><h3>Documentation operations</h3><p>Practical improvements to documentation intake, review, validation, and publishing.</p><p markdown="1">[Read sample →](process-improvement-and-documentation-automation.md)</p></div>
-<div class="portfolio-card" markdown="1"><span class="label">Platform concepts</span><h3>AI and agent platforms</h3><p>Conceptual documentation for modern agent platforms.</p><p markdown="1">[Read sample →](generative-aI-vs-agentic-aI-vs-agent-platforms.md)</p></div>
-<div class="portfolio-card" markdown="1"><span class="label">Developer documentation</span><h3>Payment API documentation</h3><p>Self-authored endpoint, tokenization, error, request, and response examples using fictional API data.</p><p markdown="1">[Explore API samples →](../projects/api-documentation/index.md)</p></div>
+<div class="sample-grid">
+  <a class="sample-card" href="https://docs.kore.ai/" target="_blank" rel="noopener noreferrer">
+    <span class="type">Enterprise AI · Current role</span>
+    <h3>Kore.ai documentation</h3>
+    <p>Enterprise AI, agent platforms, product capabilities, integrations, APIs, implementation guidance, and developer workflows.</p>
+    <span class="link-out">View documentation ↗</span>
+  </a>
+
+  <a class="sample-card" href="https://docs.clover.com/" target="_blank" rel="noopener noreferrer">
+    <span class="type">FinTech · Developer documentation</span>
+    <h3>Clover documentation · Fiserv</h3>
+    <p>Developer-facing payment, commerce, integration, API, merchant, and platform documentation.</p>
+    <span class="link-out">View documentation ↗</span>
+  </a>
+
+  <a class="sample-card" href="https://developer.icemortgagetechnology.com/developer-connect/docs/" target="_blank" rel="noopener noreferrer">
+    <span class="type">Mortgage technology · API and SDK</span>
+    <h3>ICE Mortgage Technology Developer Connect</h3>
+    <p>Developer documentation covering mortgage-platform APIs, SDK concepts, integrations, implementation workflows, and technical reference material.</p>
+    <span class="link-out">View documentation ↗</span>
+  </a>
+
+  <a class="sample-card" href="https://docs.digital.ai/" target="_blank" rel="noopener noreferrer">
+    <span class="type">DevOps · Enterprise platform</span>
+    <h3>Digital.ai documentation · Agiliad / XebiaLabs</h3>
+    <p>Enterprise DevOps, release automation, continuous delivery, deployment, cloud, and platform documentation.</p>
+    <span class="link-out">View documentation ↗</span>
+  </a>
 </div>
 
-## Payment API samples
+!!! note "Portfolio context"
+    These links point to public documentation portals associated with organizations and product areas from my employment history. They are included to demonstrate the documentation environments and domains represented in my experience; they should not be interpreted as a claim that I authored every page currently available on those sites.
 
-The following samples demonstrate endpoint reference writing, payment lifecycle concepts, request and response design, idempotency, tokenization, error handling, and developer recovery guidance.
+## Personal writing samples
 
-- [Create a charge](../projects/api-documentation/create-charge.md)
-- [Capture a charge](../projects/api-documentation/capture-charge.md)
-- [Tokenization overview](../projects/api-documentation/tokenization-overview.md)
-- [Error codes](../projects/api-documentation/error-codes.md)
-- [Additional API samples](../projects/api-documentation/api-samples.md)
-
-## What to look for
-
-Review the samples for structure, task orientation, terminology, prerequisites, examples, cross-references, and how each page helps a specific audience complete a task or understand a system.
+For self-authored portfolio material that demonstrates my individual approach to information architecture, procedural writing, API documentation, and documentation engineering, see the [Projects](../projects/index.md) section.
