@@ -63,6 +63,10 @@ nav:
           - Overview: projects/api-documentation/index.md
           - API Reference: projects/api-documentation/api-reference.md
           - API Samples: projects/api-documentation/api-samples.md
+          - Create a Charge: projects/api-documentation/create-charge.md
+          - Capture a Charge: projects/api-documentation/capture-charge.md
+          - Tokenization Overview: projects/api-documentation/tokenization-overview.md
+          - Error Codes: projects/api-documentation/error-codes.md
           - Tutorials: projects/api-documentation/tutorials.md
       - Local Documentation Preview: projects/local-documentation-preview/index.md
   - Work Samples:
@@ -72,6 +76,10 @@ nav:
       - Process Improvement: work-sample/process-improvement-and-documentation-automation.md
       - AI and Agent Platforms: work-sample/generative-aI-vs-agentic-aI-vs-agent-platforms.md
       - API Documentation Samples: projects/api-documentation/api-samples.md
+      - Create a Charge: projects/api-documentation/create-charge.md
+      - Capture a Charge: projects/api-documentation/capture-charge.md
+      - Tokenization Overview: projects/api-documentation/tokenization-overview.md
+      - Error Codes: projects/api-documentation/error-codes.md
   - Content Strategy and Best Practices:
       - Overview: resources/index.md
       - Technical Writing: resources/technical-writing.md
