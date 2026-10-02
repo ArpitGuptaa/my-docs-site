@@ -1,0 +1,68 @@
+/* Neutral recruiter-facing palette and profile image treatment. */
+:root {
+  --portfolio-ink:#202124;
+  --portfolio-ink-2:#2b2d30;
+  --portfolio-paper:#eceeef;
+  --portfolio-paper-2:#f4f5f6;
+  --portfolio-surface:#fafafa;
+  --portfolio-text:#242629;
+  --portfolio-muted:#656a70;
+  --portfolio-purple:#62676d;
+  --portfolio-purple-dark:#454a50;
+  --portfolio-purple-soft:#e1e3e5;
+  --portfolio-line:#cdd0d3;
+  --portfolio-shadow:0 8px 24px rgba(30,32,34,.08);
+  --md-primary-fg-color:#202124;
+  --md-accent-fg-color:#62676d;
+}
+
+[data-md-color-scheme="slate"] {
+  --portfolio-paper:#151617;
+  --portfolio-paper-2:#1b1c1e;
+  --portfolio-surface:#222426;
+  --portfolio-text:#f1f2f3;
+  --portfolio-muted:#b8bcc0;
+  --portfolio-purple:#a7abb0;
+  --portfolio-purple-dark:#d0d3d6;
+  --portfolio-purple-soft:#303235;
+  --portfolio-line:#424549;
+  --portfolio-shadow:0 10px 28px rgba(0,0,0,.32);
+  --md-default-bg-color:#151617;
+  --md-default-fg-color:#f1f2f3;
+  --md-default-fg-color--light:#d0d3d6;
+  --md-default-fg-color--lighter:#a7abb0;
+  --md-code-bg-color:#1d1f21;
+}
+
+.md-header,.md-tabs,.md-footer{background:#202124}
+
+/* Use the uploaded portrait in the logo position. */
+.md-header__button.md-logo{display:flex!important;align-items:center;justify-content:center;padding:.18rem;margin-right:.45rem}
+.md-header__button.md-logo img{display:block;width:2.05rem;height:2.05rem;max-width:none;object-fit:cover;object-position:center 28%;border-radius:50%;border:2px solid #d7d9dc;background:#fff}
+
+/* Neutral left navigation. */
+@media(min-width:1220px){
+  .md-sidebar--primary{background:#202124;border-right:1px solid #393c40}
+}
+.md-sidebar--primary .md-nav__link{color:#d5d7da}
+.md-sidebar--primary .md-nav__link--active,.md-sidebar--primary .md-nav__link:hover{color:#fff;background:#3a3d41}
+.md-sidebar--primary .md-nav__item--nested>.md-nav__link{color:#f0f1f2}
+.md-sidebar--primary .md-nav__item .md-nav__item .md-nav__link{color:#b9bdc1}
+
+/* Replace the previous purple right-side TOC treatment with grey. */
+.md-sidebar--secondary .md-sidebar__scrollwrap{background:#e3e5e7;border-color:#c9ccd0;box-shadow:0 6px 18px rgba(30,32,34,.06)}
+.md-sidebar--secondary .md-nav__title{color:#303337}
+.md-sidebar--secondary .md-nav__link{color:#5d6267}
+.md-sidebar--secondary .md-nav__link:hover{color:#303337;background:rgba(70,74,80,.08)}
+.md-sidebar--secondary .md-nav__link--active{color:#34383d!important;border-left-color:#60656b;background:rgba(70,74,80,.12)}
+.md-sidebar--secondary .md-nav__item .md-nav__item .md-nav__link{color:#70757a}
+.md-sidebar--secondary .md-nav__item .md-nav__item .md-nav__link--active{color:#34383d!important}
+
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__scrollwrap{background:#2a2c2f;border-color:#44474b}
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__title{color:#f0f1f2}
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link{color:#c2c5c8}
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link:hover,[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link--active{color:#fff!important;background:#393c40}
+
+@media(max-width:1219px){
+  .md-sidebar--primary .md-sidebar__scrollwrap,.md-sidebar--primary .md-nav--primary,.md-sidebar--primary .md-nav__title{background:#202124}
+}
