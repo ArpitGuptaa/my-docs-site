@@ -80,7 +80,7 @@ nav:
       - Capture a Charge: projects/api-documentation/capture-charge.md
       - Tokenization Overview: projects/api-documentation/tokenization-overview.md
       - Error Codes: projects/api-documentation/error-codes.md
-  - Content Strategy and Best Practices:
+  - Content Strategy:
       - Overview: content-strategy/index.md
       - Technical Writing: content-strategy/technical-writing.md
       - API Documentation: content-strategy/api-documentation.md
@@ -109,6 +109,22 @@ plugins:
   - search
 extra:
   generator: false
+  # Add your Google Analytics 4 measurement ID below after creating the web data stream.
+  # Material for MkDocs will then record page views and feedback events.
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+  #   feedback:
+  #     title: Was this page helpful?
+  #     ratings:
+  #       - icon: material/thumb-up-outline
+  #         name: This page was helpful
+  #         data: 1
+  #         note: Thanks for your feedback.
+  #       - icon: material/thumb-down-outline
+  #         name: This page could be improved
+  #         data: 0
+  #         note: Thanks for your feedback. Please share a suggestion using the feedback link on the Contact page.
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/arpitgupta007/
