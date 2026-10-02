@@ -1,4 +1,4 @@
-# Expertise and Platforms
+# Expertise
 
 My expertise combines technical writing, developer experience, information architecture, documentation engineering, and enterprise-domain knowledge. Select a tile to jump directly to the relevant detail on this page.
 
