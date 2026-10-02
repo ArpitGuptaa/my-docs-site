@@ -2,6 +2,10 @@
 
 My expertise combines technical writing, developer experience, information architecture, documentation engineering, and enterprise-domain knowledge. Select a tile to jump directly to the relevant detail on this page.
 
+## Tools and technologies
+
+<div class="chip-row"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Markdown</span><span class="chip">MkDocs</span><span class="chip">Postman</span><span class="chip">OpenAPI</span><span class="chip">Swagger</span><span class="chip">JSON</span><span class="chip">Confluence</span><span class="chip">Jira</span><span class="chip">DITA</span><span class="chip">MadCap Flare</span><span class="chip">ReadMe.io</span><span class="chip">WordPress</span><span class="chip">Visual Studio Code</span><span class="chip">Figma</span><span class="chip">Vale</span><span class="chip">CSpell</span></div>
+
 <div class="expertise-grid">
   <a class="expertise-card" href="#developer-documentation"><span class="tag">Developer experience</span><h3>API and SDK documentation</h3><p>References, tutorials, authentication, integrations, examples, errors, and developer workflows.</p></a>
   <a class="expertise-card" href="#product-documentation"><span class="tag">Product content</span><h3>Product documentation</h3><p>User, administrator, implementation, release, troubleshooting, and knowledge documentation.</p></a>
@@ -11,7 +15,6 @@ My expertise combines technical writing, developer experience, information archi
   <a class="expertise-card" href="#enterprise-ai"><span class="tag">Enterprise AI</span><h3>AI and agent platforms</h3><p>AI-driven capabilities, agent workflows, integrations, APIs, implementation, and enterprise use cases.</p></a>
   <a class="expertise-card" href="#content-strategy"><span class="tag">Strategy</span><h3>Content strategy and quality</h3><p>Governance, standards, content planning, editorial review, quality checks, and maintainability.</p></a>
   <a class="expertise-card" href="#requirements-and-workflows"><span class="tag">Analysis</span><h3>Requirements and workflows</h3><p>Requirements clarification, workflow analysis, stakeholder collaboration, and process improvement.</p></a>
-  <a class="expertise-card" href="#tools-and-technologies"><span class="tag">Toolchain</span><h3>Tools and technologies</h3><p>GitHub, Postman, OpenAPI, Jira, Confluence, DITA, MadCap Flare, Figma, and documentation platforms.</p></a>
 </div>
 
 <h2 id="developer-documentation">Developer documentation</h2>
@@ -45,7 +48,3 @@ I work on content planning, documentation governance, structured authoring, DITA
 <h2 id="requirements-and-workflows">Requirements and workflows</h2>
 
 I collaborate with product managers, engineers, architects, QA teams, DevOps teams, and business stakeholders to clarify requirements, analyze workflows, validate technical behavior, identify documentation needs, and improve documentation processes.
-
-<h2 id="tools-and-technologies">Tools and technologies</h2>
-
-<div class="chip-row"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Markdown</span><span class="chip">MkDocs</span><span class="chip">Postman</span><span class="chip">OpenAPI</span><span class="chip">Swagger</span><span class="chip">JSON</span><span class="chip">Confluence</span><span class="chip">Jira</span><span class="chip">DITA</span><span class="chip">MadCap Flare</span><span class="chip">ReadMe.io</span><span class="chip">WordPress</span><span class="chip">Visual Studio Code</span><span class="chip">Figma</span><span class="chip">Vale</span><span class="chip">CSpell</span></div>
