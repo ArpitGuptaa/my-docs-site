@@ -4,7 +4,7 @@
 <p class="lede">Senior Lead Technical Writer with 11+ years of experience creating product, API, SDK, developer, cloud, deployment, and process documentation for enterprise software. My work covers SaaS, IaaS, DevOps, financial technology, mortgage technology, enterprise platforms, and documentation systems.</p>
 <div class="hero-strip">TECHNICAL DOCUMENTATION · API AND SDK · DOCS-AS-CODE · INFORMATION ARCHITECTURE · CONTENT STRATEGY · CLOUD</div>
 <div class="badge-row"><span class="badge">11+ years</span><span class="badge">55+ releases</span><span class="badge">API and SDK</span><span class="badge">MkDocs</span><span class="badge">Git</span><span class="badge">Vale</span><span class="badge">CSpell</span><span class="badge">OpenAPI</span></div>
-<div class="cta-row"><a class="cta primary" href="projects/">Explore projects</a><a class="cta secondary" href="work-sample/">View work samples</a><a class="cta secondary" href="about/experience/">Experience</a><a class="cta secondary" href="contact/">Contact</a></div>
+<div class="cta-row"><a class="cta primary" href="assets/resume/ArpitGupta.pdf" download>Download resume</a><a class="cta secondary" href="projects/">Explore projects</a><a class="cta secondary" href="work-sample/">View work samples</a><a class="cta secondary" href="about/experience/">Experience</a><a class="cta secondary" href="contact/">Contact</a></div>
 </div>
 
 ## About
