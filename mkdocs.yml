@@ -8,8 +8,7 @@ theme:
   name: material
   language: en
   custom_dir: overrides
-  icon:
-    logo: material/file-document-outline
+  logo: assets/images/a52fc5d7-e39f-4577-a8e4-bef33bf34025.JPG
   features:
     - navigation.sections
     - navigation.indexes
@@ -36,6 +35,7 @@ theme:
         name: Switch to dark theme
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/profile.css
 nav:
   - About:
       - Arpit Gupta: index.md
