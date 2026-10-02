@@ -1,0 +1,98 @@
+/* Final targeted overrides. Keep this stylesheet last in mkdocs.yml. */
+
+/* Header: no portrait/logo in the top ribbon. */
+.md-header__button.md-logo,
+.md-header a.md-logo {
+  display: none !important;
+}
+
+/* About hero: clear separation between name and skills. */
+.about-hero .about-hero__intro h1 {
+  margin: 0 0 1.6rem !important;
+}
+
+/* About hero: remove every decorative leaf/background layer and show only portrait. */
+.about-hero .about-hero__visual {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: auto !important;
+  min-height: 280px !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+.about-hero .about-hero__visual::before,
+.about-hero .about-hero__visual::after,
+.about-hero .about-hero__visual .leaf,
+.about-hero .about-hero__visual .leaf-stem {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+/* Restore a larger, clear portrait similar to the pre-theme presentation. */
+.about-hero .about-hero__portrait {
+  display: block !important;
+  width: 220px !important;
+  height: 280px !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center 24% !important;
+  opacity: 1 !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--portfolio-line) !important;
+  background: #fff !important;
+  box-shadow: var(--portfolio-shadow) !important;
+}
+
+/* Contact: make all content below the heading use the full content-column width. */
+.contact-section,
+.contact-section .contact-lede,
+.contact-section .availability-banner,
+.contact-section .contact-grid,
+.contact-section .contact-actions {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+.contact-section .contact-lede {
+  display: block !important;
+}
+.contact-section .contact-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  column-gap: 2.5rem !important;
+}
+.contact-section .contact-row {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Feedback tile: concise label only; no visible email address. */
+.feedback-email {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .75rem !important;
+}
+.feedback-email strong {
+  display: inline !important;
+}
+
+@media (max-width: 960px) {
+  .about-hero .about-hero__visual {
+    display: flex !important;
+    justify-content: flex-start !important;
+    min-height: 0 !important;
+  }
+  .about-hero .about-hero__portrait {
+    width: 180px !important;
+    height: 225px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-section .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
