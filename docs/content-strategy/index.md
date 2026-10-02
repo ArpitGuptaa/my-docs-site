@@ -40,20 +40,3 @@ Requirements, workflows, stakeholders, assumptions, acceptance criteria, and pro
 [Read Business Analyst practices](business-analysis.md)
 </div>
 </div>
-
-## Related projects
-
-- [Documentation automation](../projects/documentation-automation/index.md)
-- [AI agent documentation](../projects/ai-agent-documentation/index.md)
-- [Documentation CI/CD](../projects/documentation-cicd/index.md)
-- [API documentation](../projects/api-documentation/index.md)
-- [Local documentation preview](../projects/local-documentation-preview/index.md)
-
-## API documentation examples
-
-The API documentation project includes fictional payment examples that demonstrate developer-focused content without using employer or vendor-specific product names.
-
-- [Create a charge](../projects/api-documentation/create-charge.md)
-- [Capture a charge](../projects/api-documentation/capture-charge.md)
-- [Tokenization overview](../projects/api-documentation/tokenization-overview.md)
-- [Error codes](../projects/api-documentation/error-codes.md)
