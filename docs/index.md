@@ -1,6 +1,11 @@
 <div class="hero">
-<h1>Arpit Gupta</h1>
-<span class="eyebrow">Senior Lead Technical Writer · Hyderabad, India</span>
+<div class="hero-identity">
+  <img class="hero-avatar" src="assets/images/a52fc5d7-e39f-4577-a8e4-bef33bf34025.JPG" alt="Portrait of Arpit Gupta">
+  <div class="hero-identity__content">
+    <h1>Arpit Gupta</h1>
+    <span class="eyebrow">Senior Lead Technical Writer · Hyderabad, India</span>
+  </div>
+</div>
 <p class="lede">Senior Lead Technical Writer with 11+ years of experience creating product, API, SDK, developer, cloud, deployment, and process documentation for enterprise software. My current work includes enterprise AI and agent-platform documentation, alongside experience across SaaS, IaaS, DevOps, financial technology, mortgage technology, and enterprise platforms.</p>
 <div class="hero-strip">ENTERPRISE AI · AI AGENTS · TECHNICAL DOCUMENTATION · API AND SDK · DOCS-AS-CODE · INFORMATION ARCHITECTURE · CONTENT STRATEGY · CLOUD</div>
 <div class="badge-row"><span class="badge">11+ years</span><span class="badge">Enterprise AI</span><span class="badge">AI agents</span><span class="badge">55+ releases</span><span class="badge">API and SDK</span><span class="badge">MkDocs</span><span class="badge">Git</span><span class="badge">OpenAPI</span></div>
@@ -9,15 +14,9 @@
 
 ## About
 
-<div class="about-profile">
-  <div class="about-profile__photo">
-    <img src="assets/images/a52fc5d7-e39f-4577-a8e4-bef33bf34025.JPG" alt="Portrait of Arpit Gupta">
-  </div>
-  <div class="about-profile__content">
-    <p>I translate product behavior, technical architecture, APIs, workflows, and deployment concepts into documentation that users can follow and teams can maintain. In my current role at Kore.ai, my work extends into <strong>enterprise AI and AI agent platforms</strong>, where I document AI-driven product capabilities, platform workflows, integrations, APIs, implementation requirements, and release changes for enterprise audiences. This experience has strengthened my ability to explain emerging AI concepts in the context of real product behavior, developer workflows, and enterprise implementation.</p>
-    <p>I work with product managers, engineers, architects, QA teams, DevOps teams, and business stakeholders to clarify requirements, understand technical behavior, and organize content around user tasks. My broader experience includes developer documentation, REST APIs, SDKs, OpenAPI and Swagger, Postman, Markdown, MkDocs, Git and GitHub, DITA, MadCap Flare, Confluence, Jira, ReadMe.io, WordPress, cloud documentation, microservices, CI/CD, databases, information architecture, content strategy, UX writing, release documentation, and documentation quality checks.</p>
-  </div>
-</div>
+I translate product behavior, technical architecture, APIs, workflows, and deployment concepts into documentation that users can follow and teams can maintain. In my current role at Kore.ai, my work extends into **enterprise AI and AI agent platforms**, where I document AI-driven product capabilities, platform workflows, integrations, APIs, implementation requirements, and release changes for enterprise audiences. This experience has strengthened my ability to explain emerging AI concepts in the context of real product behavior, developer workflows, and enterprise implementation.
+
+I work with product managers, engineers, architects, QA teams, DevOps teams, and business stakeholders to clarify requirements, understand technical behavior, and organize content around user tasks. My broader experience includes developer documentation, REST APIs, SDKs, OpenAPI and Swagger, Postman, Markdown, MkDocs, Git and GitHub, DITA, MadCap Flare, Confluence, Jira, ReadMe.io, WordPress, cloud documentation, microservices, CI/CD, databases, information architecture, content strategy, UX writing, release documentation, and documentation quality checks.
 
 ## What I work on
 
