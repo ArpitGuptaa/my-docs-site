@@ -81,11 +81,11 @@ nav:
       - Tokenization Overview: projects/api-documentation/tokenization-overview.md
       - Error Codes: projects/api-documentation/error-codes.md
   - Content Strategy and Best Practices:
-      - Overview: resources/index.md
-      - Technical Writing: resources/technical-writing.md
-      - API Documentation: resources/api-documentation.md
-      - Documentation Quality: resources/documentation-quality.md
-      - Business Analyst Practices: resources/business-analysis.md
+      - Overview: content-strategy/index.md
+      - Technical Writing: content-strategy/technical-writing.md
+      - API Documentation: content-strategy/api-documentation.md
+      - Documentation Quality: content-strategy/documentation-quality.md
+      - Business Analyst Practices: content-strategy/business-analysis.md
   - Contact: contact/index.md
 markdown_extensions:
   - admonition
