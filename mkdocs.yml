@@ -38,10 +38,12 @@ extra_css:
   - stylesheets/profile.css
 nav:
   - About me:
+      - About me: about/index.md
       - Overview: index.md
       - Expertise: about/products-platforms.md
       - Experience: about/experience.md
   - Docs:
+      - Docs: docs/index.md
       - Work samples: work-sample/index.md
       - Self-projects: projects/index.md
       - Content Strategy: content-strategy/index.md
