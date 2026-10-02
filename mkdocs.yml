@@ -109,24 +109,40 @@ plugins:
   - search
 extra:
   generator: false
-  # Add your Google Analytics 4 measurement ID below after creating the web data stream.
-  # Material for MkDocs will then record page views and feedback events.
-  # analytics:
-  #   provider: google
-  #   property: G-XXXXXXXXXX
-  #   feedback:
-  #     title: Was this page helpful?
-  #     ratings:
-  #       - icon: material/thumb-up-outline
-  #         name: This page was helpful
-  #         data: 1
-  #         note: Thanks for your feedback.
-  #       - icon: material/thumb-down-outline
-  #         name: This page could be improved
-  #         data: 0
-  #         note: Thanks for your feedback. Please share a suggestion using the feedback link on the Contact page.
+  analytics:
+    provider: google
+    property: G-DT8Y1SBZ26
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback.
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback. Please share a suggestion on the Contact page.
+  consent:
+    title: Cookie consent
+    description: >-
+      This site uses Google Analytics, with your consent, to measure page visits and
+      understand which documentation is useful. Feedback ratings help identify pages
+      that may need improvement.
+    cookies:
+      analytics:
+        name: Google Analytics
+        checked: false
+    actions:
+      - accept
+      - reject
+      - manage
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/arpitgupta007/
     - icon: fontawesome/brands/github
       link: https://github.com/ArpitGuptaa
+copyright: >-
+  Arpit Gupta · Technical Writing Portfolio ·
+  <a href="#__consent">Change cookie settings</a>
