@@ -9,6 +9,7 @@
 
   <div class="contact-grid">
     <div class="contact-row"><span class="k">Email</span><a href="mailto:grtarpit2008@gmail.com">grtarpit2008@gmail.com</a></div>
+    <div class="contact-row"><span class="k">Phone</span><a href="tel:+918010114948">+91 80101 14948</a></div>
     <div class="contact-row"><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/arpitgupta007/" target="_blank" rel="noopener noreferrer">Arpit Gupta ↗</a></div>
     <div class="contact-row"><span class="k">GitHub</span><a href="https://github.com/ArpitGuptaa" target="_blank" rel="noopener noreferrer">ArpitGuptaa ↗</a></div>
     <div class="contact-row"><span class="k">Resume</span><a href="../assets/resume/ArpitGupta.pdf" download>Download PDF ↓</a></div>
@@ -23,8 +24,4 @@
 
 I use reader feedback to improve the structure, clarity, examples, navigation, and usefulness of this portfolio. If you notice an unclear explanation, broken link, missing example, navigation issue, or another improvement opportunity, I would appreciate your suggestion.
 
-[Suggest a website or content improvement](mailto:grtarpit2008@gmail.com?subject=Portfolio%20feedback)
-
-## About this portfolio
-
-The personal projects are self-authored examples created to demonstrate documentation skills without sharing confidential employer material. Public employer documentation links are provided separately as examples of the documentation environments represented in my experience. The site itself is also a docs-as-code sample: Markdown source, MkDocs, Git-based version control, automated quality checks, and GitHub Pages publishing.
+<a class="feedback-email" href="mailto:grtarpit2008@gmail.com?subject=Portfolio%20feedback" aria-label="Email portfolio feedback"><span class="feedback-email__icon">✉</span><span><strong>Email portfolio feedback</strong><small>grtarpit2008@gmail.com</small></span></a>
