@@ -12,7 +12,7 @@
 <div class="cta-row"><a class="cta primary" href="assets/resume/ArpitGupta.pdf" download>Download resume</a><a class="cta secondary" href="projects/">Explore projects</a><a class="cta secondary" href="work-sample/">View work samples</a><a class="cta secondary" href="about/experience/">Experience</a><a class="cta secondary" href="contact/">Contact</a></div>
 </div>
 
-## About
+## Overview
 
 I translate product behavior, technical architecture, APIs, workflows, and deployment concepts into documentation that users can follow and teams can maintain. In my current role at Kore.ai, my work extends into **enterprise AI and AI agent platforms**, where I document AI-driven product capabilities, platform workflows, integrations, APIs, implementation requirements, and release changes for enterprise audiences. This experience has strengthened my ability to explain emerging AI concepts in the context of real product behavior, developer workflows, and enterprise implementation.
 
@@ -27,6 +27,29 @@ I work with product managers, engineers, architects, QA teams, DevOps teams, and
 <div class="portfolio-card"><span class="label">Engineering</span><h3>Docs-as-code</h3><p>Git-based authoring, Markdown, MkDocs, review workflows, automated quality checks, and CI/CD publishing.</p></div>
 <div class="portfolio-card"><span class="label">Architecture</span><h3>Information architecture</h3><p>Task-oriented navigation, content models, reusable structures, terminology, and findability across large documentation sets.</p></div>
 <div class="portfolio-card"><span class="label">Cloud</span><h3>Cloud and enterprise platforms</h3><p>SaaS and IaaS concepts, deployment guidance, integrations, databases, microservices, and DevOps workflows.</p></div>
+</div>
+
+## Education and professional development
+
+### Bachelor of Science (B.Sc.)
+
+**Bundelkhand University**
+
+### Certified Business Analysis Professional (CBAP) training
+
+**YouAccel Training · Certificate of Completion · September 21, 2026 · 18.5 hours**
+
+Completed training titled **Certified Business Analysis Professional (CBAP)**. This is a training certificate of completion and not an IIBA-issued CBAP credential.
+
+Additional training includes GitHub for Technical Writers, The Art of API Documentation, Advanced Technical Writing, Prompt Engineering — AI Tools, Introduction to ChatGPT and Generative AI, and Agentic AI Workflow.
+
+## Awards and recognition
+
+<div class="portfolio-grid">
+<div class="portfolio-card"><span class="label">Recognition</span><h3>Global Spotlight Award</h3><p>Professional recognition received during my technical writing career.</p></div>
+<div class="portfolio-card"><span class="label">Recognition</span><h3>Living Proof Recognition</h3><p>Recognition for contribution and professional impact.</p></div>
+<div class="portfolio-card"><span class="label">Individual</span><h3>Most Valuable Performer</h3><p>Individual performance recognition.</p></div>
+<div class="portfolio-card"><span class="label">Team</span><h3>Most Valuable Performer</h3><p>Team performance recognition.</p></div>
 </div>
 
 ## Featured projects
