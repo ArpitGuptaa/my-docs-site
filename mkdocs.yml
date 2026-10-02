@@ -37,18 +37,14 @@ extra_css:
   - stylesheets/extra.css
   - stylesheets/profile.css
 nav:
-  - About:
-      - Arpit Gupta: index.md
+  - About me:
+      - Overview: index.md
+      - Expertise: about/products-platforms.md
       - Experience: about/experience.md
-      - Expertise and Platforms: about/products-platforms.md
-  - Projects: projects/index.md
-  - Work Samples: work-sample/index.md
-  - Content Strategy:
-      - Overview: content-strategy/index.md
-      - Technical Writing: content-strategy/technical-writing.md
-      - API Documentation: content-strategy/api-documentation.md
-      - Documentation Quality: content-strategy/documentation-quality.md
-      - Business Analyst Practices: content-strategy/business-analysis.md
+  - Docs:
+      - Work samples: work-sample/index.md
+      - Self-projects: projects/index.md
+      - Content Strategy: content-strategy/index.md
   - Reference: reference/index.md
   - Contact: contact/index.md
 markdown_extensions:
