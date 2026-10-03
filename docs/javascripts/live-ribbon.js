@@ -5,27 +5,28 @@
   const index = location.pathname.indexOf(marker);
   const base = index >= 0 ? location.pathname.slice(0, index + marker.length) : '/';
 
+  const headerInner = document.querySelector('.md-header__inner');
+  if (!headerInner) return;
+
   const ribbon = document.createElement('div');
-  ribbon.className = 'portfolio-live-ribbon';
-  ribbon.setAttribute('aria-label', 'Portfolio highlights and industry news');
+  ribbon.className = 'portfolio-header-news';
+  ribbon.setAttribute('aria-label', 'Industry news');
   ribbon.innerHTML = `
-    <div class="portfolio-live-ribbon__track">
-      <a class="portfolio-live-ribbon__item portfolio-live-ribbon__hire" href="${base}reference/#why-hire-arpit">
-        <span aria-hidden="true">💼</span><strong>Why hire Arpit?</strong>
+    <div class="portfolio-header-news__track">
+      <a class="portfolio-header-news__item" data-news="ai" href="#" target="_blank" rel="noopener noreferrer" hidden>
+        <span class="portfolio-header-news__icon" aria-hidden="true">🤖</span>
+        <span class="portfolio-header-news__content"><strong>AI &amp; GenAI News</strong><span class="portfolio-header-news__headline" data-title></span></span>
       </a>
-      <span class="portfolio-live-ribbon__separator" aria-hidden="true">|</span>
-      <a class="portfolio-live-ribbon__item" data-news="ai" href="#" target="_blank" rel="noopener noreferrer" hidden>
-        <span aria-hidden="true">🤖</span><strong>AI &amp; GenAI News:</strong> <span data-title></span>
-      </a>
-      <span class="portfolio-live-ribbon__separator" data-separator="ai" aria-hidden="true" hidden>|</span>
-      <a class="portfolio-live-ribbon__item" data-news="technical_writing" href="#" target="_blank" rel="noopener noreferrer" hidden>
-        <span aria-hidden="true">✍️</span><strong>Technical Writing News:</strong> <span data-title></span>
+      <span class="portfolio-header-news__separator" data-separator="technical_writing" aria-hidden="true" hidden></span>
+      <a class="portfolio-header-news__item" data-news="technical_writing" href="#" target="_blank" rel="noopener noreferrer" hidden>
+        <span class="portfolio-header-news__icon" aria-hidden="true">✍️</span>
+        <span class="portfolio-header-news__content"><strong>Technical Writing News</strong><span class="portfolio-header-news__headline" data-title></span></span>
       </a>
     </div>`;
 
-  const header = document.querySelector('.md-header');
-  if (header) header.insertAdjacentElement('afterend', ribbon);
-  else document.body.prepend(ribbon);
+  const controls = headerInner.querySelector('.md-header__option') || headerInner.querySelector('[data-md-component="palette"]');
+  if (controls) headerInner.insertBefore(ribbon, controls);
+  else headerInner.appendChild(ribbon);
 
   function setItem(key, item) {
     if (!item || !item.title || !item.url) return;
@@ -35,8 +36,10 @@
     anchor.querySelector('[data-title]').textContent = item.title;
     anchor.title = item.source ? `${item.title} — ${item.source}` : item.title;
     anchor.hidden = false;
-    const separator = ribbon.querySelector(`[data-separator="${key}"]`);
-    if (separator) separator.hidden = false;
+    if (key === 'technical_writing') {
+      const separator = ribbon.querySelector('[data-separator="technical_writing"]');
+      if (separator) separator.hidden = false;
+    }
   }
 
   fetch(`${base}assets/data/portfolio-news.json?v=${Date.now()}`, { cache: 'no-store' })
@@ -47,6 +50,6 @@
       setItem('technical_writing', items.technical_writing);
     })
     .catch(() => {
-      // Keep the static Why hire Arpit link. News failure must never affect the site.
+      // The news component is optional and isolated from the rest of the site.
     });
 })();
