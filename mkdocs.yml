@@ -44,8 +44,8 @@ nav:
   - About me: index.md
   - Expertise: about/products-platforms.md
   - Experience: about/experience.md
-  - Work samples: work-sample/index.md
-  - Self-projects: projects/index.md
+  - Work Samples: work-sample/index.md
+  - Projects: projects/index.md
   - Content Strategy: content-strategy/index.md
   - Reference: reference/index.md
   - Contact: contact/index.md
