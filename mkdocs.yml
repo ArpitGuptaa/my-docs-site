@@ -34,10 +34,8 @@ extra_css:
   - stylesheets/profile.css
   - stylesheets/final-overrides.css
   - stylesheets/ask-arpit.css
-  - stylesheets/live-ribbon.css
 extra_javascript:
   - javascripts/ask-arpit.js
-  - javascripts/live-ribbon.js
 nav:
   - About me: index.md
   - Expertise: about/products-platforms.md
