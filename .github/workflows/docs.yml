@@ -19,8 +19,6 @@ jobs:
       - name: Checkout Files
         uses: actions/checkout@v4
 
-      # Validate JavaScript before building the site. This catches syntax errors
-      # that would otherwise deploy successfully but break Ask Arpit at runtime.
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -40,15 +38,20 @@ jobs:
             done
           fi
 
-      # Guard against accidentally removing the Ask Arpit assets from MkDocs.
-      - name: Validate Ask Arpit configuration
+      - name: Validate interactive asset configuration
         shell: bash
         run: |
           set -euo pipefail
           test -f docs/javascripts/ask-arpit.js
           test -f docs/stylesheets/ask-arpit.css
+          test -f docs/javascripts/live-ribbon.js
+          test -f docs/stylesheets/live-ribbon.css
+          test -f docs/assets/data/portfolio-news.json
           grep -Fq 'javascripts/ask-arpit.js' mkdocs.yml
           grep -Fq 'stylesheets/ask-arpit.css' mkdocs.yml
+          grep -Fq 'javascripts/live-ribbon.js' mkdocs.yml
+          grep -Fq 'stylesheets/live-ribbon.css' mkdocs.yml
+          python -m json.tool docs/assets/data/portfolio-news.json > /dev/null
 
       - name: Run Vale
         uses: errata-ai/vale-action@reviewdog
@@ -82,21 +85,24 @@ jobs:
           python -m pip install --upgrade pip
           pip install mkdocs mkdocs-material
 
-      # Build first so configuration, Markdown, theme, CSS and JS asset-copy
-      # problems fail CI before GitHub Pages is changed.
       - name: Build Website
         run: mkdocs build --strict
 
-      - name: Validate built Ask Arpit assets
+      - name: Validate built interactive assets
         shell: bash
         run: |
           set -euo pipefail
           test -s site/javascripts/ask-arpit.js
           test -s site/stylesheets/ask-arpit.css
+          test -s site/javascripts/live-ribbon.js
+          test -s site/stylesheets/live-ribbon.css
+          test -s site/assets/data/portfolio-news.json
           grep -R -Fq 'javascripts/ask-arpit.js' site/*.html site/**/*.html
+          grep -R -Fq 'javascripts/live-ribbon.js' site/*.html site/**/*.html
           node --check site/javascripts/ask-arpit.js
+          node --check site/javascripts/live-ribbon.js
+          python -m json.tool site/assets/data/portfolio-news.json > /dev/null
 
-      # Pull requests run every validation above but never deploy.
       - name: Deploy Website
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: mkdocs gh-deploy --force
