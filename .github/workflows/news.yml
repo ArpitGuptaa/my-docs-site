@@ -1,0 +1,44 @@
+name: Refresh Portfolio News
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: portfolio-news-refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch curated news
+        run: python scripts/fetch_news.py
+
+      - name: Commit updated cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/assets/data/portfolio-news.json; then
+            echo "News cache is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/assets/data/portfolio-news.json
+          git commit -m "Refresh portfolio news cache"
+          git push origin main
