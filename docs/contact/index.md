@@ -17,7 +17,8 @@
     <div class="contact-row"><span class="k">Notice period</span><strong>Immediate</strong></div>
   </div>
 
-  <div class="contact-actions"><a class="contact-btn primary" href="mailto:grtarpit2008@gmail.com?subject=Technical%20Writing%20Opportunity">Start a conversation</a><a class="contact-btn secondary" href="../assets/resume/ArpitGupta.pdf" download>Download resume</a></div>
+  <div class="contact-actions"><a class="contact-btn primary" href="https://chat.google.com/" target="_blank" rel="noopener noreferrer" title="Open Google Chat and search for grtarpit2008@gmail.com">Start a conversation</a><a class="contact-btn secondary" href="../assets/resume/ArpitGupta.pdf" download>Download resume</a></div>
+  <p class="contact-chat-note">Prefer Google Chat? Select <strong>Start a conversation</strong>, then search for <strong>grtarpit2008@gmail.com</strong> to send me a message.</p>
 </div>
 
 ## Share portfolio feedback
