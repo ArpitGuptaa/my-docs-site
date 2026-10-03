@@ -1,8 +1,6 @@
 site_name: Arpit Gupta | Technical Writing Portfolio
 site_description: Portfolio of technical writing, API documentation, information architecture, docs-as-code, and documentation engineering work.
 site_url: https://arpitguptaa.github.io/my-docs-site/
-repo_url: https://github.com/ArpitGuptaa/my-docs-site
-repo_name: ArpitGuptaa/my-docs-site
 
 theme:
   name: material
