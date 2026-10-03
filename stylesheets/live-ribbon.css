@@ -1,50 +1,108 @@
-.portfolio-live-ribbon {
-  position: sticky;
-  top: var(--md-header-height, 2.4rem);
-  z-index: 3;
-  width: 100%;
-  box-sizing: border-box;
-  border-bottom: 1px solid color-mix(in srgb, var(--md-default-fg-color) 12%, transparent);
-  background: color-mix(in srgb, var(--md-default-bg-color) 94%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  font-size: .66rem;
-  line-height: 1.25;
-}
-
-.portfolio-live-ribbon__track {
-  min-height: 2rem;
-  padding: .38rem 1rem;
+/* Live news is embedded inside the same upper header ribbon that contains the theme control. */
+.portfolio-header-news {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .55rem;
-  white-space: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
+  margin-left: 1rem;
+  margin-right: .75rem;
 }
 
-.portfolio-live-ribbon__track::-webkit-scrollbar { display: none; }
+.portfolio-header-news__track {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  min-width: 0;
+}
 
-.portfolio-live-ribbon__item {
-  color: var(--md-default-fg-color);
+.portfolio-header-news__item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-width: 0;
+  max-width: min(38vw, 34rem);
+  padding: .34rem .72rem;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: .6rem;
+  color: inherit;
+  background: color-mix(in srgb, var(--md-default-bg-color) 12%, transparent);
   text-decoration: none;
-  max-width: 36rem;
+  transition: background-color .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.portfolio-header-news__item:hover {
+  color: inherit;
+  background: color-mix(in srgb, var(--md-default-bg-color) 22%, transparent);
+  border-color: color-mix(in srgb, currentColor 38%, transparent);
+  transform: translateY(-1px);
+}
+
+.portfolio-header-news__icon {
+  flex: 0 0 auto;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.portfolio-header-news__content {
+  display: flex;
+  align-items: baseline;
+  gap: .4rem;
+  min-width: 0;
+  font-size: .76rem;
+  line-height: 1.2;
+}
+
+.portfolio-header-news__content strong {
+  flex: 0 0 auto;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.portfolio-header-news__headline {
+  display: block;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: .92;
+}
+
+.portfolio-header-news__separator {
+  width: 1px;
+  height: 1.7rem;
   flex: 0 0 auto;
+  background: currentColor;
+  opacity: .25;
 }
 
-.portfolio-live-ribbon__item:hover { color: var(--md-accent-fg-color); }
-.portfolio-live-ribbon__hire { font-weight: 600; }
-.portfolio-live-ribbon__separator { opacity: .35; flex: 0 0 auto; }
-
-@media (max-width: 900px) {
-  .portfolio-live-ribbon__track { justify-content: flex-start; padding-inline: .7rem; }
-  .portfolio-live-ribbon__item { max-width: 25rem; }
+/* Preserve room for the Material search/theme controls on medium screens. */
+@media (max-width: 1200px) {
+  .portfolio-header-news { margin-left: .45rem; margin-right: .4rem; }
+  .portfolio-header-news__track { gap: .4rem; }
+  .portfolio-header-news__item { max-width: 28vw; padding: .3rem .5rem; }
+  .portfolio-header-news__headline { max-width: 10rem; }
 }
 
-@media (max-width: 600px) {
-  .portfolio-live-ribbon { font-size: .62rem; }
-  .portfolio-live-ribbon__item { max-width: 19rem; }
+/* On phones the header has very little horizontal room. Keep the two tabs usable
+   with horizontal scrolling instead of shrinking the text to an unreadable size. */
+@media (max-width: 760px) {
+  .portfolio-header-news {
+    order: 20;
+    flex: 1 1 100%;
+    width: 100%;
+    margin: .15rem .35rem .3rem;
+    overflow: hidden;
+  }
+  .portfolio-header-news__track {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .portfolio-header-news__track::-webkit-scrollbar { display: none; }
+  .portfolio-header-news__item { min-width: 15rem; max-width: 19rem; }
+  .portfolio-header-news__headline { max-width: 8.5rem; }
 }
