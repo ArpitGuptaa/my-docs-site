@@ -34,31 +34,41 @@
   .contact-section .contact-grid { grid-template-columns:1fr!important; }
 }
 
-/* Phone layout: keep Material's mobile header/navigation intact and make all custom
-   portfolio components fit a single-column viewport. */
+/* Restore MkDocs Material off-canvas navigation on tablet and phone. */
+@media screen and (max-width:76.234375em) {
+  .md-sidebar--primary { position:fixed!important;top:0!important;left:0!important;z-index:4!important;width:12.1rem!important;height:100vh!important;margin:0!important;padding:0!important;background:var(--md-default-bg-color)!important;transform:translateX(-12.1rem)!important;transition:transform .25s cubic-bezier(.4,0,.2,1)!important; }
+  [data-md-toggle=drawer]:checked ~ .md-container .md-sidebar--primary { transform:translateX(0)!important; }
+  .md-sidebar--primary .md-sidebar__scrollwrap { height:100%!important;margin:0!important;overflow-y:auto!important; }
+  .md-sidebar--primary .md-sidebar__inner { padding:0!important; }
+  .md-overlay { z-index:3!important; }
+}
+
+/* Phone layout */
 @media (max-width:760px) {
-  html,body { width:100%;max-width:100%;overflow-x:hidden; }
+  html,body { width:100%!important;max-width:100%!important;overflow-x:hidden!important; }
+  .md-header,.md-header__inner { width:100%!important;max-width:100vw!important;box-sizing:border-box!important; }
   .md-header__inner { min-height:3.2rem!important;padding-left:.5rem!important;padding-right:.5rem!important; }
   .md-header__button { margin:0 .1rem!important;padding:.55rem!important; }
 
-  /* The desktop news ribbon consumes the space needed by the mobile menu/search/theme
-     controls. Hide it on phones; news remains a desktop enhancement. */
-  .portfolio-header-news { display:none!important; }
+  /* News is a desktop enhancement and must not consume the mobile header. */
+  .portfolio-header-news,.live-ribbon,.news-ribbon,.header-news { display:none!important; }
 
-  .md-main__inner { display:block!important;width:100%!important;min-width:0!important; }
-  .md-content__inner { padding:1rem .8rem 2.5rem!important; }
-  .md-typeset { font-size:.78rem!important; }
-  .md-typeset h1 { font-size:1.75rem!important;line-height:1.15!important; }
+  .md-container,.md-main,.md-main__inner,.md-content { width:100%!important;max-width:100vw!important;min-width:0!important;margin-left:0!important;margin-right:0!important; }
+  .md-main__inner { display:block!important; }
+  .md-content__inner { width:auto!important;max-width:100%!important;margin:0!important;padding:1rem .8rem 6rem!important; }
+  .md-typeset { font-size:.78rem!important;overflow-wrap:anywhere; }
+  .md-typeset h1 { font-size:1.75rem!important;line-height:1.15!important;overflow-wrap:anywhere; }
   .md-typeset h2 { font-size:1.2rem!important; }
 
+  .about-hero,.about-hero__top,.about-hero__intro { width:100%!important;max-width:100%!important;min-width:0!important; }
   .about-hero { padding-top:.25rem!important; }
-  .about-hero__top { display:block!important;min-height:0!important;overflow:visible!important; }
-  .about-hero .about-hero__visual { display:flex!important;justify-content:center!important;margin:1rem 0!important; }
+  .about-hero__top { display:flex!important;flex-direction:column!important;min-height:0!important;overflow:visible!important; }
+  .about-hero .about-hero__visual { order:2!important;display:flex!important;justify-content:center!important;width:100%!important;margin:1rem 0!important; }
   .about-hero .about-hero__portrait { width:min(180px,60vw)!important;height:auto!important;aspect-ratio:4/5!important; }
-  .profile-skill-pills { gap:.32rem!important; }
-  .profile-skill-pills span { font-size:.6rem!important;padding:.28rem .52rem!important; }
+  .profile-skill-pills { display:flex!important;flex-wrap:wrap!important;width:100%!important;max-width:100%!important;gap:.32rem!important; }
+  .profile-skill-pills span { max-width:100%!important;font-size:.6rem!important;padding:.28rem .52rem!important;white-space:normal!important; }
 
-  .profile-highlights,.portfolio-grid,.expertise-grid,.projects-grid,.sample-grid,.reference-grid,.credential-grid,.award-grid,.why-grid,.skills-matrix,.metric-grid { grid-template-columns:1fr!important;width:100%!important; }
+  .profile-highlights,.portfolio-grid,.expertise-grid,.projects-grid,.sample-grid,.reference-grid,.credential-grid,.award-grid,.why-grid,.skills-matrix,.metric-grid { display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;max-width:100%!important; }
   .project-tile { min-height:0!important; }
 
   .changelog-head { align-items:flex-start!important; }
@@ -74,6 +84,8 @@
   .recommendation-card { flex-direction:column!important;align-items:flex-start!important; }
   .cta-row { flex-direction:column!important;align-items:stretch!important; }
   .cta { justify-content:center!important;text-align:center!important; }
+
+  #ask-arpit-launcher,.ask-arpit-launcher,.ask-arpit-button { max-width:calc(100vw - 24px)!important;right:12px!important;bottom:20px!important; }
 }
 
 @media (max-width:420px) {
