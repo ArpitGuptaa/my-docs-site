@@ -15,8 +15,8 @@ A tutorial should help a developer complete a meaningful end-to-end task rather 
 
 ## Portfolio examples
 
-- [Capture a charge](../../clover-project/capture-a-charge-tutorial.md)
-- [Tokenization overview](../../clover-project/ecommerce-tokenization-overview.md)
-- [Error codes](../../clover-project/ecommerce-error-codes.md)
-- [Shopify integration](../../clover-project/integrate-clover-payments-plugin-with-shopify-online-shop.md)
-- [Compliance webhooks](../../clover-project/clover-payments-plugin-shopify-webhooks.md)
+- [Capture a charge](capture-charge.md)
+- [Tokenization overview](tokenization-overview.md)
+- [Error codes](error-codes.md)
+- [Create a charge](create-charge.md)
+- [API samples](api-samples.md)
