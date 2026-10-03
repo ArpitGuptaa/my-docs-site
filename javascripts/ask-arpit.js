@@ -4,18 +4,26 @@
   const STOP = new Set('a an and are as at be by can did do does for from has have he his how i in is it me of on or show tell that the to what when where which who why with work worked you your about'.split(' '));
   const SYNONYMS = {
     api:['api','apis','rest','endpoint','endpoints','swagger','openapi','postman','sdk','webhook','integration','developer'],
-    ai:['ai','genai','generative','llm','llms','rag','agent','agents','agentic','gpt','nlp','prompt','automation'],
+    ai:['ai','genai','generative','llm','llms','rag','agentic','gpt','nlp','prompt','automation'],
     experience:['experience','career','role','roles','company','companies','employer','employers','kore','fiserv','clover','ice','agiliad'],
     skills:['skill','skills','tools','technology','technologies','proficient','expertise'],
-    samples:['sample','samples','work','portfolio','documentation'],
-    projects:['project','projects','learning','self-projects'],
+    samples:['sample','samples','work','portfolio','documentation'], projects:['project','projects','learning','self-projects'],
     certification:['certification','certifications','certificate','training','cbap','credential','credentials'],
-    contact:['contact','email','phone','call','whatsapp','reach','connect','conversation','human','person','availability','notice'],
+    contact:['contact','email','phone','call','whatsapp','reach','connect','conversation','human','person','transfer'],
     education:['education','degree','university','college'], awards:['award','awards','recognition']
   };
   const state = { docs: [], ready: false, lastTopic: '' };
+  const HANDOFF_PATTERNS = [
+    /\bconnect\s+(me|us)\s+(to|with)\s+arpit\b/i,
+    /\b(connect|contact|reach)\s+arpit\b/i,
+    /\b(talk|speak|chat)\s+(to|with)\s+arpit\b/i,
+    /\b(call|phone|whatsapp)\s+arpit\b/i,
+    /\b(agent|human)\s+(transfer|handoff|hand-off)\b/i,
+    /\btransfer\s+(me|us)\b/i,
+    /\b(real|live)\s+(person|human|agent)\b/i,
+    /\b(contact|connect|talk|speak|chat|call|whatsapp|phone)\b/i
+  ];
   const intents = [
-    {id:'contact', test:/\b(contact|call|phone|whatsapp|reach|connect|talk|speak|conversation|human|person)\b/i},
     {id:'availability', test:/\b(available|availability|notice period|join|joining|immediate)\b/i},
     {id:'api', test:/\b(api|apis|sdk|rest|swagger|openapi|postman|endpoint|webhook)\b/i},
     {id:'ai', test:/\b(ai|gen\s?ai|llm|rag|agentic|gpt|nlp|prompt)\b/i},
@@ -27,31 +35,28 @@
   ];
   function esc(s=''){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
   function stripHtml(s=''){const d=document.createElement('div');d.innerHTML=s;return(d.textContent||'').replace(/\s+/g,' ').trim();}
-  function words(q=''){return[...new Set(q.toLowerCase().replace(/[^a-z0-9+#.-]+/g,' ').split(/\s+/).filter(w=>w.length>1&&!STOP.has(w)))];}
+  function normalize(q=''){return q.toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9+#.\s-]+/g,' ').replace(/\s+/g,' ').trim();}
+  function words(q=''){return[...new Set(normalize(q).split(/\s+/).filter(w=>w.length>1&&!STOP.has(w)))];}
   function expand(tokens){const out=new Set(tokens);Object.values(SYNONYMS).forEach(g=>{if(tokens.some(t=>g.includes(t)))g.forEach(t=>out.add(t));});return[...out];}
   function baseUrl(){const p=location.pathname,m='/my-docs-site/',i=p.indexOf(m);return i>=0?p.slice(0,i+m.length):'/';}
   function absoluteLink(loc=''){return baseUrl()+loc.replace(/^\.\//,'');}
   function whatsappUrl(){return `https://wa.me/${PHONE}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;}
-  function transferCard(reason='Would you like to continue with Arpit directly?'){
-    return `<div class="ask-arpit__transfer"><span class="ask-arpit__transfer-label">Agent transfer</span><strong>${esc(reason)}</strong><p>Continue the conversation with Arpit by phone or WhatsApp.</p><div class="ask-arpit__transfer-actions"><a href="${whatsappUrl()}" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><a href="tel:+${PHONE}">Call Arpit</a></div></div>`;
-  }
-  async function loadIndex(){try{const r=await fetch(baseUrl()+'search/search_index.json',{cache:'no-cache'});if(!r.ok)throw new Error();const data=await r.json();state.docs=(data.docs||[]).map(d=>({...d,plain:stripHtml(d.text||''),title:stripHtml(d.title||'')}));state.ready=true;}catch(e){state.ready=false;}}
-  function detectIntent(q){const found=intents.find(i=>i.test.test(q));if(found){state.lastTopic=found.id;return found.id;}if(/\b(more|details|samples|examples|that|this)\b/i.test(q)&&state.lastTopic)return state.lastTopic;return'';}
+  function transferCard(reason='Would you like to continue with Arpit directly?'){return `<div class="ask-arpit__transfer"><span class="ask-arpit__transfer-label">Agent transfer</span><strong>${esc(reason)}</strong><p>I can transfer you from the portfolio assistant to Arpit. Choose how you would like to connect.</p><div class="ask-arpit__transfer-actions"><a href="${whatsappUrl()}" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><a href="tel:+${PHONE}">Call Arpit</a></div></div>`;}
+  async function loadIndex(){try{const r=await fetch(baseUrl()+'search/search_index.json?v=3',{cache:'no-store'});if(!r.ok)throw new Error();const data=await r.json();state.docs=(data.docs||[]).map(d=>({...d,plain:stripHtml(d.text||''),title:stripHtml(d.title||'')}));state.ready=true;}catch(e){state.ready=false;}}
+  function isHandoff(q){const n=normalize(q);return HANDOFF_PATTERNS.some(p=>p.test(n));}
+  function detectIntent(q){if(isHandoff(q)){state.lastTopic='contact';return'contact';}const found=intents.find(i=>i.test.test(q));if(found){state.lastTopic=found.id;return found.id;}if(/\b(more|details|samples|examples|that|this)\b/i.test(q)&&state.lastTopic)return state.lastTopic;return'';}
   function scoreDoc(doc,tokens){const title=(doc.title||'').toLowerCase(),text=(doc.plain||'').toLowerCase(),loc=(doc.location||'').toLowerCase();let score=0;tokens.forEach(t=>{if(title.includes(t))score+=7;if(loc.includes(t))score+=4;const safe=t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),n=(text.match(new RegExp('\\b'+safe+'\\b','g'))||[]).length;score+=Math.min(n,5)*1.4;});return score;}
   function snippet(doc,tokens){const text=doc.plain||'';if(!text)return'';const lower=text.toLowerCase();let pos=-1;for(const t of tokens){const p=lower.indexOf(t);if(p>=0&&(pos<0||p<pos))pos=p;}const start=Math.max(0,(pos<0?0:pos)-70),end=Math.min(text.length,start+270);return(start>0?'…':'')+text.slice(start,end)+(end<text.length?'…':'');}
   function search(q,intent){const raw=words(q+(intent?' '+intent:'')),tokens=expand(raw);if(!raw.length)return[];return state.docs.map(d=>({d,score:scoreDoc(d,tokens)})).filter(x=>x.score>3).sort((a,b)=>b.score-a.score).slice(0,3).map(x=>({title:x.d.title||'Portfolio result',url:absoluteLink(x.d.location||''),snippet:snippet(x.d,tokens)}));}
   function botMessage(html){const m=document.createElement('div');m.className='ask-arpit__message ask-arpit__message--bot';m.innerHTML=html;messages.appendChild(m);messages.scrollTop=messages.scrollHeight;}
   function userMessage(text){const m=document.createElement('div');m.className='ask-arpit__message ask-arpit__message--user';m.textContent=text;messages.appendChild(m);messages.scrollTop=messages.scrollHeight;}
   function answer(q){userMessage(q);const intent=detectIntent(q);
-    if(intent==='contact'){botMessage(`You can connect with Arpit directly.${transferCard('Ready to speak with Arpit?')}`);return;}
+    if(intent==='contact'){botMessage(`Sure — I can help you connect with Arpit.${transferCard('Agent transfer available')}`);return;}
     if(intent==='availability'){botMessage(`Arpit's portfolio lists his availability as <strong>Immediate</strong>. <a href="${baseUrl()}contact/">View contact details →</a>${transferCard('Want to discuss an opportunity?')}`);return;}
-    if(!state.ready){botMessage(`I’m having trouble loading the portfolio index.${transferCard('Need help now?')}`);return;}
-    const results=search(q,intent);
-    if(!results.length){botMessage(`I couldn't find a confident answer in Arpit's portfolio. Try experience, AI &amp; GenAI, API &amp; SDK documentation, skills, work samples, or certifications.${transferCard('Would you like to ask Arpit directly?')}`);return;}
-    const cards=results.map(r=>`<div class="ask-arpit__result"><strong>${esc(r.title)}</strong><p>${esc(r.snippet)}</p><a href="${esc(r.url)}">View related content →</a></div>`).join('');
-    botMessage(`<span class="ask-arpit__found">I found these relevant sections:</span>${cards}<div class="ask-arpit__handoff-link"><button type="button" data-transfer>Talk to Arpit</button></div>`);
+    if(!state.ready){botMessage(`I’m having trouble loading the portfolio index.${transferCard('Need to speak with Arpit?')}`);return;}
+    const results=search(q,intent);if(!results.length){botMessage(`I couldn't find a confident answer in Arpit's portfolio. Try experience, AI &amp; GenAI, API &amp; SDK documentation, skills, work samples, or certifications.${transferCard('Would you like to ask Arpit directly?')}`);return;}
+    const cards=results.map(r=>`<div class="ask-arpit__result"><strong>${esc(r.title)}</strong><p>${esc(r.snippet)}</p><a href="${esc(r.url)}">View related content →</a></div>`).join('');botMessage(`<span class="ask-arpit__found">I found these relevant sections:</span>${cards}<div class="ask-arpit__handoff-link"><button type="button" data-transfer>Talk to Arpit</button></div>`);
   }
-  const root=document.createElement('div');root.className='ask-arpit';root.innerHTML=`<button class="ask-arpit__launcher" type="button" aria-label="Open Ask Arpit"><span aria-hidden="true">✦</span><b>Ask Arpit</b></button><section class="ask-arpit__panel" aria-label="Ask Arpit portfolio search" hidden><header><div><strong>Ask Arpit</strong><small>Portfolio assistant · site content only</small></div><button class="ask-arpit__close" type="button" aria-label="Close">×</button></header><div class="ask-arpit__messages"></div><div class="ask-arpit__suggestions"><button>Experience</button><button>AI &amp; GenAI</button><button>API &amp; SDK documentation</button><button>Technical skills</button><button>Work samples</button><button>Certifications</button><button>Talk to Arpit</button></div><form class="ask-arpit__form"><input type="text" maxlength="160" autocomplete="off" placeholder="Ask about Arpit…" aria-label="Ask about Arpit"><button type="submit" aria-label="Search">➜</button></form><footer>Answers come from this portfolio. No LLM or external AI service is used.</footer></section>`;
-  document.body.appendChild(root);const panel=root.querySelector('.ask-arpit__panel'),launcher=root.querySelector('.ask-arpit__launcher'),close=root.querySelector('.ask-arpit__close'),form=root.querySelector('form'),input=root.querySelector('input');const messages=root.querySelector('.ask-arpit__messages');
-  launcher.addEventListener('click',()=>{panel.hidden=false;launcher.hidden=true;if(!messages.children.length)botMessage("Hi! I can help you explore Arpit's portfolio. Ask about his experience, AI documentation, API & SDK work, skills, projects, certifications, or connect with Arpit directly.");input.focus();});close.addEventListener('click',()=>{panel.hidden=true;launcher.hidden=false;});form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(q){answer(q);input.value='';}});root.querySelectorAll('.ask-arpit__suggestions button').forEach(b=>b.addEventListener('click',()=>answer(b.textContent)));messages.addEventListener('click',e=>{if(e.target.matches('[data-transfer]'))botMessage(transferCard('Continue with Arpit directly'));});loadIndex();
+  const root=document.createElement('div');root.className='ask-arpit';root.innerHTML=`<button class="ask-arpit__launcher" type="button" aria-label="Open Ask Arpit"><span aria-hidden="true">✦</span><b>Ask Arpit</b></button><section class="ask-arpit__panel" aria-label="Ask Arpit portfolio search" hidden><header><div><strong>Ask Arpit</strong><small>Portfolio assistant · site content only</small></div><button class="ask-arpit__close" type="button" aria-label="Close">×</button></header><div class="ask-arpit__messages"></div><div class="ask-arpit__suggestions"><button>Experience</button><button>AI &amp; GenAI</button><button>API &amp; SDK documentation</button><button>Technical skills</button><button>Work samples</button><button>Certifications</button><button>Connect me to Arpit</button></div><form class="ask-arpit__form"><input type="text" maxlength="160" autocomplete="off" placeholder="Ask about Arpit…" aria-label="Ask about Arpit"><button type="submit" aria-label="Search">➜</button></form><footer>Answers come from this portfolio. No LLM or external AI service is used.</footer></section>`;
+  document.body.appendChild(root);const panel=root.querySelector('.ask-arpit__panel'),launcher=root.querySelector('.ask-arpit__launcher'),close=root.querySelector('.ask-arpit__close'),form=root.querySelector('form'),input=root.querySelector('input');const messages=root.querySelector('.ask-arpit__messages');launcher.addEventListener('click',()=>{panel.hidden=false;launcher.hidden=true;if(!messages.children.length)botMessage("Hi! I can help you explore Arpit's portfolio. Ask about his experience, AI documentation, API & SDK work, skills, projects, certifications, or ask me to connect you with Arpit.");input.focus();});close.addEventListener('click',()=>{panel.hidden=true;launcher.hidden=false;});form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(q){answer(q);input.value='';}});root.querySelectorAll('.ask-arpit__suggestions button').forEach(b=>b.addEventListener('click',()=>answer(b.textContent)));messages.addEventListener('click',e=>{if(e.target.matches('[data-transfer]'))botMessage(transferCard('Continue with Arpit directly'));});loadIndex();
 })();
