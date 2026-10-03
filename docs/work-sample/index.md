@@ -1,4 +1,4 @@
-# Work samples
+# Work Samples
 
 The following public documentation portals represent products and domains I worked with during my career. They provide a clearer view of the type of enterprise, developer, API, FinTech, mortgage, and DevOps documentation environments represented in my experience. Links open the corresponding public documentation sites.
 
