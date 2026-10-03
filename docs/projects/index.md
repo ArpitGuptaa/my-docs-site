@@ -1,4 +1,4 @@
-# Self-projects
+# Projects
 
 This section brings together projects I created to turn learning into practical documentation work. Each project started with a skill, workflow, technology, or documentation pattern I wanted to explore more deeply, then applied that learning to a realistic problem. The projects help me experiment with approaches such as documentation automation, enterprise AI documentation, docs-as-code, CI/CD quality checks, API documentation, and local authoring workflows without using confidential employer content.
 
