@@ -5,8 +5,8 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 1rem;
+  justify-content: flex-start;
+  margin-left: .25rem;
   margin-right: .75rem;
 }
 
@@ -14,7 +14,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: .75rem;
   min-width: 0;
 }
@@ -79,16 +79,13 @@
   opacity: .25;
 }
 
-/* Preserve room for the Material search/theme controls on medium screens. */
 @media (max-width: 1200px) {
-  .portfolio-header-news { margin-left: .45rem; margin-right: .4rem; }
+  .portfolio-header-news { margin-left: .15rem; margin-right: .4rem; }
   .portfolio-header-news__track { gap: .4rem; }
   .portfolio-header-news__item { max-width: 28vw; padding: .3rem .5rem; }
   .portfolio-header-news__headline { max-width: 10rem; }
 }
 
-/* On phones the header has very little horizontal room. Keep the two tabs usable
-   with horizontal scrolling instead of shrinking the text to an unreadable size. */
 @media (max-width: 760px) {
   .portfolio-header-news {
     order: 20;
