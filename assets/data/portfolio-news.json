@@ -1,4 +1,17 @@
 {
-  "updated_at": null,
-  "items": {}
+  "updated_at": "2026-10-03T11:46:55.634100+00:00",
+  "items": {
+    "ai": {
+      "title": "Germany's RAG Foundation could sell entire Evonik stake - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQVVneWVYX09ka3duQXY5UFNtZFgzdVI1SzAxTnVydHFWVUkyeFlYRloxVWxJTnRyOXVsa3BPYi1uT2E1Qm0tLUJxYlVHZ240MWtGem55SW9iSHNwZm5XQUlDZ1NWRnN5OTQ0dFNFNllOSkM1VkZxa2lRUEpFbV9Qdmk2UWlYS0NWSnRUbmREY042R0FEQkwzandRYnNfQmF4ZDBqR2l6VVM2cDFHV2Nr?oc=5",
+      "source": "Reuters",
+      "published": "Wed, 30 Sep 2026 15:55:17 GMT"
+    },
+    "technical_writing": {
+      "title": "Google Web Search Service API Documentation Has Been Removed - Search Engine Roundtable",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZW5yY3g3dy15NTNqYzlDUERBVkpoLU5WMkctWTViQ09haGlzWGM4aGMtZ0o0eFVDaUdWUUxLWG1tUDdsNXZ0dlNFR3VobGNoNG1vSl9DeUFaSjRZbXZzRHk4dWlyb3NOaGxzNnFwN2ZUcnU5MjZwMTB3MHlWaGg0VnBWbEgtZGYtVTF3WVhKQWRMZV8zc2c?oc=5",
+      "source": "Search Engine Roundtable",
+      "published": "Mon, 28 Sep 2026 11:41:00 GMT"
+    }
+  }
 }
