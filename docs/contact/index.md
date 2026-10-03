@@ -13,7 +13,6 @@
     <div class="contact-row"><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/arpitgupta007/" target="_blank" rel="noopener noreferrer">Arpit Gupta ↗</a></div>
     <div class="contact-row"><span class="k">GitHub</span><a href="https://github.com/ArpitGuptaa" target="_blank" rel="noopener noreferrer">ArpitGuptaa ↗</a></div>
     <div class="contact-row"><span class="k">Resume</span><a href="../assets/resume/ArpitGupta.pdf" download>Download PDF ↓</a></div>
-    <div class="contact-row"><span class="k">Location</span><span>Hyderabad, India</span></div>
     <div class="contact-row"><span class="k">Notice period</span><strong>Immediate</strong></div>
   </div>
 
