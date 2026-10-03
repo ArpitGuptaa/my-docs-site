@@ -4,29 +4,60 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
-  deploy:
+  validate-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository
       - name: Checkout Files
         uses: actions/checkout@v4
+
+      # Validate JavaScript before building the site. This catches syntax errors
+      # that would otherwise deploy successfully but break Ask Arpit at runtime.
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t js_files < <(find docs -type f -name '*.js' -print)
+          if [ ${#js_files[@]} -eq 0 ]; then
+            echo "No JavaScript files found under docs/."
+          else
+            for file in "${js_files[@]}"; do
+              echo "Checking $file"
+              node --check "$file"
+            done
+          fi
+
+      # Guard against accidentally removing the Ask Arpit assets from MkDocs.
+      - name: Validate Ask Arpit configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f docs/javascripts/ask-arpit.js
+          test -f docs/stylesheets/ask-arpit.css
+          grep -Fq 'javascripts/ask-arpit.js' mkdocs.yml
+          grep -Fq 'stylesheets/ask-arpit.css' mkdocs.yml
 
       - name: Run Vale
         uses: errata-ai/vale-action@reviewdog
 
-      # Spell checking
       - name: Run CSpell
         uses: streetsidesoftware/cspell-action@v6
         with:
           files: "**/*.md"
 
-      # Broken link checking
       - name: Run Lychee Link Checker
         uses: lycheeverse/lychee-action@v2
         with:
@@ -41,18 +72,31 @@ jobs:
             --exclude https://www.linkedin.com/.*
             docs/**/*.md
 
-      # Install Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # Install MkDocs
       - name: Install MkDocs
         run: |
+          python -m pip install --upgrade pip
           pip install mkdocs mkdocs-material
 
-      # Deploy documentation site
-      - name: Deploy Website
+      # Build first so configuration, Markdown, theme, CSS and JS asset-copy
+      # problems fail CI before GitHub Pages is changed.
+      - name: Build Website
+        run: mkdocs build --strict
+
+      - name: Validate built Ask Arpit assets
+        shell: bash
         run: |
-          mkdocs gh-deploy --force
+          set -euo pipefail
+          test -s site/javascripts/ask-arpit.js
+          test -s site/stylesheets/ask-arpit.css
+          grep -R -Fq 'javascripts/ask-arpit.js' site/*.html site/**/*.html
+          node --check site/javascripts/ask-arpit.js
+
+      # Pull requests run every validation above but never deploy.
+      - name: Deploy Website
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: mkdocs gh-deploy --force
