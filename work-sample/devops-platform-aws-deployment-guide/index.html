@@ -749,50 +749,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#architecture_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-definitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tool definitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#perceivereasonact-loop-with-human-in-the-loop-approval" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Perceive–reason–act loop, with human-in-the-loop approval
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deployment-steps_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment steps
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -806,45 +762,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Best practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#backups" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Backups
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Security
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1043,7 +960,7 @@
 </ul>
 <h3 id="step-3-launch-the-stack">Step 3: Launch the stack<a class="headerlink" href="#step-3-launch-the-stack" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Open the AWS CloudFormation console and choose to create a new stack, using the template for your chosen <a href="#4-deployment-options">deployment option</a>.</li>
+<li>Open the AWS CloudFormation console and choose to create a new stack, using the template for your chosen <a href="#deployment-options">deployment option</a>.</li>
 <li>Confirm the Region displayed in the console.</li>
 <li>On the Select Template page, keep the default template URL and choose <strong>Next</strong>.</li>
 <li>On the Specify Details page, enter a stack name and set the parameters described below. Select <strong>Next</strong> when you're done.</li>
@@ -1406,163 +1323,29 @@
 <p><strong>Note</strong>: These principles apply beyond the Slack use case. If you build additional agents against this platform (for example, an agent that manages database backups or scales the ECS cluster), apply the same table before you grant it any new tool or permission.</p>
 </blockquote>
 <h2 id="use-case-deploy-an-autonomous-release-agent-integrated-with-slack-on-aws">Use case: Deploy an autonomous release agent integrated with Slack on AWS<a class="headerlink" href="#use-case-deploy-an-autonomous-release-agent-integrated-with-slack-on-aws" title="Permanent link">&para;</a></h2>
-<p>This use case extends the deployment with an agent that your team interacts with directly in Slack. Instead of a one-way webhook that only posts static text, the agent can answer questions about release state, explain <em>why</em> a release is stuck, and — with your approval — trigger a rollback through the deployment automation module.</p>
+<p>This use case extends the deployment with an agent that your team interacts with directly in Slack. Instead of a one-way webhook that only posts static text, the agent can answer questions about release state, explain <em>why</em> a release is stuck, and — with your approval — trigger a rollback through the deployment automation module's API.</p>
 <h3 id="what-the-agent-does">What the Agent does<a class="headerlink" href="#what-the-agent-does" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Answers questions</strong> such as <em>what's blocking the payments-service release?</em> by querying the release orchestration module's API and summarizing the result.</li>
 <li><strong>Watches for stuck or failed releases</strong> and proactively posts a summary to the channel.</li>
 <li><strong>Proposes and, on approval, executes actions</strong> such as retrying a failed task or rolling back a deployment, using the deployment automation module's API.</li>
-<li><strong>Keeps a record</strong> of every action it proposed and whether a human approved it.</li>
 </ul>
-<h3 id="architecture_1">Architecture<a class="headerlink" href="#architecture_1" title="Permanent link">&para;</a></h3>
-<p><img alt="Architecture" src="../images/architecture03.jpg" /></p>
-<p><strong>Description</strong>:</p>
-<ul>
-<li><strong>Slack workspace</strong>: The release owner interacts with the agent using a slash command (for example, <code>/release status payments-service</code>) or by mentioning the agent in a channel. Slack delivers this event over HTTPS.</li>
-<li><strong>Amazon API Gateway</strong>: Exposes a single HTTPS endpoint that receives Slack events and slash-command payloads, and validates the Slack request signature before forwarding anything to the agent.</li>
-<li><strong>AWS Lambda (agent orchestrator)</strong>: This is the core of the perceive–reason–act loop. It retrieves conversation context from DynamoDB, calls Amazon Bedrock to decide which tool to use, calls the platform's API through the existing Application Load Balancer, and posts the result back to Slack.</li>
-<li><strong>Amazon Bedrock</strong>: It hosts the reasoning model. The Lambda function sends it the user's request plus a fixed list of available tools (<code>get_release_status</code>, <code>list_blocked_tasks</code>, <code>propose_rollback</code>, <code>execute_rollback</code>); the model returns which tool to call and with what arguments — it never calls AWS or platform APIs directly itself.</li>
-<li><strong>Amazon DynamoDB</strong>: It stores short-lived conversation state (so follow-up questions like "why?" have context) and a permanent audit record of every proposed and executed action.</li>
-<li><strong>AWS Secrets Manager</strong>: It holds the Slack signing secret, the Slack bot token, and the platform API credentials, so none of them appear in Lambda environment variables or code.</li>
-<li><strong>The Existing Platform Deployment</strong>: The agent calls the same Application Load Balancer endpoint that a human user would use in a browser, through the release orchestration and deployment automation module APIs.</li>
-<li><strong>Amazon CloudWatch</strong>: It captures structured logs of every reasoning step and tool call, and can alarm if the agent's error rate rises or if it proposes an unusually high number of production rollbacks in a short window.</li>
-</ul>
-<h3 id="tool-definitions">Tool definitions<a class="headerlink" href="#tool-definitions" title="Permanent link">&para;</a></h3>
-<p>Define the agent's callable tools narrowly, so its capabilities are explicit and reviewable:</p>
-<table>
-<thead>
-<tr>
-<th>Tool</th>
-<th>Underlying API call</th>
-<th>Risk level</th>
-<th>Approval required?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>get_release_status</code></td>
-<td>Release orchestration module: read release state</td>
-<td>Low</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>list_blocked_tasks</code></td>
-<td>Release orchestration module: read task queue</td>
-<td>Low</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>propose_rollback</code></td>
-<td>Deploy module: read deployment history (read-only)</td>
-<td>Low</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>execute_rollback</code></td>
-<td>Deploy module: trigger rollback</td>
-<td>High</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<p>Only <code>execute_rollback</code> changes production state. Every other tool is read-only, which limits the blast radius of a reasoning error.</p>
-<h3 id="perceivereasonact-loop-with-human-in-the-loop-approval">Perceive–reason–act loop, with human-in-the-loop approval<a class="headerlink" href="#perceivereasonact-loop-with-human-in-the-loop-approval" title="Permanent link">&para;</a></h3>
-<p><img alt="architecture02" src="../images/architecture02.jpg" /></p>
-<p>The first exchange is fully autonomous, because every tool it uses is read-only. The second exchange follows the same perceive–reason–act pattern, but because <code>execute_rollback</code> is a high-risk tool, the agent pauses after reasoning and posts an interactive approval request instead of acting immediately. Only after the release owner approves does the agent call the platform API — and it records who approved the action and when, in DynamoDB, for audit purposes.</p>
-<h3 id="deployment-steps_1">Deployment steps<a class="headerlink" href="#deployment-steps_1" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Create a Slack app</strong></li>
-<li>In Slack, navigate to <strong>api.slack.com/apps</strong> and create an app for your workspace.</li>
-<li>Enable <strong>Interactivity &amp; Shortcuts</strong> (for the Approve/Deny buttons) and add a <strong>slash command</strong> (for example, <code>/release</code>).</li>
-<li>Enable <strong>Event Subscriptions</strong> and point the request URL to the API Gateway endpoint you create in the next step.</li>
-<li>
-<p>Copy the Signing Secret and Bot User OAuth Tokens.</p>
-</li>
-<li>
-<p><strong>Store credentials in AWS Secrets Manager</strong></p>
-</li>
-<li>Create one secret for the Slack signing secret and bot token.</li>
-<li>
-<p>Create a second secret for the platform API credentials (the administrator or a dedicated service account for each module).</p>
-</li>
-<li>
-<p><strong>Deploy the agent's AWS resources</strong></p>
-</li>
-<li>Create the DynamoDB table for conversation state and audit records, with a time-to-live (TTL) attribute on conversation items so short-lived context expires automatically. Keep audit items without a TTL.</li>
-<li>Create the Lambda function (agent orchestrator) and grant it an IAM role scoped to: <code>secretsmanager:GetSecretValue</code> on the two secrets above, <code>dynamodb:GetItem</code>/<code>PutItem</code>/<code>Query</code> on the table, <code>bedrock:InvokeModel</code> on the specific model you select, and outbound HTTPS to the platform's Application Load Balancer.</li>
-<li>Create the API Gateway HTTPS endpoint and connect it to the Lambda function.</li>
-<li>
-<p>Enable a model in Amazon Bedrock and record its model ID for the Lambda function's configuration.</p>
-</li>
-<li>
-<p><strong>Configure the tool list</strong>: In the Lambda function's code or configuration, and confirm <code>execute_rollback</code> is marked as requiring approval.</p>
-</li>
-<li>
-<p><strong>Test in a non-production environment</strong></p>
-</li>
-<li>Run a read-only query (<code>/release status &lt;test-release&gt;</code>) and confirm the agent responds correctly.</li>
-<li>Trigger a test rollback request and confirm the approval flow blocks execution until you approve it in Slack.</li>
-<li>
-<p>Deny a test rollback request and confirm no action is taken against the platform.</p>
-</li>
-<li>
-<p><strong>Enable monitoring</strong></p>
-</li>
-<li>Create a CloudWatch alarm on the Lambda function's error rate.</li>
-<li>
-<p>Create a CloudWatch alarm that notifies you if <code>execute_rollback</code> is called more than a defined number of times per hour, as a safeguard against reasoning loops or misuse.</p>
-</li>
-<li>
-<p><strong>Review</strong>: Roll out to production channels, and review the DynamoDB audit log periodically to confirm the agent's proposed actions match your team's expectations.</p>
-</li>
-</ol>
 <h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<h3 id="backups">Backups<a class="headerlink" href="#backups" title="Permanent link">&para;</a></h3>
-<p>Regularly back up the Aurora PostgreSQL data and the contents of the EFS volume. This protects you against accidental stack deletion or data corruption.</p>
-<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
-<p>The default security groups and IAM roles provide minimal access. Review and adjust them for your organization's requirements. For platform users and groups, see your vendor's product documentation.</p>
 <ul>
-<li>Restrict the <code>RemoteAccessCIDR</code> parameter to a known IP range; never leave it open to <code>0.0.0.0/0</code> in production.</li>
-<li>Rotate the database administrator and module administrator passwords on a schedule, and store them in AWS Secrets Manager rather than as plain CloudFormation parameters after initial setup.</li>
-<li>Enable <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail</a> in the account to log API activity against the stack's resources.</li>
-<li>Enable multi-factor authentication (MFA) for any IAM user or role with permission to modify this stack.</li>
-<li>For the AI Agent extension, apply the least-privilege tool access and human-in-the-loop principles to every new tool you add.</li>
-</ul>
-<h3 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html">Amazon CloudWatch alarms</a> on ECS service CPU/memory utilization and Aurora CPU/storage metrics.</li>
-<li>A CloudWatch alarm on ALB target health, so you're notified if either module becomes unreachable.</li>
-<li>For the agent, alarms on Lambda error rate and on the frequency of high-risk tool calls.</li>
+<li>Apply least privilege to IAM roles and platform credentials.</li>
+<li>Require human approval before production-impacting actions.</li>
+<li>Log agent actions and tool calls for auditability.</li>
+<li>Use TLS for externally reachable endpoints.</li>
+<li>Test rollback and recovery procedures before production deployment.</li>
 </ul>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<p><strong>Question</strong>: I got a <code>CREATE_FAILED</code> error when I launched the stack.</p>
-<p><strong>Answer</strong>: Relaunch the template with Rollback on failure set to <strong>No</strong> (under Advanced on the CloudFormation Options page). This keeps the stack and its instances running so you can review the logs. Delete the stack when you finish troubleshooting, since it continues to incur AWS charges while it exists.</p>
-<p><strong>Question</strong>: I got a size-limitation error when I deployed the template.</p>
-<p><strong>Answer</strong>: Launch the template from an S3-hosted URL rather than a local copy. See the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">AWS CloudFormation limits documentation</a>.</p>
-<p><strong>Question</strong>: Can I use a <code>latest</code> tag for the module version?</p>
-<p><strong>Answer</strong>: No. A <code>latest</code> tag makes deployments non-repeatable, because you can't tell which version is running. Use an exact version number, or your vendor's <code>latest in stream</code> tag if one is published.</p>
-<p><strong>Question</strong>: Can I run this on the AWS Free Tier?</p>
-<p><strong>Answer</strong>: No. The minimum instance sizes this deployment needs exceed Free Tier limits.</p>
-<p><strong>Question</strong>: How many AWS resources does this deployment use?</p>
-<p><strong>Answer</strong>: Two to four EC2 hosts in a single ECS cluster for the platform containers, plus one EC2 host for the bastion (if enabled) and one Elastic IP address. The AI Agent adds serverless resources (Lambda, API Gateway, DynamoDB) that don't require dedicated EC2 capacity.</p>
-<p><strong>Question</strong>: The agent keeps proposing rollbacks that don't make sense.</p>
-<p><strong>Answer</strong>: Review the DynamoDB audit log for the reasoning trace that led to the proposal, and check the CloudWatch alarm. Because <code>execute_rollback</code> requires human approval, no incorrect action can execute without your confirmation — but repeated bad proposals usually mean the tool descriptions or context passed to the reasoning model need to be more specific.</p>
+<p>If deployment fails, review the CloudFormation stack events first. Then inspect ECS service events, load balancer target health, security group rules, and application logs. For agent-related issues, confirm the agent has access only to the expected APIs and verify its audit logs before retrying an action.</p>
 <h2 id="additional-resources">Additional resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
-<p><strong>AWS services</strong></p>
 <ul>
-<li><a href="https://docs.aws.amazon.com/ec2/">Amazon EC2</a></li>
-<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html">Amazon ECS</a></li>
-<li><a href="https://docs.aws.amazon.com/efs/">Amazon EFS</a></li>
-<li><a href="https://docs.aws.amazon.com/vpc/">Amazon VPC</a></li>
-<li><a href="https://docs.aws.amazon.com/cloudformation/">AWS CloudFormation</a></li>
-<li><a href="https://docs.aws.amazon.com/iam/">AWS IAM</a></li>
-<li><a href="https://docs.aws.amazon.com/bedrock/">Amazon Bedrock</a></li>
-<li><a href="https://docs.aws.amazon.com/lambda/">AWS Lambda</a></li>
-<li><a href="https://docs.aws.amazon.com/dynamodb/">Amazon DynamoDB</a></li>
-<li><a href="https://docs.aws.amazon.com/secretsmanager/">AWS Secrets Manager</a></li>
+<li><a href="https://docs.aws.amazon.com/cloudformation/">AWS CloudFormation documentation</a></li>
+<li><a href="https://docs.aws.amazon.com/ecs/">Amazon ECS documentation</a></li>
+<li><a href="https://docs.aws.amazon.com/iam/">AWS IAM documentation</a></li>
 </ul>
-<p><strong>Reference deployments</strong></p>
-<p><a href="https://aws.amazon.com/quickstart/">AWS Quick Start home page</a></p>
 
 
 
