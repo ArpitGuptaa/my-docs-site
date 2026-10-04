@@ -1,5 +1,49 @@
 /* Final targeted overrides. Keep this stylesheet last in mkdocs.yml. */
 
+/* Header ribbon: blend into the page body in both themes. */
+.md-header,
+.md-header[data-md-component="header"] {
+  background:var(--md-default-bg-color)!important;
+  background-color:var(--md-default-bg-color)!important;
+  color:var(--md-default-fg-color)!important;
+  box-shadow:none!important;
+  border-bottom:0!important;
+}
+.md-header__inner {
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.md-header--shadow {
+  box-shadow:none!important;
+}
+.md-header__button,
+.md-header__button.md-icon,
+.md-search__icon,
+.md-header label.md-header__button {
+  color:var(--md-default-fg-color)!important;
+}
+.md-search__form {
+  background:transparent!important;
+  border:1px solid var(--portfolio-line,rgba(127,127,127,.25))!important;
+  box-shadow:none!important;
+}
+.md-search__input {
+  color:var(--md-default-fg-color)!important;
+}
+.md-search__input::placeholder {
+  color:var(--md-default-fg-color--light)!important;
+}
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-header[data-md-component="header"] {
+  background:transparent!important;
+  background-color:transparent!important;
+}
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-header[data-md-component="header"] {
+  background:var(--md-default-bg-color)!important;
+  background-color:var(--md-default-bg-color)!important;
+}
+
 /* Header: no portrait/logo in the top ribbon. */
 .md-header__button.md-logo,
 .md-header a.md-logo { display:none!important; }
@@ -50,7 +94,7 @@
   .md-header__inner { min-height:3.2rem!important;padding-left:.5rem!important;padding-right:.5rem!important; }
   .md-header__button { margin:0 .1rem!important;padding:.55rem!important; }
 
-  /* News is a desktop enhancement and must not consume the mobile header. */
+  /* News is removed; keep any stale cached ribbon markup hidden on mobile. */
   .portfolio-header-news,.live-ribbon,.news-ribbon,.header-news { display:none!important; }
 
   .md-container,.md-main,.md-main__inner,.md-content { width:100%!important;max-width:100vw!important;min-width:0!important;margin-left:0!important;margin-right:0!important; }
