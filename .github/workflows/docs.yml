@@ -44,14 +44,12 @@ jobs:
           set -euo pipefail
           test -f docs/javascripts/ask-arpit.js
           test -f docs/stylesheets/ask-arpit.css
-          test -f docs/javascripts/live-ribbon.js
-          test -f docs/stylesheets/live-ribbon.css
-          test -f docs/assets/data/portfolio-news.json
           grep -Fq 'javascripts/ask-arpit.js' mkdocs.yml
           grep -Fq 'stylesheets/ask-arpit.css' mkdocs.yml
-          grep -Fq 'javascripts/live-ribbon.js' mkdocs.yml
-          grep -Fq 'stylesheets/live-ribbon.css' mkdocs.yml
-          python -m json.tool docs/assets/data/portfolio-news.json > /dev/null
+          if grep -Fq 'javascripts/live-ribbon.js' mkdocs.yml || grep -Fq 'stylesheets/live-ribbon.css' mkdocs.yml; then
+            echo "Obsolete news ribbon assets are still configured in mkdocs.yml."
+            exit 1
+          fi
 
       - name: Run Vale
         uses: errata-ai/vale-action@reviewdog
@@ -94,14 +92,12 @@ jobs:
           set -euo pipefail
           test -s site/javascripts/ask-arpit.js
           test -s site/stylesheets/ask-arpit.css
-          test -s site/javascripts/live-ribbon.js
-          test -s site/stylesheets/live-ribbon.css
-          test -s site/assets/data/portfolio-news.json
           grep -R -Fq 'javascripts/ask-arpit.js' site/*.html site/**/*.html
-          grep -R -Fq 'javascripts/live-ribbon.js' site/*.html site/**/*.html
           node --check site/javascripts/ask-arpit.js
-          node --check site/javascripts/live-ribbon.js
-          python -m json.tool site/assets/data/portfolio-news.json > /dev/null
+          if grep -R -Fq 'javascripts/live-ribbon.js' site/*.html site/**/*.html; then
+            echo "Obsolete news ribbon JavaScript is still referenced by the built site."
+            exit 1
+          fi
 
       - name: Deploy Website
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
