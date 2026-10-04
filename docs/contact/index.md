@@ -19,7 +19,7 @@
   <div class="contact-actions"><a class="contact-btn primary" href="https://wa.me/918010114948?text=Hi%20Arpit%2C%20I%20came%20across%20your%20technical%20writing%20portfolio%20and%20would%20like%20to%20connect%20regarding%20an%20opportunity." target="_blank" rel="noopener noreferrer" aria-label="Start a conversation with Arpit on WhatsApp">Start a conversation on WhatsApp</a><a class="contact-btn secondary" href="../assets/resume/ArpitGupta.pdf" download>Download resume</a></div>
 </div>
 
-## Share portfolio feedback
+## Share feedback
 
 I use reader feedback to improve the structure, clarity, examples, navigation, and usefulness of this portfolio. If you notice an unclear explanation, broken link, missing example, navigation issue, or another improvement opportunity, I would appreciate your suggestion.
 
