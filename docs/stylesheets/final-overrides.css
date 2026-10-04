@@ -3,9 +3,9 @@
 /* Header ribbon: blend into the page body in both themes. */
 .md-header,
 .md-header[data-md-component="header"] {
-  background:var(--md-default-bg-color)!important;
-  background-color:var(--md-default-bg-color)!important;
-  color:var(--md-default-fg-color)!important;
+  background:var(--portfolio-paper)!important;
+  background-color:var(--portfolio-paper)!important;
+  color:var(--portfolio-text)!important;
   box-shadow:none!important;
   border-bottom:0!important;
 }
@@ -13,26 +13,19 @@
   background:transparent!important;
   box-shadow:none!important;
 }
-.md-header--shadow {
-  box-shadow:none!important;
-}
+.md-header--shadow { box-shadow:none!important; }
 .md-header__button,
 .md-header__button.md-icon,
 .md-search__icon,
-.md-header label.md-header__button {
-  color:var(--md-default-fg-color)!important;
-}
+.md-header label.md-header__button { color:var(--portfolio-text)!important; }
 .md-search__form {
   background:transparent!important;
-  border:1px solid var(--portfolio-line,rgba(127,127,127,.25))!important;
+  border:1px solid var(--portfolio-line)!important;
   box-shadow:none!important;
 }
-.md-search__input {
-  color:var(--md-default-fg-color)!important;
-}
-.md-search__input::placeholder {
-  color:var(--md-default-fg-color--light)!important;
-}
+.md-search__input { color:var(--portfolio-text)!important; }
+.md-search__input::placeholder { color:var(--portfolio-muted)!important; }
+/* Dark mode remains visually transparent; light mode uses the exact body color. */
 [data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-header[data-md-component="header"] {
   background:transparent!important;
@@ -40,9 +33,10 @@
 }
 [data-md-color-scheme="default"] .md-header,
 [data-md-color-scheme="default"] .md-header[data-md-component="header"] {
-  background:var(--md-default-bg-color)!important;
-  background-color:var(--md-default-bg-color)!important;
+  background:var(--portfolio-paper)!important;
+  background-color:var(--portfolio-paper)!important;
 }
+[data-md-color-scheme="default"] .md-header__inner { background:var(--portfolio-paper)!important; }
 
 /* Header: no portrait/logo in the top ribbon. */
 .md-header__button.md-logo,
@@ -73,10 +67,7 @@
   .about-hero .about-hero__visual { display:flex!important;justify-content:flex-start!important;min-height:0!important; }
   .about-hero .about-hero__portrait { width:180px!important;height:225px!important; }
 }
-
-@media (max-width:800px) {
-  .contact-section .contact-grid { grid-template-columns:1fr!important; }
-}
+@media (max-width:800px) { .contact-section .contact-grid { grid-template-columns:1fr!important; } }
 
 /* Restore MkDocs Material off-canvas navigation on tablet and phone. */
 @media screen and (max-width:76.234375em) {
@@ -93,17 +84,13 @@
   .md-header,.md-header__inner { width:100%!important;max-width:100vw!important;box-sizing:border-box!important; }
   .md-header__inner { min-height:3.2rem!important;padding-left:.5rem!important;padding-right:.5rem!important; }
   .md-header__button { margin:0 .1rem!important;padding:.55rem!important; }
-
-  /* News is removed; keep any stale cached ribbon markup hidden on mobile. */
   .portfolio-header-news,.live-ribbon,.news-ribbon,.header-news { display:none!important; }
-
   .md-container,.md-main,.md-main__inner,.md-content { width:100%!important;max-width:100vw!important;min-width:0!important;margin-left:0!important;margin-right:0!important; }
   .md-main__inner { display:block!important; }
   .md-content__inner { width:auto!important;max-width:100%!important;margin:0!important;padding:1rem .8rem 6rem!important; }
   .md-typeset { font-size:.78rem!important;overflow-wrap:anywhere; }
   .md-typeset h1 { font-size:1.75rem!important;line-height:1.15!important;overflow-wrap:anywhere; }
   .md-typeset h2 { font-size:1.2rem!important; }
-
   .about-hero,.about-hero__top,.about-hero__intro { width:100%!important;max-width:100%!important;min-width:0!important; }
   .about-hero { padding-top:.25rem!important; }
   .about-hero__top { display:flex!important;flex-direction:column!important;min-height:0!important;overflow:visible!important; }
@@ -111,27 +98,21 @@
   .about-hero .about-hero__portrait { width:min(180px,60vw)!important;height:auto!important;aspect-ratio:4/5!important; }
   .profile-skill-pills { display:flex!important;flex-wrap:wrap!important;width:100%!important;max-width:100%!important;gap:.32rem!important; }
   .profile-skill-pills span { max-width:100%!important;font-size:.6rem!important;padding:.28rem .52rem!important;white-space:normal!important; }
-
   .profile-highlights,.portfolio-grid,.expertise-grid,.projects-grid,.sample-grid,.reference-grid,.credential-grid,.award-grid,.why-grid,.skills-matrix,.metric-grid { display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;max-width:100%!important; }
   .project-tile { min-height:0!important; }
-
   .changelog-head { align-items:flex-start!important; }
   .changelog-head .role { margin-left:0!important;display:block!important;margin-top:.2rem!important; }
   .diff-line { align-items:flex-start; }
-
   .contact-section { padding:1.15rem!important;border-radius:10px!important; }
   .contact-section h2 { font-size:1.3rem!important; }
   .contact-row { flex-direction:column!important;align-items:flex-start!important;gap:.2rem!important;overflow-wrap:anywhere; }
   .contact-actions { display:flex!important;flex-direction:column!important;gap:.55rem!important; }
   .contact-btn { width:100%!important;box-sizing:border-box!important;text-align:center!important;justify-content:center!important; }
-
   .recommendation-card { flex-direction:column!important;align-items:flex-start!important; }
   .cta-row { flex-direction:column!important;align-items:stretch!important; }
   .cta { justify-content:center!important;text-align:center!important; }
-
   #ask-arpit-launcher,.ask-arpit-launcher,.ask-arpit-button { max-width:calc(100vw - 24px)!important;right:12px!important;bottom:20px!important; }
 }
-
 @media (max-width:420px) {
   .md-content__inner { padding-left:.65rem!important;padding-right:.65rem!important; }
   .about-hero .about-hero__intro h1 { font-size:1.9rem!important;margin-bottom:1rem!important; }
