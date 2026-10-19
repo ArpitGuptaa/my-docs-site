@@ -8,7 +8,7 @@
   <div class="availability-banner"><span>Availability</span><strong>Immediate</strong></div>
 
   <div class="contact-grid">
-    <div class="contact-row"><span class="k">Email</span><a href="mailto:grtarpit2008@gmail.com">grtarpit2008@gmail.com</a></div>
+    <div class="contact-row"><span class="k">Email</span><a href="mailto:ame.arpit@gmail.com">ame.arpit@gmail.com</a></div>
     <div class="contact-row"><span class="k">Phone</span><a href="tel:+918010114948">+91 80101 14948</a></div>
     <div class="contact-row"><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/arpitgupta007/" target="_blank" rel="noopener noreferrer">Arpit Gupta ↗</a></div>
     <div class="contact-row"><span class="k">GitHub</span><a href="https://github.com/ArpitGuptaa" target="_blank" rel="noopener noreferrer">ArpitGuptaa ↗</a></div>
@@ -23,4 +23,4 @@
 
 I use reader feedback to improve the structure, clarity, examples, navigation, and usefulness of this portfolio. If you notice an unclear explanation, broken link, missing example, navigation issue, or another improvement opportunity, I would appreciate your suggestion.
 
-<a class="feedback-email" href="mailto:grtarpit2008@gmail.com?subject=Portfolio%20feedback" aria-label="Email feedback"><span class="feedback-email__icon">✉</span><span><strong>Email feedback</strong></span></a>
+<a class="feedback-email" href="mailto:ame.arpit@gmail.com?subject=Portfolio%20feedback" aria-label="Email feedback"><span class="feedback-email__icon">✉</span><span><strong>Email feedback</strong></span></a>
