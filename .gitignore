@@ -1,0 +1,8 @@
+# Python virtual environment and bytecode
+.venv/
+__pycache__/
+*.py[cod]
+
+# MkDocs generated site and caches
+/site/
+/.cache/
