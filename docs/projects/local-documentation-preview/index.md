@@ -38,47 +38,47 @@ When installing Python on Windows, select the installer option that adds Python 
 1. Open Command Prompt or a terminal.
 2. Navigate to the cloned repository. For example:
 
-   ```text
-   cd Desktop/GitHub/docs
-   ```
+    ```text
+    cd Desktop/GitHub/docs
+    ```
 
 3. Verify Python:
 
-   ```text
-   python --version
-   ```
+    ```text
+    python --version
+    ```
 
 4. Verify pip:
 
-   ```text
-   python -m pip --version
-   ```
+    ```text
+    python -m pip --version
+    ```
 
 5. Verify MkDocs:
 
-   ```text
-   python -m mkdocs --version
-   ```
+    ```text
+    python -m mkdocs --version
+    ```
 
 6. Install the repository dependencies if required. For a repository that provides `requirements.txt`, run:
 
-   ```text
-   python -m pip install -r requirements.txt
-   ```
+    ```text
+    python -m pip install -r requirements.txt
+    ```
 
 7. Start MkDocs. For a standard project, run:
 
-   ```text
-   python -m mkdocs serve
-   ```
+    ```text
+    python -m mkdocs serve
+    ```
 
-   For a repository with a separate configuration file, run:
+    For a repository with a separate configuration file, run:
 
-   ```text
-   python -m mkdocs serve --config-file=<configuration-file>.yml
-   ```
+    ```text
+    python -m mkdocs serve --config-file=<configuration-file>.yml
+    ```
 
-8. Wait for the build to finish, then open the local address displayed in the terminal. MkDocs commonly uses `http://127.0.0.1:8000/`.
+8. Wait for the build to finish, then open the local address displayed in the terminal. MkDocs commonly uses [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 9. Edit and save the documentation. Review the updated page in the local site.
 10. Keep the terminal open while you work. Press `Ctrl+C` when you want to stop the local server.
 

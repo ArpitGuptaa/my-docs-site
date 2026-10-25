@@ -1,0 +1,104 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Files
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t js_files < <(find docs -type f -name '*.js' -print)
+          if [ ${#js_files[@]} -eq 0 ]; then
+            echo "No JavaScript files found under docs/."
+          else
+            for file in "${js_files[@]}"; do
+              echo "Checking $file"
+              node --check "$file"
+            done
+          fi
+
+      - name: Validate interactive asset configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f docs/javascripts/ask-arpit.js
+          test -f docs/stylesheets/ask-arpit.css
+          grep -Fq 'javascripts/ask-arpit.js' mkdocs.yml
+          grep -Fq 'stylesheets/ask-arpit.css' mkdocs.yml
+          if grep -Fq 'javascripts/live-ribbon.js' mkdocs.yml || grep -Fq 'stylesheets/live-ribbon.css' mkdocs.yml; then
+            echo "Obsolete news ribbon assets are still configured in mkdocs.yml."
+            exit 1
+          fi
+
+      - name: Run Vale
+        uses: errata-ai/vale-action@reviewdog
+
+      - name: Run CSpell
+        uses: streetsidesoftware/cspell-action@v6
+        with:
+          files: "**/*.md"
+
+      - name: Run Lychee Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --verbose
+            --no-progress
+            --exclude "accounts.shopify.com"
+            --exclude "abdm.gov.in"
+            --exclude "financialeducation.rbi.org.in"
+            --exclude "epfindia.gov.in"
+            --exclude "rbi.org.in"
+            --exclude https://www.linkedin.com/.*
+            docs/**/*.md
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Build Website
+        run: mkdocs build --strict
+
+      - name: Validate built interactive assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s site/javascripts/ask-arpit.js
+          test -s site/stylesheets/ask-arpit.css
+          grep -R -Fq 'javascripts/ask-arpit.js' site/*.html site/**/*.html
+          node --check site/javascripts/ask-arpit.js
+          if grep -R -Fq 'javascripts/live-ribbon.js' site/*.html site/**/*.html; then
+            echo "Obsolete news ribbon JavaScript is still referenced by the built site."
+            exit 1
+          fi
+
+      - name: Deploy Website
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: mkdocs gh-deploy --force
