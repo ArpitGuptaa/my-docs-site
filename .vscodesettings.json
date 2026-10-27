@@ -1,0 +1,6 @@
+{
+  "vale.valeCLI.config": "${workspaceFolder}/.vale.ini",
+  "vale.valeCLI.syncOnStartup": true,
+  "vale.valeCLI.lintOnChange": true,
+  "vale.enableSpellcheck": false
+}

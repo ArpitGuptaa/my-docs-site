@@ -77,7 +77,7 @@ Many salaried individuals rely only on:
 
 This is often insufficient for long-term retirement needs.
 
-Learn more at the [Employees' Provident Fund Organisation (EPFO)](https://www.epfindia.gov.in/).
+Learn more at the [Employees' Provident Fund Organization (EPFO)](https://www.epfindia.gov.in/).
 
 ## Core principles of smart savings
 

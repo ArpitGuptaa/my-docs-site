@@ -38,7 +38,7 @@ I also use AI-assisted authoring and automation to improve documentation quality
 
 ## Current Focus
 
-At Kore.ai, I work on AI-powered documentation workflows, content governance, knowledge management, and documentation quality automation.
+At Kore.ai, I work on AI-powered documentation workflows, content governance, knowledge management, and documentation quality automation
 
 ## Featured Projects
 

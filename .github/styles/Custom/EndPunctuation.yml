@@ -1,0 +1,8 @@
+extends: existence
+message: "End this sentence with punctuation."
+link: https://learn.microsoft.com/en-us/style-guide/punctuation/periods
+level: warning
+scope: sentence
+nonword: true
+tokens:
+  - '[^\s.!?…]["''’”)\]]*$'

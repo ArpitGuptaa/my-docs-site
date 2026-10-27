@@ -1,5 +1,6 @@
 {
   "version": "0.2",
+  "language": "en-US",  
   "words": [
     "Arpit",
     "Kore",
@@ -34,6 +35,15 @@
     "Artimis",
     "mkdocs",
     "venv",
-    "Artimis"
+    "Artimis",
+    "Ayushman",
+    "DigitalAI",
+    "EPFO",
+    "ULIPs",
+    "agentflow",
+    "Flowclient",
+    "Flowserver",
+    "DDLC",
+    "SDLC"
   ]
 }
